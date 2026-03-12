@@ -6,7 +6,9 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "generate:frontmatter": "npx tsx scripts/generate-frontmatter.ts",
+    "generate:all": "npm run generate:frontmatter"
   },
   "keywords": [
     "vitepress",
@@ -17,6 +19,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^25.4.0",
+    "tsx": "^4.21.0",
     "vitepress": "^1.6.3",
     "vue": "^3.5.13"
   }

@@ -39,6 +39,7 @@ export default defineConfig({
       { text: 'Python', link: '/python/', activeMatch: '/python/' },
       { text: '算法', link: '/algorithm/', activeMatch: '/algorithm/' },
       { text: '技术笔记', link: '/notes/', activeMatch: '/notes/' },
+      { text: '标签', link: '/tags/', activeMatch: '/tags/' },
       { text: '常用工具', link: '/tools/', activeMatch: '/tools/' },
       { text: '其他内容', link: '/others/', activeMatch: '/others/' }
     ],
@@ -59,7 +60,7 @@ export default defineConfig({
 
     // 大纲配置
     outline: {
-      level: [2, 3],
+      level: [1, 6],
       label: '目录'
     },
 
