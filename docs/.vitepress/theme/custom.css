@@ -664,3 +664,38 @@
   background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
 }
+
+/* ========================================
+   图片样式和缩放
+   ======================================== */
+
+/* 文档中的图片样式 */
+.vp-doc img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.vp-doc img:hover {
+  transform: scale(1.01);
+}
+
+/* medium-zoom 样式 */
+.medium-zoom-overlay {
+  z-index: 999;
+}
+
+.medium-zoom-image--opened {
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+/* 图片容器 */
+.vp-doc p > img {
+  display: block;
+  margin: 1.5rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

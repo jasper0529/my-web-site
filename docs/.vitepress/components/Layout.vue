@@ -30,8 +30,4 @@ const showDocMeta = () => {
 </template>
 
 <style>
-/* 隐藏 VitePress 默认的 h1 标题容器，因为 DocMeta 会显示 */
-.vp-doc > div > h1:first-of-type {
-  display: none;
-}
 </style>

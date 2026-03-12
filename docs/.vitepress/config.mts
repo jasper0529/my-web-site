@@ -14,6 +14,8 @@ export default defineConfig({
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:locale', content: 'zh-CN' }],
     ['link', { rel: 'icon', href: '/images/logo.ico' }],
+    // 图片防盗链解决 - 设置 referrer policy
+    ['meta', { name: 'referrer', content: 'no-referrer' }],
   ],
 
   // 最后更新时间
