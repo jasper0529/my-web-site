@@ -1,0 +1,23 @@
+{
+  "name": "knowledge-base",
+  "version": "1.0.0",
+  "description": "个人知识库和博客网站",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "vitepress",
+    "blog",
+    "knowledge-base"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.4.0",
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
+  }
+}
