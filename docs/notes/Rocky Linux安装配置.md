@@ -1,3 +1,10 @@
+---
+title: Rocky Linux 安装配置
+date: 2024-12-20
+tags: [Linux, Rocky Linux, 运维, 服务器]
+description: Rocky Linux 完整安装配置指南，从系统下载到环境配置的详细步骤。
+---
+
 # 1. 简介
 
 
