@@ -29,9 +29,3 @@ const showDocMeta = () => {
   </Layout>
 </template>
 
-<style>
-/* 隐藏默认的 h1 标题，因为 DocMeta 会显示 */
-.vp-doc h1:first-of-type {
-  display: none;
-}
-</style>

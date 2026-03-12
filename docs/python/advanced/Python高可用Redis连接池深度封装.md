@@ -1,4 +1,12 @@
-# <font style="color:rgb(64, 64, 64);">引言</font>
+---
+title: Python高可用Redis连接池深度封装
+date: 2026-03-12
+tags: ['Python', 'redis']
+description: <font style="color:rgb(64, 64, 64);">Redis作为高性能的内存数据库，已成为现代系统的关键基础设施。然而原生Redis客户端在复杂生产环境中暴露出诸多痛点：</font> + <font style="color:rgb(64, 64, 64);">连接泄漏</...
+---
+
+
+# 引言
 <font style="color:rgb(64, 64, 64);">Redis作为高性能的内存数据库，已成为现代系统的关键基础设施。然而原生Redis客户端在复杂生产环境中暴露出诸多痛点：</font>
 
 + **<font style="color:rgb(64, 64, 64);">连接泄漏</font>**<font style="color:rgb(64, 64, 64);">：开发人员容易忘记手动释放连接</font>
