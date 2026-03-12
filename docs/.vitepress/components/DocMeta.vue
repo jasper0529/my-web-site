@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useData } from 'vitepress'
 
-const { frontmatter, page } = useData()
+const { frontmatter } = useData()
 
 const formatDate = (date: string | Date) => {
   if (!date) return ''
@@ -15,46 +15,36 @@ const formatDate = (date: string | Date) => {
 }
 
 const hasMeta = computed(() => {
-  return frontmatter.value.date || 
+  return frontmatter.value.date ||
          (frontmatter.value.tags && frontmatter.value.tags.length > 0)
-})
-
-const articleTitle = computed(() => {
-  return frontmatter.value.title || page.value.title
 })
 </script>
 
 <template>
-  <div class="doc-meta-container">
-    <!-- 文章标题 -->
-    <h1 v-if="articleTitle" class="article-title">{{ articleTitle }}</h1>
-    
-    <!-- 元信息 -->
-    <div v-if="hasMeta" class="doc-meta">
-      <div class="meta-info">
-        <!-- 创建时间 -->
-        <span v-if="frontmatter.date" class="meta-item date">
-          <span class="icon">📅</span>
-          <span class="label">创建于</span>
-          <span class="value">{{ formatDate(frontmatter.date) }}</span>
+  <div v-if="hasMeta" class="doc-meta">
+    <div class="meta-info">
+      <!-- 创建时间 -->
+      <span v-if="frontmatter.date" class="meta-item date">
+        <span class="icon">📅</span>
+        <span class="label">创建于</span>
+        <span class="value">{{ formatDate(frontmatter.date) }}</span>
+      </span>
+      
+      <!-- 标签 -->
+      <span v-if="frontmatter.tags && frontmatter.tags.length > 0" class="meta-item tags">
+        <span class="icon">🏷️</span>
+        <span class="label">标签</span>
+        <span class="tag-list">
+          <a
+            v-for="tag in frontmatter.tags"
+            :key="tag"
+            :href="`/tags/?tag=${encodeURIComponent(tag)}`"
+            class="tag"
+          >
+            {{ tag }}
+          </a>
         </span>
-        
-        <!-- 标签 -->
-        <span v-if="frontmatter.tags && frontmatter.tags.length > 0" class="meta-item tags">
-          <span class="icon">🏷️</span>
-          <span class="label">标签</span>
-          <span class="tag-list">
-            <a 
-              v-for="tag in frontmatter.tags" 
-              :key="tag" 
-              :href="`/tags/?tag=${encodeURIComponent(tag)}`"
-              class="tag"
-            >
-              {{ tag }}
-            </a>
-          </span>
-        </span>
-      </div>
+      </span>
     </div>
   </div>
 </template>
