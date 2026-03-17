@@ -2,29 +2,29 @@
 title: Python高可用Redis连接池深度封装
 date: 2026-03-12
 tags: ['Python', 'redis']
-description: <font style="color:rgb(64, 64, 64);">Redis作为高性能的内存数据库，已成为现代系统的关键基础设施。然而原生Redis客户端在复杂生产环境中暴露出诸多痛点：</font> + <font style="color:rgb(64, 64, 64);">连接泄漏</...
+description: Redis作为高性能的内存数据库，已成为现代系统的关键基础设施。然而原生Redis客户端在复杂生产环境中暴露出诸多痛点： + 连接泄漏</...
 ---
 
 
 # 引言
-<font style="color:rgb(64, 64, 64);">Redis作为高性能的内存数据库，已成为现代系统的关键基础设施。然而原生Redis客户端在复杂生产环境中暴露出诸多痛点：</font>
+Redis作为高性能的内存数据库，已成为现代系统的关键基础设施。然而原生Redis客户端在复杂生产环境中暴露出诸多痛点：
 
-+ **<font style="color:rgb(64, 64, 64);">连接泄漏</font>**<font style="color:rgb(64, 64, 64);">：开发人员容易忘记手动释放连接</font>
-+ **<font style="color:rgb(64, 64, 64);">网络脆弱</font>**<font style="color:rgb(64, 64, 64);">：TCP连接意外中断导致服务不可用</font>
-+ **<font style="color:rgb(64, 64, 64);">监控缺失</font>**<font style="color:rgb(64, 64, 64);">：缺乏关键指标影响故障排查</font>
-+ **<font style="color:rgb(64, 64, 64);">多进程隐患</font>**<font style="color:rgb(64, 64, 64);">：fork操作导致连接状态异常</font>
-+ **<font style="color:rgb(64, 64, 64);">重复造轮子</font>**<font style="color:rgb(64, 64, 64);">：每个项目都需要重复实现基础功能</font>
++ **连接泄漏**：开发人员容易忘记手动释放连接
++ **网络脆弱**：TCP连接意外中断导致服务不可用
++ **监控缺失**：缺乏关键指标影响故障排查
++ **多进程隐患**：fork操作导致连接状态异常
++ **重复造轮子**：每个项目都需要重复实现基础功能
 
 为了解决这些问题，本文将介绍一个封装 Redis 客户端的实践方案，该方案支持高可用性、性能监控、重试机制和线程安全。
 
 #  代码结构概述
-代码的核心是 <font style="color:#F38F39;">RedisClient</font> 类，它封装了 Redis 的连接、重试、性能监控和线程安全功能。以下是代码的主要模块：
+代码的核心是 RedisClient 类，它封装了 Redis 的连接、重试、性能监控和线程安全功能。以下是代码的主要模块：
 
-+ 自定义异常类：<font style="color:#F38F39;">RedisClientError</font> 及其子类（如 RedisConnectionError、RedisOperationError）用于更精确地处理 Redis 相关的错误。
-+ 性能监控类：<font style="color:#F38F39;">RedisMetrics</font> 用于记录 Redis 的性能指标，包括请求数量、响应时间、重连次数等。
-+ 重试策略类：<font style="color:#F38F39;">RetryPolicy</font> 定义了重试策略，包括最大重试次数、重试间隔、重试指数等。
-+ 重试装饰器：<font style="color:#F38F39;">retry</font> 装饰器根据重试策略实现自动重试功能。
-+ <font style="color:#F38F39;">RedisClient</font> 类：实现了单例模式、连接池、重试机制、性能监控和线程安全。
++ 自定义异常类：RedisClientError 及其子类（如 RedisConnectionError、RedisOperationError）用于更精确地处理 Redis 相关的错误。
++ 性能监控类：RedisMetrics 用于记录 Redis 的性能指标，包括请求数量、响应时间、重连次数等。
++ 重试策略类：RetryPolicy 定义了重试策略，包括最大重试次数、重试间隔、重试指数等。
++ 重试装饰器：retry 装饰器根据重试策略实现自动重试功能。
++ RedisClient 类：实现了单例模式、连接池、重试机制、性能监控和线程安全。
 
 # 核心功能实现
 ## 单例模式与连接池
@@ -64,7 +64,7 @@ def get_client(cls, config: Optional[Dict] = None) -> 'RedisClient':
 ```
 
 ## 重试机制
-<font style="color:#F38F39;">retry</font> 装饰器实现了重试机制，能够处理可重试的异常（如 ConnectionError、TimeoutError 等）。通过配置重试策略，可以灵活调整重试次数和间隔。
+retry 装饰器实现了重试机制，能够处理可重试的异常（如 ConnectionError、TimeoutError 等）。通过配置重试策略，可以灵活调整重试次数和间隔。
 
 ```python
 class RetryPolicy:
@@ -138,16 +138,16 @@ def retry(policy: RetryPolicy = RetryPolicy()):
 ```
 
 ## 性能监控
-<font style="color:#F38F39;">RedisMetrics </font>类记录了 Redis 的性能指标，包括请求数量、响应时间、重连次数等。通过这些指标，可以实时监控 Redis 的健康状态。
+RedisMetrics 类记录了 Redis 的性能指标，包括请求数量、响应时间、重连次数等。通过这些指标，可以实时监控 Redis 的健康状态。
 
-<font style="color:rgba(0, 0, 0, 0.88);">RedisMetrics类记录的关键指标：</font>
+RedisMetrics类记录的关键指标：
 
-| <font style="color:rgba(0, 0, 0, 0.88);">指标</font> | <font style="color:rgba(0, 0, 0, 0.88);">说明</font> | <font style="color:rgba(0, 0, 0, 0.88);">采样方式</font> |
+| 指标 | 说明 | 采样方式 |
 | --- | --- | --- |
-| <font style="color:rgba(0, 0, 0, 0.88);">slow_queries</font> | <font style="color:rgba(0, 0, 0, 0.88);">慢查询列表(命令+耗时)</font> | <font style="color:rgba(0, 0, 0, 0.88);">自动记录>500ms操作</font> |
-| <font style="color:rgba(0, 0, 0, 0.88);">avg_time</font> | <font style="color:rgba(0, 0, 0, 0.88);">平均响应时间</font> | <font style="color:rgba(0, 0, 0, 0.88);">加权平均算法</font> |
-| <font style="color:rgba(0, 0, 0, 0.88);">error_requests</font> | <font style="color:rgba(0, 0, 0, 0.88);">失败请求数</font> | <font style="color:rgba(0, 0, 0, 0.88);">异常捕获计数</font> |
-| <font style="color:rgba(0, 0, 0, 0.88);">reconnects</font> | <font style="color:rgba(0, 0, 0, 0.88);">重连次数</font> | <font style="color:rgba(0, 0, 0, 0.88);">心跳线程触发计数</font> |
+| slow_queries | 慢查询列表(命令+耗时) | 自动记录>500ms操作 |
+| avg_time | 平均响应时间 | 加权平均算法 |
+| error_requests | 失败请求数 | 异常捕获计数 |
+| reconnects | 重连次数 | 心跳线程触发计数 |
 
 
 ```python
@@ -241,15 +241,15 @@ def _reconnect(self):
             raise RedisConnectionError("Reconnection failed") from e
 ```
 
-<font style="color:rgba(0, 0, 0, 0.88);">异常处理流程：</font>
+异常处理流程：
 
-1. <font style="color:rgba(0, 0, 0, 0.88);">检测到连接断开</font>
-2. <font style="color:rgba(0, 0, 0, 0.88);">关闭旧连接（释放资源）</font>
-3. <font style="color:rgba(0, 0, 0, 0.88);">重新初始化连接池</font>
-4. <font style="color:rgba(0, 0, 0, 0.88);">更新重连计数器（metrics.reconnects）</font>
+1. 检测到连接断开
+2. 关闭旧连接（释放资源）
+3. 重新初始化连接池
+4. 更新重连计数器（metrics.reconnects）
 
-## <font style="color:rgba(0, 0, 0, 0.85);">哨兵模式集成</font>
-<font style="color:rgba(0, 0, 0, 0.88);">配置示例：</font>
+## 哨兵模式集成
+配置示例：
 
 ```python
 config = {
@@ -260,11 +260,11 @@ config = {
 }
 ```
 
-<font style="color:rgba(0, 0, 0, 0.88);">初始化过程：</font>
+初始化过程：
 
-1. <font style="color:rgba(0, 0, 0, 0.88);">创建Sentinel对象连接哨兵集群</font>
-2. <font style="color:rgba(0, 0, 0, 0.88);">通过master_for获取主节点连接</font>
-3. <font style="color:rgba(0, 0, 0, 0.88);">自动处理主从切换事件</font>
+1. 创建Sentinel对象连接哨兵集群
+2. 通过master_for获取主节点连接
+3. 自动处理主从切换事件
 
 # 使用示例
 ## 最简单使用方式

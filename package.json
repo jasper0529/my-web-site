@@ -4,11 +4,12 @@
   "description": "个人知识库和博客网站",
   "type": "module",
   "scripts": {
-    "docs:dev": "npm run generate:frontmatter && vitepress dev docs",
-    "docs:build": "npm run generate:frontmatter && vitepress build docs",
+    "docs:dev": "npm run generate:frontmatter &&  npm run generate:seo && vitepress dev docs",
+    "docs:build": "npm run generate:all && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "generate:frontmatter": "npx tsx scripts/generate-frontmatter.ts",
-    "generate:all": "npm run generate:frontmatter"
+    "generate:seo": "npx tsx scripts/generate-seo.ts",
+    "generate:all": "npm run generate:frontmatter && npm run generate:seo"
   },
   "keywords": [
     "vitepress",
@@ -19,11 +20,19 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^25.4.0",
+    "feed": "^5.2.0",
+    "glob": "^13.0.6",
+    "gray-matter": "^4.0.3",
+    "sitemap": "^9.0.1",
     "tsx": "^4.21.0",
     "vitepress": "^1.6.3",
+    "vitepress-plugin-group-icons": "^1.7.1",
     "vue": "^3.5.13"
   },
   "dependencies": {
+    "@giscus/vue": "^3.1.1",
+    "katex": "^0.16.38",
+    "markdown-it-mathjax3": "^4.3.2",
     "medium-zoom": "^1.1.0"
   }
 }

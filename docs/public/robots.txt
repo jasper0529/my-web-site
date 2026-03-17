@@ -1,0 +1,26 @@
+# robots.txt for Jasper Labs
+# https://jasper-labs.cn
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jasper-labs.cn/sitemap.xml
+
+# RSS Feed
+# https://jasper-labs.cn/rss.xml
+
+# Disallow unnecessary paths
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /tags/
+
+# Allow search engines to crawl all content
+Allow: /python/
+Allow: /algorithm/
+Allow: /notes/
+Allow: /tools/
+Allow: /others/
+
+# Crawl delay (optional, be nice to the server)
+Crawl-delay: 1

@@ -35,6 +35,14 @@ const categoryTitles: Record<string, string> = {
   '2024': '2024'
 }
 
+// 特定文件的标题覆盖
+const fileTitleOverrides: Record<string, string> = {
+  'others/about': '关于我',
+  'others/archives': '文章归档',
+  'others/sitemap-page': '站点地图',
+  'others/update': '网站更新记录'
+}
+
 // 从文件名生成标题
 function generateTitle(filename: string): string {
   // 移除扩展名
@@ -99,9 +107,13 @@ function generateSidebarItems(
     const sidebarItems: SidebarItem[] = mdFiles.map(file => {
       const fileName = file.replace(/\.md$/, '')
       const link = fileName === 'index' ? basePath : `${basePath}${fileName}`
+      const relativeKey = `${categoryPath}/${fileName}`
+      const overrideTitle = fileTitleOverrides[relativeKey]
       
       return {
-        text: fileName === 'index' ? `${categoryTitle}概览` : generateTitle(file),
+        text: fileName === 'index'
+          ? `${categoryTitle}概览`
+          : overrideTitle || generateTitle(file),
         link: link
       }
     })

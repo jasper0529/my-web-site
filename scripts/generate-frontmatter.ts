@@ -50,10 +50,11 @@ function generateDescription(title: string, content: string): string {
     .replace(/^#+\s.*$/gm, '') // 移除标题
     .replace(/```[\s\S]*?```/g, '') // 移除代码块
     .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // 移除链接
+    .replace(/<[^>]+>/g, '') // 移除 HTML 标签
     .replace(/[*_`~]/g, '') // 移除格式标记
     .replace(/\s+/g, ' ') // 合并空白
     .trim()
-  
+
   const description = cleanContent.substring(0, 150)
   return description.length < cleanContent.length ? description + '...' : description
 }

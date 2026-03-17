@@ -1,20 +1,19 @@
 ---
 layout: home
-
 hero:
-  name: "Jasper Labs"
-  text: "个人技术知识库与博客"
-  tagline: 记录学习、分享知识、沉淀成长
-  image:
-    src: /images/hero-image.svg
-    alt: Jasper Labs
-  actions:
-    - theme: brand
-      text: 开始探索
-      link: /python/
-    - theme: alt
-      text: 技术笔记
-      link: /notes/
+    name: "Jasper Labs"
+    text: "个人技术知识库与博客"
+    tagline: 记录学习、分享知识、沉淀成长
+    image:
+      src: /images/hero-image.svg
+      alt: Jasper Labs
+    actions:
+      - theme: brand
+        text: 开始探索
+        link: /python/
+      - theme: alt
+        text: 最新文章
+        link: /others/archives
 
 features:
   - icon: 🐍
@@ -34,14 +33,64 @@ features:
     details: 精选开发工具推荐，提升效率的软件和在线服务。
     link: /tools/
   - icon: 📚
-    title: 读书笔记
-    details: 技术书籍阅读笔记，关键知识点提炼与思考。
-    link: /others/readings
+    title: 文章归档
+    details: 按时间线浏览所有文章，方便查找历史内容。
+    link: /others/archives
   - icon: 💡
     title: 关于我
     details: 了解更多关于本站和作者的信息。
     link: /others/about
 ---
+
+<script setup lang="ts">
+import { data } from './.vitepress/posts.data'
+
+const latestPosts = data.posts.slice(0, 6)
+const recommendedPosts = (() => {
+  const tagged = data.posts.filter(post => post.tags?.includes('推荐'))
+  return (tagged.length ? tagged : data.posts).slice(0, 3)
+})()
+
+const tagCountMap = new Map<string, number>()
+data.posts.forEach(post => {
+  post.tags?.forEach(tag => {
+    tagCountMap.set(tag, (tagCountMap.get(tag) || 0) + 1)
+  })
+})
+const hotTagEntries = Array.from(tagCountMap.entries())
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 12)
+
+const hotTags = hotTagEntries.map(([tag]) => tag)
+const tagStats = Object.fromEntries(hotTagEntries)
+</script>
+
+<section class="home-section">
+  <div class="section-header">
+    <p class="section-eyebrow">Latest</p>
+    <h2>最新文章</h2>
+    <p class="section-desc">实时更新的文章动态，快速了解本站最新内容。</p>
+  </div>
+  <PostList :data="latestPosts" />
+</section>
+
+<section class="home-section">
+  <div class="section-header">
+    <p class="section-eyebrow">Recommended</p>
+    <h2>推荐阅读</h2>
+    <p class="section-desc">优先展示带「推荐」标签的精选文章，若暂未标注则展示最新文章。</p>
+  </div>
+  <PostList :data="recommendedPosts" />
+</section>
+
+<section class="home-section">
+  <div class="section-header">
+    <p class="section-eyebrow">Hot Topics</p>
+    <h2>热门标签</h2>
+    <p class="section-desc">统计所有文章的标签出现频次，优先展示最常访问的主题方向。</p>
+  </div>
+  <TagList :tags="hotTags" :stats="tagStats" />
+</section>
 
 <style>
 :root {

@@ -1,0 +1,178 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Jasper Labs",
+    "home_page_url": "https://jasper-labs.cn",
+    "feed_url": "https://jasper-labs.cn/feed.json",
+    "description": "个人知识库和博客网站，包含Python、算法、技术笔记等内容",
+    "icon": "https://jasper-labs.cn/images/logo.svg",
+    "author": {
+        "name": "Jasper",
+        "url": "https://jasper-labs.cn"
+    },
+    "items": [
+        {
+            "id": "https://jasper-labs.cn/tools//",
+            "content_html": "精选开发工具推荐，提升效率的软件和在线服务。",
+            "url": "https://jasper-labs.cn/tools//",
+            "title": "常用工具",
+            "date_modified": "2026-03-17T09:46:43.830Z",
+            "tags": []
+        },
+        {
+            "id": "https://jasper-labs.cn/others/sitemap-page/",
+            "content_html": "可视化浏览网站结构",
+            "url": "https://jasper-labs.cn/others/sitemap-page/",
+            "title": "站点地图",
+            "date_modified": "2026-03-17T03:57:14.352Z",
+            "tags": []
+        },
+        {
+            "id": "https://jasper-labs.cn/",
+            "content_html": "Untitled",
+            "url": "https://jasper-labs.cn/",
+            "title": "Untitled",
+            "date_modified": "2026-03-17T02:08:25.456Z",
+            "tags": []
+        },
+        {
+            "id": "https://jasper-labs.cn/others/update/",
+            "content_html": "记录站点历史更新、规划与目前支持的功能能力",
+            "url": "https://jasper-labs.cn/others/update/",
+            "title": "网站更新记录",
+            "date_modified": "2026-03-17T00:00:00.000Z",
+            "tags": [
+                "其他"
+            ]
+        },
+        {
+            "id": "https://jasper-labs.cn/python/advanced/ Python构造数据神器-mimesis/",
+            "content_html": "Mimesis 是一个用于生成假数据的 Python 库，支持多种语言和数据类型。它的设计目标是提供一个简单而灵活的 API，以便用户能够快速生成所需的假数据。官方文档：mimesis 主要特点 + 多语言：支持47种不同国家语言 + 可扩展性：支持自定义数据生成和自定义数据处理 + 性能：比fa...",
+            "url": "https://jasper-labs.cn/python/advanced/ Python构造数据神器-mimesis/",
+            "title": "Python构造数据神器 Mimesis",
+            "date_modified": "2026-03-17T00:00:00.000Z",
+            "tags": [
+                "Python",
+                "Mimesis",
+                "数据生成",
+                "测试",
+                "工具"
+            ]
+        },
+        {
+            "id": "https://jasper-labs.cn/algorithm/data-structure/算法时间复杂度/",
+            "content_html": "时间复杂度是衡量算法效率的核心指标，描述算法运行时间与输入规模的关系。它不关注具体运行时间（如毫秒数），而是关注随着输入规模 n 增大时，算法运行时间的增长趋势。 1. 评估效率： 比较不同算法在解决同一个问题时的效率,则优选择。 2. 预测性能： 预测算法在处理大规模数据时的表现。 3. 优化算法...",
+            "url": "https://jasper-labs.cn/algorithm/data-structure/算法时间复杂度/",
+            "title": "算法时间复杂度",
+            "date_modified": "2026-03-17T00:00:00.000Z",
+            "tags": [
+                "算法",
+                "数据结构"
+            ]
+        },
+        {
+            "id": "https://jasper-labs.cn/algorithm/sorting//",
+            "content_html": "冒泡、快速、归并等经典排序算法的原理与复杂度分析。",
+            "url": "https://jasper-labs.cn/algorithm/sorting//",
+            "title": "排序算法",
+            "date_modified": "2026-03-16T11:08:56.829Z",
+            "tags": []
+        },
+        {
+            "id": "https://jasper-labs.cn/algorithm/data-structure//",
+            "content_html": "数组、链表、栈、队列、树、图等基础数据结构的原理与实现。",
+            "url": "https://jasper-labs.cn/algorithm/data-structure//",
+            "title": "数据结构",
+            "date_modified": "2026-03-16T11:08:54.066Z",
+            "tags": []
+        },
+        {
+            "id": "https://jasper-labs.cn/others/archives/",
+            "content_html": "按时间线浏览所有文章，方便查找历史内容。",
+            "url": "https://jasper-labs.cn/others/archives/",
+            "title": "文章归档",
+            "date_modified": "2026-03-16T08:56:57.466Z",
+            "tags": []
+        },
+        {
+            "id": "https://jasper-labs.cn/others//",
+            "content_html": "关于我、读书笔记、友情链接等内容。",
+            "url": "https://jasper-labs.cn/others//",
+            "title": "其他内容",
+            "date_modified": "2026-03-13T07:49:42.226Z",
+            "tags": []
+        },
+        {
+            "id": "https://jasper-labs.cn/python/advanced/Python高可用Redis连接池深度封装/",
+            "content_html": "Redis作为高性能的内存数据库，已成为现代系统的关键基础设施。然而原生Redis客户端在复杂生产环境中暴露出诸多痛点： + 连接泄漏</...",
+            "url": "https://jasper-labs.cn/python/advanced/Python高可用Redis连接池深度封装/",
+            "title": "Python高可用Redis连接池深度封装",
+            "date_modified": "2026-03-12T00:00:00.000Z",
+            "tags": [
+                "Python",
+                "redis"
+            ]
+        },
+        {
+            "id": "https://jasper-labs.cn/notes//",
+            "content_html": "开发过程中遇到的问题与解决方案，技术探索与心得体会。",
+            "url": "https://jasper-labs.cn/notes//",
+            "title": "技术笔记",
+            "date_modified": "2026-03-11T09:57:55.146Z",
+            "tags": []
+        },
+        {
+            "id": "https://jasper-labs.cn/algorithm//",
+            "content_html": "深入理解算法原理，LeetCode 刷题笔记，可视化图解复杂概念。",
+            "url": "https://jasper-labs.cn/algorithm//",
+            "title": "算法与数据结构",
+            "date_modified": "2026-03-11T09:57:34.055Z",
+            "tags": []
+        },
+        {
+            "id": "https://jasper-labs.cn/python//",
+            "content_html": "系统学习 Python 编程，从基础语法到高级特性，包含常用库的使用教程和最佳实践。",
+            "url": "https://jasper-labs.cn/python//",
+            "title": "Python 学习",
+            "date_modified": "2026-03-11T09:55:35.727Z",
+            "tags": []
+        },
+        {
+            "id": "https://jasper-labs.cn/notes/Rocky Linux安装配置/",
+            "content_html": "Rocky Linux 完整安装配置指南，从系统下载到环境配置的详细步骤。",
+            "url": "https://jasper-labs.cn/notes/Rocky Linux安装配置/",
+            "title": "Rocky Linux 安装配置",
+            "date_modified": "2024-12-20T00:00:00.000Z",
+            "tags": [
+                "Linux",
+                "Rocky Linux",
+                "运维",
+                "服务器"
+            ]
+        },
+        {
+            "id": "https://jasper-labs.cn/algorithm/leetcode/two-sum/",
+            "content_html": "LeetCode 第一题 Two Sum 的详细解析，包含 Python 和 JavaScript 多种解法。",
+            "url": "https://jasper-labs.cn/algorithm/leetcode/two-sum/",
+            "title": "LeetCode 001 - Two Sum",
+            "date_modified": "2024-02-20T00:00:00.000Z",
+            "tags": [
+                "LeetCode",
+                "算法",
+                "哈希表",
+                "数组"
+            ]
+        },
+        {
+            "id": "https://jasper-labs.cn/notes/code-group-demo/",
+            "content_html": "代码组与阅读统计功能演示",
+            "url": "https://jasper-labs.cn/notes/code-group-demo/",
+            "title": "代码组与阅读统计功能演示",
+            "date_modified": "2024-01-15T00:00:00.000Z",
+            "tags": [
+                "VitePress",
+                "教程",
+                "前端"
+            ]
+        }
+    ]
+}

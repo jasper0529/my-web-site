@@ -22,6 +22,7 @@
   --vp-c-brand-2: #1D4ED8;
   --vp-c-brand-3: #1E40AF;
   --vp-c-brand-soft: #EFF6FF;
+  --vp-c-accent: #F97316;
   
   /* 背景色 */
   --vp-c-bg: #FFFFFF;
@@ -47,8 +48,9 @@
   
   /* 英雄区渐变 */
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-  --vp-home-hero-image-background-image: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+  --vp-home-hero-name-background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 60%, #F97316 100%);
+  --vp-home-hero-image-background-image: radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.5), transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(249, 115, 22, 0.45), transparent 55%);
   --vp-home-hero-image-filter: blur(72px);
   
   /* 按钮样式 */
@@ -122,14 +124,53 @@
    ======================================== */
 
 .VPNavBar {
-  background: rgba(255, 255, 255, 0.8) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--vp-c-border);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
 }
 
 .dark .VPNavBar {
   background: rgba(11, 15, 25, 0.8) !important;
+}
+
+.VPNavBar .VPNavBarMenuLink,
+.VPNavBar .VPNavBarMenuGroup .text {
+  position: relative;
+  font-weight: 500;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  transition: color 0.25s ease;
+}
+
+.VPNavBar .VPNavBarMenuLink::after,
+.VPNavBar .VPNavBarMenuGroup .text::after {
+  content: '';
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: -0.35rem;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0), rgba(37, 99, 235, 0.8), rgba(59, 130, 246, 0));
+  opacity: 0;
+  transform: translateY(6px);
+  filter: blur(0.5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.VPNavBar .VPNavBarMenuLink.active,
+.VPNavBar .VPNavBarMenuLink:hover,
+.VPNavBar .VPNavBarMenuGroup.is-active .text {
+  color: var(--vp-c-brand-1);
+}
+
+.VPNavBar .VPNavBarMenuLink.active::after,
+.VPNavBar .VPNavBarMenuLink:hover::after,
+.VPNavBar .VPNavBarMenuGroup.is-active .text::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ========================================
@@ -239,19 +280,30 @@
    按钮样式
    ======================================== */
 
+
 .vp-button.brand {
-  border-radius: var(--vp-border-radius);
-  font-weight: 500;
-  transition: all 0.2s ease;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  padding-inline: 1.5rem;
 }
 
 .vp-button.brand:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
 }
 
 .dark .vp-button.brand:hover {
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.45);
+}
+
+.vp-button.alt {
+  border-radius: 999px;
+  border-width: 1.5px;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+  border-color: rgba(37, 99, 235, 0.5);
+  background: transparent;
 }
 
 /* ========================================
@@ -278,26 +330,161 @@
 
 .feature-card,
 .post-card,
-.tool-card {
+.tool-card,
+.home-section .post-card,
+.home-section .feature-card {
   padding: 1.5rem;
-  border-radius: var(--vp-border-radius-soft);
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-border);
-  transition: all 0.25s ease;
+  border-radius: var(--vp-border-radius-large);
+  background: var(--vp-c-bg);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
 }
 
 .feature-card:hover,
 .post-card:hover,
-.tool-card:hover {
+.tool-card:hover,
+.home-section .post-card:hover,
+.home-section .feature-card:hover {
   border-color: var(--vp-c-brand-1);
-  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
-  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.15);
+  transform: translateY(-4px);
+}
+
+.home-section {
+  margin: 4rem 0;
+  padding: clamp(2rem, 3vw, 3rem);
+  border-radius: calc(var(--vp-border-radius-large) * 1.25);
+  background: linear-gradient(145deg, rgba(37, 99, 235, 0.06), rgba(37, 99, 235, 0.02));
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(249, 115, 22, 0.08), transparent 60%);
+  opacity: 0.8;
+}
+
+.home-section > * {
+  position: relative;
+}
+
+.home-section + .home-section {
+  margin-top: 2.5rem;
+}
+
+.dark .home-section {
+  background: linear-gradient(145deg, rgba(59, 130, 246, 0.12), rgba(2, 6, 23, 0.8));
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+.home-section .section-header {
+  margin-bottom: 1.75rem;
+}
+
+
+.home-section .section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.15);
+  color: var(--vp-c-brand-1);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-section .section-eyebrow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.35), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.home-section:hover .section-eyebrow::after {
+  opacity: 1;
+}
+
+.dark .home-section .section-eyebrow {
+  background: rgba(59, 130, 246, 0.25);
+}
+
+.home-section h2 {
+  margin: 0.35rem 0;
+  font-size: clamp(1.75rem, 1.5rem + 0.5vw, 2.2rem);
+}
+
+.home-section .section-desc {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  max-width: 720px;
+  font-size: 1rem;
+}
+
+.home-section {
+  margin: 3rem 0;
+  padding: 2.5rem;
+  border-radius: var(--vp-border-radius-large);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(29, 78, 216, 0.05));
+  border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+.home-section + .home-section {
+  margin-top: 2rem;
+}
+
+.dark .home-section {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(29, 78, 216, 0.1));
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.home-section .section-header {
+  margin-bottom: 1.5rem;
+}
+
+.home-section .section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--vp-c-brand-1);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dark .home-section .section-eyebrow {
+  background: rgba(59, 130, 246, 0.18);
+}
+
+.home-section h2 {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+}
+
+.home-section .section-desc {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  max-width: 720px;
 }
 
 .dark .feature-card:hover,
 .dark .post-card:hover,
 .dark .tool-card:hover {
-  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.65);
 }
 
 .feature-card .feature-icon {
@@ -384,6 +571,77 @@
   background-clip: text;
 }
 
+.VPHero {
+  position: relative;
+  overflow: hidden;
+}
+
+.VPHero::before,
+.VPHero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 25% 20%, rgba(37, 99, 235, 0.15), transparent 55%);
+  transform: translate3d(0, 0, 0);
+  animation: hero-pulse 9s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.VPHero::after {
+  background: radial-gradient(circle at 75% 35%, rgba(249, 115, 22, 0.12), transparent 50%);
+  animation-duration: 11s;
+  mix-blend-mode: screen;
+}
+
+/* Hero 图片浮动动画 */
+.VPHero .image-bg {
+  animation: hero-float 6s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Hero 图片容器动画 */
+.VPHero .image-container {
+  animation: hero-container-float 6s ease-in-out infinite;
+}
+
+@keyframes hero-container-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.02);
+  }
+}
+
+/* Hero 图片光晕效果 */
+.VPHero .image-bg::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle, var(--vp-c-brand-soft) 0%, transparent 70%);
+  opacity: 0.5;
+  animation: hero-glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes hero-glow {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
 /* ========================================
    表格样式
    ======================================== */
@@ -425,6 +683,29 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--vp-c-brand-1);
+}
+
+/* ========================================
+   文章标题样式
+   ======================================== */
+
+.vp-doc h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.vp-doc h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.vp-doc h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 /* ========================================
@@ -698,4 +979,378 @@
   display: block;
   margin: 1.5rem auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   代码组样式和图标
+   ======================================== */
+
+/* 代码组：tab间距 */
+.vp-code-group .tabs {
+  padding-top: 20px;
+}
+
+/* 代码组：添加样式及阴影 */
+.vp-code-group {
+  color: var(--vp-c-black-soft);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px 0 rgb(0 0 0 / 40%);
+}
+
+/* 代码组：添加macOS风格的小圆点 */
+.vp-code-group .tabs::before {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  height: 12px;
+  width: 12px;
+  background: #fc625d;
+  border-radius: 50%;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+}
+
+/* 代码组：修正倒角、阴影、边距 */
+.vp-code-group div[class*="language-"].vp-adaptive-theme.line-numbers-mode {
+  border-radius: 8px;
+  box-shadow: none;
+  padding-top: 0px;
+}
+
+/* 代码组：隐藏小圆点 */
+.vp-code-group div[class*="language-"].vp-adaptive-theme.line-numbers-mode::before {
+  display: none;
+}
+
+/* 代码组：修正行号位置 */
+.vp-code-group .line-numbers-mode .line-numbers-wrapper {
+  padding-top: 20px;
+}
+
+/* 代码组：修正行号右侧竖线位置 */
+.vp-code-group .line-numbers-mode .line-numbers-wrapper::after {
+  top: 24px;
+  height: calc(100% - 45px);
+}
+
+/* 代码组（无行号）：修正倒角、阴影、边距 */
+.vp-code-group div[class*="language-"].vp-adaptive-theme {
+  border-radius: 8px;
+  box-shadow: none;
+  padding-top: 0px;
+}
+
+/* 代码组（无行号）：隐藏小圆点 */
+.vp-code-group div[class*="language-"].vp-adaptive-theme::before {
+  display: none;
+}
+
+
+
+/* ========================================
+   单个代码块使用代码组风格
+   ======================================== */
+
+/* .vitepress/theme/style/vp-code.css */
+
+/* 代码块：增加留空边距 增加阴影 */
+.vp-doc div[class*="language-"] {
+  box-shadow: 0 10px 30px 0 rgb(0 0 0 / 40%);
+  padding-top: 20px;
+}
+
+/* 代码块：添加macOS风格的小圆点 */
+.vp-doc div[class*="language-"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  background-color: #ff5f56;
+  border-radius: 50%;
+  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  z-index: 1;
+}
+
+/* 代码块：下移行号 隐藏右侧竖线 */
+.vp-doc .line-numbers-wrapper {
+  padding-top: 40px;
+  border-right: none;
+}
+
+/* 代码块：重建行号右侧竖线 */
+.vp-doc .line-numbers-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 0;
+  border-right: 1px solid var(--vp-code-block-divider-color);
+  height: calc(100% - 60px);
+}
+
+.vp-doc div[class*="language-"].line-numbers-mode {
+  margin-bottom: 20px;
+}
+
+/* ========================================
+   代码块折叠功能
+   ======================================== */
+
+/* 代码块底部折叠栏 */
+.code-fold-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background: linear-gradient(to bottom, transparent, var(--vp-code-block-bg));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  border-radius: 0 0 8px 8px;
+}
+
+.code-fold-bar:hover {
+  background: linear-gradient(to bottom, transparent, var(--vp-c-brand-soft));
+}
+
+.code-fold-bar:hover .fold-text {
+  color: var(--vp-c-brand-1);
+}
+
+.code-fold-bar .fold-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.code-fold-bar .fold-icon {
+  transition: transform 0.3s ease;
+}
+
+.code-fold-bar.collapsed .fold-icon {
+  transform: rotate(180deg);
+}
+
+/* 折叠状态下的代码块 */
+.vp-doc div[class*="language-"].code-collapsed {
+  min-height: 44px;
+}
+
+.vp-doc div[class*="language-"].code-collapsed pre,
+.vp-doc div[class*="language-"].code-collapsed code {
+  height: 0;
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.vp-doc div[class*="language-"].code-collapsed .line-numbers-wrapper {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* 展开时代码内容平滑过渡 */
+.vp-doc div[class*="language-"] pre,
+.vp-doc div[class*="language-"] code,
+.vp-doc div[class*="language-"] .line-numbers-wrapper {
+  transition: all 0.3s ease;
+}
+
+/* 折叠状态下底部栏位置调整 */
+.code-fold-bar.collapsed {
+  position: relative;
+  border-top: 1px dashed var(--vp-c-border);
+}
+
+/* 代码块底部留出折叠栏空间 */
+.vp-doc div[class*="language-"] {
+  position: relative;
+  padding-bottom: 32px;
+}
+
+/* 行号模式下调整 */
+.vp-doc div[class*="language-"].line-numbers-mode .code-fold-bar {
+  left: 50px;
+}
+
+/* 暗色模式适配 */
+.dark .code-fold-bar:hover {
+  background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.1));
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .code-fold-bar {
+    height: 28px;
+  }
+  
+  .code-fold-bar .fold-text {
+    font-size: 11px;
+  }
+  
+  .vp-doc div[class*="language-"] {
+    padding-bottom: 28px;
+  }
+  
+  .vp-doc div[class*="language-"].line-numbers-mode .code-fold-bar {
+    left: 36px;
+  }
+}
+
+/* ========================================
+   打印优化样式
+   ======================================== */
+
+@media print {
+  /* 隐藏不必要的元素 */
+  .VPNav,
+  .VPSidebar,
+  .VPFooter,
+  .back-to-top,
+  .reading-progress,
+  .announcement-bar,
+  .giscus,
+  .VPDocFooter,
+  .VPLastUpdated,
+  .VPCarbonAds,
+  .doc-meta-container,
+  .article-copyright {
+    display: none !important;
+  }
+  
+  /* 重置布局 */
+  .VPContent {
+    padding: 0 !important;
+  }
+  
+  .VPDoc {
+    margin: 0 !important;
+  }
+  
+  .content-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  
+  /* 文档内容样式 */
+  .vp-doc {
+    font-size: 12pt;
+    line-height: 1.6;
+    color: #000 !important;
+    background: #fff !important;
+  }
+  
+  /* 链接样式 */
+  .vp-doc a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+  
+  .vp-doc a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+  
+  /* 代码块样式 */
+  .vp-doc div[class*="language-"] {
+    background: #f5f5f5 !important;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+  }
+  
+  .vp-doc code {
+    background: #f5f5f5 !important;
+    color: #000 !important;
+  }
+  
+  /* 标题样式 */
+  .vp-doc h1,
+  .vp-doc h2,
+  .vp-doc h3,
+  .vp-doc h4 {
+    page-break-after: avoid;
+    color: #000 !important;
+  }
+  
+  /* 图片样式 */
+  .vp-doc img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+  
+  /* 表格样式 */
+  .vp-doc table {
+    border-collapse: collapse;
+    page-break-inside: avoid;
+  }
+  
+  .vp-doc th,
+  .vp-doc td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  /* 自定义容器 */
+  .custom-block {
+    border: 1px solid #ddd !important;
+    background: #f9f9f9 !important;
+    page-break-inside: avoid;
+  }
+  
+  /* 页面分隔 */
+  .VPDoc h2 {
+    page-break-before: auto;
+  }
+  
+  /* 打印页眉页脚 */
+  @page {
+    margin: 2cm;
+    @top-center {
+      content: "Jasper Labs";
+      font-size: 10pt;
+      color: #666;
+    }
+    @bottom-center {
+      content: counter(page) " / " counter(pages);
+      font-size: 10pt;
+      color: #666;
+    }
+  }
+}
+
+/* ========================================
+   代码块复制按钮 - 保持 VitePress 默认风格
+   ======================================== */
+
+/* 仅做轻微调整，保持与主题一致 */
+.vp-doc div[class*="language-"] > button.copy {
+  /* 轻微圆角优化 */
+  border-radius: 6px !important;
+  
+  /* 悬停时品牌色 */
+  transition: all 0.2s ease !important;
+}
+
+.vp-doc div[class*="language-"] > button.copy:hover {
+  background-color: var(--vp-c-brand-soft) !important;
+}
+
+/* 复制成功状态 */
+.vp-doc div[class*="language-"] > button.copy.copied {
+  background-color: rgba(16, 185, 129, 0.1) !important;
 }

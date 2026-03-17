@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://jasper-labs.cn</id>
+    <title>Jasper Labs</title>
+    <updated>2026-03-17T11:07:50.878Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>Jasper</name>
+        <email>jasper@example.com</email>
+        <uri>https://jasper-labs.cn</uri>
+    </author>
+    <link rel="alternate" href="https://jasper-labs.cn"/>
+    <link rel="self" href="https://jasper-labs.cn/atom.xml"/>
+    <subtitle>个人知识库和博客网站，包含Python、算法、技术笔记等内容</subtitle>
+    <logo>https://jasper-labs.cn/images/logo.svg</logo>
+    <icon>https://jasper-labs.cn/images/logo.ico</icon>
+    <rights>Copyright © 2026 Jasper</rights>
+    <entry>
+        <title type="html"><![CDATA[常用工具]]></title>
+        <id>https://jasper-labs.cn/tools//</id>
+        <link href="https://jasper-labs.cn/tools//"/>
+        <updated>2026-03-17T09:46:43.830Z</updated>
+        <summary type="html"><![CDATA[精选开发工具推荐，提升效率的软件和在线服务。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[站点地图]]></title>
+        <id>https://jasper-labs.cn/others/sitemap-page/</id>
+        <link href="https://jasper-labs.cn/others/sitemap-page/"/>
+        <updated>2026-03-17T03:57:14.352Z</updated>
+        <summary type="html"><![CDATA[可视化浏览网站结构]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Untitled]]></title>
+        <id>https://jasper-labs.cn/</id>
+        <link href="https://jasper-labs.cn/"/>
+        <updated>2026-03-17T02:08:25.456Z</updated>
+        <summary type="html"><![CDATA[Untitled]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[网站更新记录]]></title>
+        <id>https://jasper-labs.cn/others/update/</id>
+        <link href="https://jasper-labs.cn/others/update/"/>
+        <updated>2026-03-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[记录站点历史更新、规划与目前支持的功能能力]]></summary>
+        <category label="其他"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python构造数据神器 Mimesis]]></title>
+        <id>https://jasper-labs.cn/python/advanced/ Python构造数据神器-mimesis/</id>
+        <link href="https://jasper-labs.cn/python/advanced/ Python构造数据神器-mimesis/"/>
+        <updated>2026-03-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Mimesis 是一个用于生成假数据的 Python 库，支持多种语言和数据类型。它的设计目标是提供一个简单而灵活的 API，以便用户能够快速生成所需的假数据。官方文档：mimesis 主要特点 + 多语言：支持47种不同国家语言 + 可扩展性：支持自定义数据生成和自定义数据处理 + 性能：比fa...]]></summary>
+        <category label="Python"/>
+        <category label="Mimesis"/>
+        <category label="数据生成"/>
+        <category label="测试"/>
+        <category label="工具"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[算法时间复杂度]]></title>
+        <id>https://jasper-labs.cn/algorithm/data-structure/算法时间复杂度/</id>
+        <link href="https://jasper-labs.cn/algorithm/data-structure/算法时间复杂度/"/>
+        <updated>2026-03-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[时间复杂度是衡量算法效率的核心指标，描述算法运行时间与输入规模的关系。它不关注具体运行时间（如毫秒数），而是关注随着输入规模 n 增大时，算法运行时间的增长趋势。 1. 评估效率： 比较不同算法在解决同一个问题时的效率,则优选择。 2. 预测性能： 预测算法在处理大规模数据时的表现。 3. 优化算法...]]></summary>
+        <category label="算法"/>
+        <category label="数据结构"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[排序算法]]></title>
+        <id>https://jasper-labs.cn/algorithm/sorting//</id>
+        <link href="https://jasper-labs.cn/algorithm/sorting//"/>
+        <updated>2026-03-16T11:08:56.829Z</updated>
+        <summary type="html"><![CDATA[冒泡、快速、归并等经典排序算法的原理与复杂度分析。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数据结构]]></title>
+        <id>https://jasper-labs.cn/algorithm/data-structure//</id>
+        <link href="https://jasper-labs.cn/algorithm/data-structure//"/>
+        <updated>2026-03-16T11:08:54.066Z</updated>
+        <summary type="html"><![CDATA[数组、链表、栈、队列、树、图等基础数据结构的原理与实现。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[文章归档]]></title>
+        <id>https://jasper-labs.cn/others/archives/</id>
+        <link href="https://jasper-labs.cn/others/archives/"/>
+        <updated>2026-03-16T08:56:57.466Z</updated>
+        <summary type="html"><![CDATA[按时间线浏览所有文章，方便查找历史内容。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[其他内容]]></title>
+        <id>https://jasper-labs.cn/others//</id>
+        <link href="https://jasper-labs.cn/others//"/>
+        <updated>2026-03-13T07:49:42.226Z</updated>
+        <summary type="html"><![CDATA[关于我、读书笔记、友情链接等内容。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python高可用Redis连接池深度封装]]></title>
+        <id>https://jasper-labs.cn/python/advanced/Python高可用Redis连接池深度封装/</id>
+        <link href="https://jasper-labs.cn/python/advanced/Python高可用Redis连接池深度封装/"/>
+        <updated>2026-03-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Redis作为高性能的内存数据库，已成为现代系统的关键基础设施。然而原生Redis客户端在复杂生产环境中暴露出诸多痛点： + 连接泄漏</...]]></summary>
+        <category label="Python"/>
+        <category label="redis"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[技术笔记]]></title>
+        <id>https://jasper-labs.cn/notes//</id>
+        <link href="https://jasper-labs.cn/notes//"/>
+        <updated>2026-03-11T09:57:55.146Z</updated>
+        <summary type="html"><![CDATA[开发过程中遇到的问题与解决方案，技术探索与心得体会。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[算法与数据结构]]></title>
+        <id>https://jasper-labs.cn/algorithm//</id>
+        <link href="https://jasper-labs.cn/algorithm//"/>
+        <updated>2026-03-11T09:57:34.055Z</updated>
+        <summary type="html"><![CDATA[深入理解算法原理，LeetCode 刷题笔记，可视化图解复杂概念。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python 学习]]></title>
+        <id>https://jasper-labs.cn/python//</id>
+        <link href="https://jasper-labs.cn/python//"/>
+        <updated>2026-03-11T09:55:35.727Z</updated>
+        <summary type="html"><![CDATA[系统学习 Python 编程，从基础语法到高级特性，包含常用库的使用教程和最佳实践。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rocky Linux 安装配置]]></title>
+        <id>https://jasper-labs.cn/notes/Rocky Linux安装配置/</id>
+        <link href="https://jasper-labs.cn/notes/Rocky Linux安装配置/"/>
+        <updated>2024-12-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Rocky Linux 完整安装配置指南，从系统下载到环境配置的详细步骤。]]></summary>
+        <category label="Linux"/>
+        <category label="Rocky Linux"/>
+        <category label="运维"/>
+        <category label="服务器"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LeetCode 001 - Two Sum]]></title>
+        <id>https://jasper-labs.cn/algorithm/leetcode/two-sum/</id>
+        <link href="https://jasper-labs.cn/algorithm/leetcode/two-sum/"/>
+        <updated>2024-02-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[LeetCode 第一题 Two Sum 的详细解析，包含 Python 和 JavaScript 多种解法。]]></summary>
+        <category label="LeetCode"/>
+        <category label="算法"/>
+        <category label="哈希表"/>
+        <category label="数组"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[代码组与阅读统计功能演示]]></title>
+        <id>https://jasper-labs.cn/notes/code-group-demo/</id>
+        <link href="https://jasper-labs.cn/notes/code-group-demo/"/>
+        <updated>2024-01-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[代码组与阅读统计功能演示]]></summary>
+        <category label="VitePress"/>
+        <category label="教程"/>
+        <category label="前端"/>
+    </entry>
+</feed>

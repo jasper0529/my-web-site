@@ -12,10 +12,17 @@ description: 关于我、读书笔记、友情链接等内容。
 <div class="card-grid">
 
 <div class="feature-card">
-  <div class="feature-icon">📖</div>
-  <h3>读书笔记</h3>
-  <p>技术书籍的阅读笔记，关键知识点提炼与思考。</p>
-  <a href="/others/readings">查看笔记 →</a>
+  <div class="feature-icon">📚</div>
+  <h3>文章归档</h3>
+  <p>按时间线浏览所有文章，方便查找历史内容。</p>
+  <a href="/others/archives">浏览归档 →</a>
+</div>
+
+<div class="feature-card">
+  <div class="feature-icon">🗺️</div>
+  <h3>站点地图</h3>
+  <p>可视化网站结构，快速了解全站内容。</p>
+  <a href="/others/sitemap-page">查看地图 →</a>
 </div>
 
 <div class="feature-card">

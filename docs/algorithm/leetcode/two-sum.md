@@ -1,6 +1,9 @@
 ---
 title: LeetCode 001 - Two Sum
+date: 2024-02-20
+tags: [LeetCode, 算法, 哈希表, 数组]
 description: LeetCode 第一题 Two Sum 的详细解析，包含 Python 和 JavaScript 多种解法。
+author: Jasper
 ---
 
 # LeetCode 001: Two Sum (两数之和)

@@ -3,12 +3,15 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const isVisible = ref(false)
 const scrollThreshold = 300
+const isClient = typeof window !== 'undefined'
 
 const handleScroll = () => {
+  if (!isClient) return
   isVisible.value = window.scrollY > scrollThreshold
 }
 
 const scrollToTop = () => {
+  if (!isClient) return
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
@@ -16,10 +19,12 @@ const scrollToTop = () => {
 }
 
 onMounted(() => {
+  if (!isClient) return
   window.addEventListener('scroll', handleScroll)
 })
 
 onUnmounted(() => {
+  if (!isClient) return
   window.removeEventListener('scroll', handleScroll)
 })
 </script>

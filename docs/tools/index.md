@@ -159,10 +159,6 @@ description: 精选开发工具推荐，提升效率的软件和在线服务。
 
 </div>
 
-## 更多工具
-
-- [软件推荐](/tools/software) - 本地软件推荐清单
-- [在线工具](/tools/online-tools) - 实用在线工具集合
 
 <style>
 .tool-grid {
