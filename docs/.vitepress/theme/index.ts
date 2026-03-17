@@ -1,5 +1,6 @@
 import { h, onMounted, watch, nextTick } from 'vue'
 import DefaultTheme from 'vitepress/theme'
+import { useRoute } from 'vitepress'
 import type { Theme } from 'vitepress'
 import mediumZoom from 'medium-zoom'
 import 'virtual:group-icons.css'
@@ -25,11 +26,28 @@ export default {
   },
   setup() {
     const isClient = typeof window !== 'undefined'
+    const route = useRoute()
+    let zoomInstance: ReturnType<typeof mediumZoom> | null = null
     // 初始化图片缩放功能
     const initZoom = () => {
-      mediumZoom('.main img', {
+      if (zoomInstance) zoomInstance.detach()
+
+      const targets = document.querySelectorAll('.vp-doc img:not(.no-zoom)')
+      if (!targets.length) return
+
+      zoomInstance = mediumZoom(targets, {
         background: 'var(--vp-c-bg)',
         margin: 24
+      })
+    }
+
+    const rerunEnhance = () => {
+      if (!isClient) return
+      nextTick(() => {
+        requestAnimationFrame(() => {
+          initZoom()
+          initCodeFold()
+        })
       })
     }
 
@@ -92,17 +110,13 @@ export default {
     }
 
     onMounted(() => {
-      initZoom()
-      initCodeFold()
+      rerunEnhance()
     })
 
     if (isClient) {
       watch(
-        () => window.location.pathname,
-        () => nextTick(() => {
-          initZoom()
-          initCodeFold()
-        })
+        () => route.path,
+        () => rerunEnhance()
       )
     }
   }

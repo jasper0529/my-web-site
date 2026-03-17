@@ -708,6 +708,67 @@
   line-height: 1.5;
 }
 
+/* 暗色模式文章可读性增强 */
+.dark .vp-doc {
+  color: var(--vp-c-text-1);
+}
+
+.dark .vp-doc p,
+.dark .vp-doc li,
+.dark .vp-doc th,
+.dark .vp-doc td {
+  color: var(--vp-c-text-1);
+}
+
+.dark .vp-doc strong {
+  color: #E2E8F0;
+}
+
+.dark .vp-doc a {
+  color: var(--vp-c-brand-1);
+}
+
+.dark .vp-doc table {
+  background: #0F172A;
+  border-color: #1F2937;
+}
+
+.dark .vp-doc blockquote {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid var(--vp-c-brand-1);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  color: var(--vp-c-text-1);
+}
+
+.dark .vp-doc code {
+  background: rgba(255, 255, 255, 0.06);
+  color: #E5E7EB;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .vp-doc div[class*='language-'] {
+  border-color: #1F2937;
+  background: #0F172A;
+}
+
+.dark .vp-doc th {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* 暗色模式修正内联颜色（旧文章中嵌入的浅色内联样式） */
+.dark .vp-doc font,
+.dark .vp-doc [style*="color:rgb(44, 44, 54"],
+.dark .vp-doc [style*="color:rgb(32, 33, 34"],
+.dark .vp-doc [style*="color:rgb(60, 60, 67"] {
+  color: var(--vp-c-text-1) !important;
+}
+
+.dark .vp-doc [style*="color:rgb(44, 44, 54"] strong,
+.dark .vp-doc [style*="color:rgb(32, 33, 34"] strong,
+.dark .vp-doc [style*="color:rgb(60, 60, 67"] strong {
+  color: #E2E8F0 !important;
+}
+
 /* ========================================
    响应式设计
    ======================================== */
