@@ -4,7 +4,7 @@
         <title>Jasper Labs</title>
         <link>https://jasper-labs.cn</link>
         <description>个人知识库和博客网站，包含Python、算法、技术笔记等内容</description>
-        <lastBuildDate>Wed, 18 Mar 2026 08:07:03 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 19 Mar 2026 03:52:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -14,6 +14,47 @@
             <link>https://jasper-labs.cn</link>
         </image>
         <copyright>Copyright © 2026 Jasper</copyright>
+        <item>
+            <title><![CDATA[无限域名邮箱打造]]></title>
+            <link>https://jasper-labs.cn/notes/无限域名邮箱打造/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/无限域名邮箱打造/</guid>
+            <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[无限域名邮箱指的是一种可以生成多个别名邮箱地址的域名邮箱，这些别名都指向同一个主邮箱，用于接收邮件。这种方式的主要优点是保护隐私、方便管理邮件和减少垃圾邮件。 无限域名邮箱的核心在于“别名”的概念。你可以为你的域名邮箱设置多个别名，例如：yourname+alias1@yourdomain.com,...]]></description>
+            <category>邮箱</category>
+        </item>
+        <item>
+            <title><![CDATA[Python生成并插入百万数据到MySQL]]></title>
+            <link>https://jasper-labs.cn/python/advanced/Python生成并插入百万数据到MySQL/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/python/advanced/Python生成并插入百万数据到MySQL/</guid>
+            <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[在进行API接口性能优化时，测试百万级别数据的处理能力是非常重要的环节。为了高效完成这一任务，本文将详细介绍如何生成大量数据并将其快速插入数据库中。 在插入数据之前，首先需要生成大量数据。Python提供了多种库和方法来生成数据，以下是几种常见的方法。 Mimesis 是一个用于生成假数据的 Pyt...]]></description>
+            <category>Python</category>
+            <category>mysql</category>
+        </item>
+        <item>
+            <title><![CDATA[Python删除列表元素]]></title>
+            <link>https://jasper-labs.cn/python/advanced/Python删除列表元素/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/python/advanced/Python删除列表元素/</guid>
+            <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[在python中删除列表中元素是比较常见的操作，删除的方法也比较多，这里列一下最常见的做法 !画板 pop() 方法用于删除指定位置的元素，默认删除最后一个元素，返回值为该元素。如果索引超出范围，将引发 IndexError 异常。 注意： + 需要知道要删除元素的指定索引位置。 + 索引超出范围，...]]></description>
+            <category>Python</category>
+        </item>
+        <item>
+            <title><![CDATA[构建生产级 Linux LVM 磁盘自动扩容]]></title>
+            <link>https://jasper-labs.cn/notes/linux/构建生产级 Linux LVM 磁盘自动扩容/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/构建生产级 Linux LVM 磁盘自动扩容/</guid>
+            <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[在当今的云和虚拟化环境中，动态调整服务器资源已是常态。然而，手动扩展磁盘分区，尤其是在使用了 LVM (Logical Volume Manager) 的 Linux 系统上，仍然是一项繁琐且有风险的任务。一个错误的命令就可能导致数据丢失。 那么，如何实现“即插即用”的磁盘扩容，让服务器在检测到新磁...]]></description>
+            <category>Linux</category>
+        </item>
+        <item>
+            <title><![CDATA[Centos7编译安装Python3.12.6]]></title>
+            <link>https://jasper-labs.cn/notes/linux/Centos7编译安装Python3.12.6/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/Centos7编译安装Python3.12.6/</guid>
+            <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[+ Centos7 + Python3.12.6 访问Python的官方网站，下载最新的源码包,这里下载的是Python3.12.6 + --enable-optimizations 选项用于启用额外的优化，使 Python 运行更快。 + --prefix 指定python安装目录 + make ...]]></description>
+            <category>技术笔记</category>
+        </item>
         <item>
             <title><![CDATA[常用工具]]></title>
             <link>https://jasper-labs.cn/tools//</link>
@@ -124,35 +165,14 @@
         </item>
         <item>
             <title><![CDATA[Rocky Linux 安装配置]]></title>
-            <link>https://jasper-labs.cn/notes/Rocky Linux安装配置/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes/Rocky Linux安装配置/</guid>
+            <link>https://jasper-labs.cn/notes/linux/Rocky Linux安装配置/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/Rocky Linux安装配置/</guid>
             <pubDate>Fri, 20 Dec 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Rocky Linux 完整安装配置指南，从系统下载到环境配置的详细步骤。]]></description>
             <category>Linux</category>
             <category>Rocky Linux</category>
             <category>运维</category>
             <category>服务器</category>
-        </item>
-        <item>
-            <title><![CDATA[LeetCode 001 - Two Sum]]></title>
-            <link>https://jasper-labs.cn/algorithm/leetcode/two-sum/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/algorithm/leetcode/two-sum/</guid>
-            <pubDate>Tue, 20 Feb 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[LeetCode 第一题 Two Sum 的详细解析，包含 Python 和 JavaScript 多种解法。]]></description>
-            <category>LeetCode</category>
-            <category>算法</category>
-            <category>哈希表</category>
-            <category>数组</category>
-        </item>
-        <item>
-            <title><![CDATA[代码组与阅读统计功能演示]]></title>
-            <link>https://jasper-labs.cn/notes/code-group-demo/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes/code-group-demo/</guid>
-            <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[代码组与阅读统计功能演示]]></description>
-            <category>VitePress</category>
-            <category>教程</category>
-            <category>前端</category>
         </item>
     </channel>
 </rss>

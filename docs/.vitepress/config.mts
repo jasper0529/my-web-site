@@ -107,6 +107,8 @@ export default defineConfig({
   
   // Markdown 配置
   markdown: {
+    // 允许渲染内联 HTML
+    html: true,
     lineNumbers: true,
     math: {
       parseInlineDollar: true,
@@ -115,8 +117,25 @@ export default defineConfig({
       inlineClose: '$',
     },
     config(md) {
+      md.set({ html: true })
       md.use(groupIconMdPlugin)
       md.use(normalizeLooseInlineMath)
+
+      // 允许在内联代码反引号中直接渲染特定的 HTML（如 `<font ...>text</font>`）
+      const defaultCodeInline = md.renderer.rules.code_inline
+      md.renderer.rules.code_inline = (tokens, idx, options, env, self) => {
+        const content = tokens[idx].content
+        const isFontHtml = /<font\s+style=.*?>[\s\S]*?<\/font>/i.test(content)
+
+        if (isFontHtml) {
+          // 直接输出原始 HTML，跳过默认的 <code> 包裹与转义
+          return content
+        }
+
+        return defaultCodeInline
+          ? defaultCodeInline(tokens, idx, options, env, self)
+          : self.renderToken(tokens, idx, options)
+      }
     },
   },
 

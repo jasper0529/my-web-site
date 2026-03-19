@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-03-18T08:07:03.019Z</updated>
+    <updated>2026-03-19T03:52:37.343Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -15,6 +15,47 @@
     <logo>https://jasper-labs.cn/images/logo.svg</logo>
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
+    <entry>
+        <title type="html"><![CDATA[无限域名邮箱打造]]></title>
+        <id>https://jasper-labs.cn/notes/无限域名邮箱打造/</id>
+        <link href="https://jasper-labs.cn/notes/无限域名邮箱打造/"/>
+        <updated>2026-03-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[无限域名邮箱指的是一种可以生成多个别名邮箱地址的域名邮箱，这些别名都指向同一个主邮箱，用于接收邮件。这种方式的主要优点是保护隐私、方便管理邮件和减少垃圾邮件。 无限域名邮箱的核心在于“别名”的概念。你可以为你的域名邮箱设置多个别名，例如：yourname+alias1@yourdomain.com,...]]></summary>
+        <category label="邮箱"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python生成并插入百万数据到MySQL]]></title>
+        <id>https://jasper-labs.cn/python/advanced/Python生成并插入百万数据到MySQL/</id>
+        <link href="https://jasper-labs.cn/python/advanced/Python生成并插入百万数据到MySQL/"/>
+        <updated>2026-03-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[在进行API接口性能优化时，测试百万级别数据的处理能力是非常重要的环节。为了高效完成这一任务，本文将详细介绍如何生成大量数据并将其快速插入数据库中。 在插入数据之前，首先需要生成大量数据。Python提供了多种库和方法来生成数据，以下是几种常见的方法。 Mimesis 是一个用于生成假数据的 Pyt...]]></summary>
+        <category label="Python"/>
+        <category label="mysql"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python删除列表元素]]></title>
+        <id>https://jasper-labs.cn/python/advanced/Python删除列表元素/</id>
+        <link href="https://jasper-labs.cn/python/advanced/Python删除列表元素/"/>
+        <updated>2026-03-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[在python中删除列表中元素是比较常见的操作，删除的方法也比较多，这里列一下最常见的做法 !画板 pop() 方法用于删除指定位置的元素，默认删除最后一个元素，返回值为该元素。如果索引超出范围，将引发 IndexError 异常。 注意： + 需要知道要删除元素的指定索引位置。 + 索引超出范围，...]]></summary>
+        <category label="Python"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[构建生产级 Linux LVM 磁盘自动扩容]]></title>
+        <id>https://jasper-labs.cn/notes/linux/构建生产级 Linux LVM 磁盘自动扩容/</id>
+        <link href="https://jasper-labs.cn/notes/linux/构建生产级 Linux LVM 磁盘自动扩容/"/>
+        <updated>2026-03-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[在当今的云和虚拟化环境中，动态调整服务器资源已是常态。然而，手动扩展磁盘分区，尤其是在使用了 LVM (Logical Volume Manager) 的 Linux 系统上，仍然是一项繁琐且有风险的任务。一个错误的命令就可能导致数据丢失。 那么，如何实现“即插即用”的磁盘扩容，让服务器在检测到新磁...]]></summary>
+        <category label="Linux"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Centos7编译安装Python3.12.6]]></title>
+        <id>https://jasper-labs.cn/notes/linux/Centos7编译安装Python3.12.6/</id>
+        <link href="https://jasper-labs.cn/notes/linux/Centos7编译安装Python3.12.6/"/>
+        <updated>2026-03-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[+ Centos7 + Python3.12.6 访问Python的官方网站，下载最新的源码包,这里下载的是Python3.12.6 + --enable-optimizations 选项用于启用额外的优化，使 Python 运行更快。 + --prefix 指定python安装目录 + make ...]]></summary>
+        <category label="技术笔记"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[常用工具]]></title>
         <id>https://jasper-labs.cn/tools//</id>
@@ -125,34 +166,13 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Rocky Linux 安装配置]]></title>
-        <id>https://jasper-labs.cn/notes/Rocky Linux安装配置/</id>
-        <link href="https://jasper-labs.cn/notes/Rocky Linux安装配置/"/>
+        <id>https://jasper-labs.cn/notes/linux/Rocky Linux安装配置/</id>
+        <link href="https://jasper-labs.cn/notes/linux/Rocky Linux安装配置/"/>
         <updated>2024-12-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Rocky Linux 完整安装配置指南，从系统下载到环境配置的详细步骤。]]></summary>
         <category label="Linux"/>
         <category label="Rocky Linux"/>
         <category label="运维"/>
         <category label="服务器"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LeetCode 001 - Two Sum]]></title>
-        <id>https://jasper-labs.cn/algorithm/leetcode/two-sum/</id>
-        <link href="https://jasper-labs.cn/algorithm/leetcode/two-sum/"/>
-        <updated>2024-02-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[LeetCode 第一题 Two Sum 的详细解析，包含 Python 和 JavaScript 多种解法。]]></summary>
-        <category label="LeetCode"/>
-        <category label="算法"/>
-        <category label="哈希表"/>
-        <category label="数组"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[代码组与阅读统计功能演示]]></title>
-        <id>https://jasper-labs.cn/notes/code-group-demo/</id>
-        <link href="https://jasper-labs.cn/notes/code-group-demo/"/>
-        <updated>2024-01-15T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[代码组与阅读统计功能演示]]></summary>
-        <category label="VitePress"/>
-        <category label="教程"/>
-        <category label="前端"/>
     </entry>
 </feed>

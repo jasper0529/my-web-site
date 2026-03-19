@@ -4,6 +4,12 @@ import { useData } from 'vitepress'
 
 const { page, frontmatter } = useData()
 
+// 通用名称格式化（避免每个目录手动硬编码）
+const formatSegmentName = (segment: string) =>
+  decodeURIComponent(segment)
+    .replace(/[-_]/g, ' ')
+    .trim()
+
 // 定义路径映射
 const pathMap: Record<string, { name: string, icon: string }> = {
   'python': { name: 'Python 学习', icon: '🐍' },
@@ -37,6 +43,7 @@ const breadcrumbs = computed(() => {
   
   parts.forEach((part, index) => {
     accumulatedPath += '/' + part
+    const isLast = index === parts.length - 1
     
     // 跳过 index 文件
     if (part === 'index' && index === parts.length - 1) {
@@ -50,13 +57,19 @@ const breadcrumbs = computed(() => {
       result.push({
         name: info.name,
         icon: info.icon,
-        path: index === parts.length - 1 && parts[parts.length - 1] !== 'index' 
-          ? undefined 
-          : accumulatedPath + '/'
+        path: isLast ? undefined : accumulatedPath + '/'
+      })
+      return
+    }
+
+    // 未配置映射：目录使用格式化目录名并可点击，文件使用 frontmatter 标题
+    if (!isLast) {
+      result.push({
+        name: formatSegmentName(part),
+        path: accumulatedPath + '/'
       })
     } else {
-      // 如果是文章文件名，使用 frontmatter 中的标题
-      const title = frontmatter.value.title || part
+      const title = frontmatter.value.title || formatSegmentName(part)
       result.push({
         name: title,
         path: undefined
