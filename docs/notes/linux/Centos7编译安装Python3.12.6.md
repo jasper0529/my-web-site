@@ -1,7 +1,7 @@
 ---
 title: Centos7编译安装Python3.12.6
 date: 2026-03-19
-tags: ['linux']
+tags: ['Linux']
 description: + Centos7 + Python3.12.6 访问Python的官方网站，下载最新的源码包,这里下载的是Python3.12.6 + --enable-optimizations 选项用于启用额外的优化，使 Python 运行更快。 + --prefix 指定python安装目录 + make ...
 ---
 

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-03-19T03:52:37.343Z</updated>
+    <updated>2026-03-20T08:42:31.121Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -15,6 +15,30 @@
     <logo>https://jasper-labs.cn/images/logo.svg</logo>
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
+    <entry>
+        <title type="html"><![CDATA[Linux常用命令]]></title>
+        <id>https://jasper-labs.cn/notes/linux/Linux常用命令/</id>
+        <link href="https://jasper-labs.cn/notes/linux/Linux常用命令/"/>
+        <updated>2026-03-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Linux常用命令...]]></summary>
+        <category label="Linux"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Centos7升级GCC版本]]></title>
+        <id>https://jasper-labs.cn/notes/linux/Centos7升级GCC版本/</id>
+        <link href="https://jasper-labs.cn/notes/linux/Centos7升级GCC版本/"/>
+        <updated>2026-03-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[在 CentOS 7 上升级 GCC 版本可以通过多种方法实现, 这里使用个人认为最简单的方式升级，CentOS SCL + Centos7 + gcc4.8.5 ->gcc8.3.1 由于scl源在国外，有时候安装很慢，这里把源换成国内阿里源 + 修改CentOS-SCLo-scl.repo 内容...]]></summary>
+        <category label="Linux"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ARM架构下编译安装Nmap7.95]]></title>
+        <id>https://jasper-labs.cn/notes/linux/ARM架构下编译安装nmap7.95/</id>
+        <link href="https://jasper-labs.cn/notes/linux/ARM架构下编译安装nmap7.95/"/>
+        <updated>2026-03-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[从 nmap 官方网站下载源代码并在 ARM 平台编译安装 nmap-7.95 的全过程，含常见依赖问题处理]]></summary>
+        <category label="Linux"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[无限域名邮箱打造]]></title>
         <id>https://jasper-labs.cn/notes/无限域名邮箱打造/</id>
@@ -54,7 +78,7 @@
         <link href="https://jasper-labs.cn/notes/linux/Centos7编译安装Python3.12.6/"/>
         <updated>2026-03-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[+ Centos7 + Python3.12.6 访问Python的官方网站，下载最新的源码包,这里下载的是Python3.12.6 + --enable-optimizations 选项用于启用额外的优化，使 Python 运行更快。 + --prefix 指定python安装目录 + make ...]]></summary>
-        <category label="技术笔记"/>
+        <category label="Linux"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[常用工具]]></title>
@@ -149,30 +173,5 @@
         <link href="https://jasper-labs.cn/notes//"/>
         <updated>2026-03-11T09:57:55.146Z</updated>
         <summary type="html"><![CDATA[开发过程中遇到的问题与解决方案，技术探索与心得体会。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[算法与数据结构]]></title>
-        <id>https://jasper-labs.cn/algorithm//</id>
-        <link href="https://jasper-labs.cn/algorithm//"/>
-        <updated>2026-03-11T09:57:34.055Z</updated>
-        <summary type="html"><![CDATA[深入理解算法原理，LeetCode 刷题笔记，可视化图解复杂概念。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python 学习]]></title>
-        <id>https://jasper-labs.cn/python//</id>
-        <link href="https://jasper-labs.cn/python//"/>
-        <updated>2026-03-11T09:55:35.727Z</updated>
-        <summary type="html"><![CDATA[系统学习 Python 编程，从基础语法到高级特性，包含常用库的使用教程和最佳实践。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rocky Linux 安装配置]]></title>
-        <id>https://jasper-labs.cn/notes/linux/Rocky Linux安装配置/</id>
-        <link href="https://jasper-labs.cn/notes/linux/Rocky Linux安装配置/"/>
-        <updated>2024-12-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Rocky Linux 完整安装配置指南，从系统下载到环境配置的详细步骤。]]></summary>
-        <category label="Linux"/>
-        <category label="Rocky Linux"/>
-        <category label="运维"/>
-        <category label="服务器"/>
     </entry>
 </feed>

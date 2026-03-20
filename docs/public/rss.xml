@@ -4,7 +4,7 @@
         <title>Jasper Labs</title>
         <link>https://jasper-labs.cn</link>
         <description>个人知识库和博客网站，包含Python、算法、技术笔记等内容</description>
-        <lastBuildDate>Thu, 19 Mar 2026 03:52:37 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 20 Mar 2026 08:42:31 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -14,6 +14,30 @@
             <link>https://jasper-labs.cn</link>
         </image>
         <copyright>Copyright © 2026 Jasper</copyright>
+        <item>
+            <title><![CDATA[Linux常用命令]]></title>
+            <link>https://jasper-labs.cn/notes/linux/Linux常用命令/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/Linux常用命令/</guid>
+            <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Linux常用命令...]]></description>
+            <category>Linux</category>
+        </item>
+        <item>
+            <title><![CDATA[Centos7升级GCC版本]]></title>
+            <link>https://jasper-labs.cn/notes/linux/Centos7升级GCC版本/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/Centos7升级GCC版本/</guid>
+            <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[在 CentOS 7 上升级 GCC 版本可以通过多种方法实现, 这里使用个人认为最简单的方式升级，CentOS SCL + Centos7 + gcc4.8.5 ->gcc8.3.1 由于scl源在国外，有时候安装很慢，这里把源换成国内阿里源 + 修改CentOS-SCLo-scl.repo 内容...]]></description>
+            <category>Linux</category>
+        </item>
+        <item>
+            <title><![CDATA[ARM架构下编译安装Nmap7.95]]></title>
+            <link>https://jasper-labs.cn/notes/linux/ARM架构下编译安装nmap7.95/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/ARM架构下编译安装nmap7.95/</guid>
+            <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[从 nmap 官方网站下载源代码并在 ARM 平台编译安装 nmap-7.95 的全过程，含常见依赖问题处理]]></description>
+            <category>Linux</category>
+        </item>
         <item>
             <title><![CDATA[无限域名邮箱打造]]></title>
             <link>https://jasper-labs.cn/notes/无限域名邮箱打造/</link>
@@ -53,7 +77,7 @@
             <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/Centos7编译安装Python3.12.6/</guid>
             <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[+ Centos7 + Python3.12.6 访问Python的官方网站，下载最新的源码包,这里下载的是Python3.12.6 + --enable-optimizations 选项用于启用额外的优化，使 Python 运行更快。 + --prefix 指定python安装目录 + make ...]]></description>
-            <category>技术笔记</category>
+            <category>Linux</category>
         </item>
         <item>
             <title><![CDATA[常用工具]]></title>
@@ -148,31 +172,6 @@
             <guid isPermaLink="false">https://jasper-labs.cn/notes//</guid>
             <pubDate>Wed, 11 Mar 2026 09:57:55 GMT</pubDate>
             <description><![CDATA[开发过程中遇到的问题与解决方案，技术探索与心得体会。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[算法与数据结构]]></title>
-            <link>https://jasper-labs.cn/algorithm//</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/algorithm//</guid>
-            <pubDate>Wed, 11 Mar 2026 09:57:34 GMT</pubDate>
-            <description><![CDATA[深入理解算法原理，LeetCode 刷题笔记，可视化图解复杂概念。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Python 学习]]></title>
-            <link>https://jasper-labs.cn/python//</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/python//</guid>
-            <pubDate>Wed, 11 Mar 2026 09:55:35 GMT</pubDate>
-            <description><![CDATA[系统学习 Python 编程，从基础语法到高级特性，包含常用库的使用教程和最佳实践。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Rocky Linux 安装配置]]></title>
-            <link>https://jasper-labs.cn/notes/linux/Rocky Linux安装配置/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/Rocky Linux安装配置/</guid>
-            <pubDate>Fri, 20 Dec 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Rocky Linux 完整安装配置指南，从系统下载到环境配置的详细步骤。]]></description>
-            <category>Linux</category>
-            <category>Rocky Linux</category>
-            <category>运维</category>
-            <category>服务器</category>
         </item>
     </channel>
 </rss>

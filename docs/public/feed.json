@@ -11,6 +11,36 @@
     },
     "items": [
         {
+            "id": "https://jasper-labs.cn/notes/linux/Linux常用命令/",
+            "content_html": "Linux常用命令...",
+            "url": "https://jasper-labs.cn/notes/linux/Linux常用命令/",
+            "title": "Linux常用命令",
+            "date_modified": "2026-03-20T00:00:00.000Z",
+            "tags": [
+                "Linux"
+            ]
+        },
+        {
+            "id": "https://jasper-labs.cn/notes/linux/Centos7升级GCC版本/",
+            "content_html": "在 CentOS 7 上升级 GCC 版本可以通过多种方法实现, 这里使用个人认为最简单的方式升级，CentOS SCL + Centos7 + gcc4.8.5 ->gcc8.3.1 由于scl源在国外，有时候安装很慢，这里把源换成国内阿里源 + 修改CentOS-SCLo-scl.repo 内容...",
+            "url": "https://jasper-labs.cn/notes/linux/Centos7升级GCC版本/",
+            "title": "Centos7升级GCC版本",
+            "date_modified": "2026-03-20T00:00:00.000Z",
+            "tags": [
+                "Linux"
+            ]
+        },
+        {
+            "id": "https://jasper-labs.cn/notes/linux/ARM架构下编译安装nmap7.95/",
+            "content_html": "从 nmap 官方网站下载源代码并在 ARM 平台编译安装 nmap-7.95 的全过程，含常见依赖问题处理",
+            "url": "https://jasper-labs.cn/notes/linux/ARM架构下编译安装nmap7.95/",
+            "title": "ARM架构下编译安装Nmap7.95",
+            "date_modified": "2026-03-20T00:00:00.000Z",
+            "tags": [
+                "Linux"
+            ]
+        },
+        {
             "id": "https://jasper-labs.cn/notes/无限域名邮箱打造/",
             "content_html": "无限域名邮箱指的是一种可以生成多个别名邮箱地址的域名邮箱，这些别名都指向同一个主邮箱，用于接收邮件。这种方式的主要优点是保护隐私、方便管理邮件和减少垃圾邮件。 无限域名邮箱的核心在于“别名”的概念。你可以为你的域名邮箱设置多个别名，例如：yourname+alias1@yourdomain.com,...",
             "url": "https://jasper-labs.cn/notes/无限域名邮箱打造/",
@@ -58,7 +88,7 @@
             "title": "Centos7编译安装Python3.12.6",
             "date_modified": "2026-03-19T00:00:00.000Z",
             "tags": [
-                "技术笔记"
+                "Linux"
             ]
         },
         {
@@ -170,35 +200,6 @@
             "title": "技术笔记",
             "date_modified": "2026-03-11T09:57:55.146Z",
             "tags": []
-        },
-        {
-            "id": "https://jasper-labs.cn/algorithm//",
-            "content_html": "深入理解算法原理，LeetCode 刷题笔记，可视化图解复杂概念。",
-            "url": "https://jasper-labs.cn/algorithm//",
-            "title": "算法与数据结构",
-            "date_modified": "2026-03-11T09:57:34.055Z",
-            "tags": []
-        },
-        {
-            "id": "https://jasper-labs.cn/python//",
-            "content_html": "系统学习 Python 编程，从基础语法到高级特性，包含常用库的使用教程和最佳实践。",
-            "url": "https://jasper-labs.cn/python//",
-            "title": "Python 学习",
-            "date_modified": "2026-03-11T09:55:35.727Z",
-            "tags": []
-        },
-        {
-            "id": "https://jasper-labs.cn/notes/linux/Rocky Linux安装配置/",
-            "content_html": "Rocky Linux 完整安装配置指南，从系统下载到环境配置的详细步骤。",
-            "url": "https://jasper-labs.cn/notes/linux/Rocky Linux安装配置/",
-            "title": "Rocky Linux 安装配置",
-            "date_modified": "2024-12-20T00:00:00.000Z",
-            "tags": [
-                "Linux",
-                "Rocky Linux",
-                "运维",
-                "服务器"
-            ]
         }
     ]
 }
