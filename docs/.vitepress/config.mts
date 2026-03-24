@@ -61,6 +61,14 @@ function normalizeLooseInlineMath(md) {
   })
 }
 
+function normalizeFontStrong(md) {
+  const fontStrongPattern = /\*\*<font([^>]*)>([\s\S]*?)<\/font>\*\*/g
+
+  md.core.ruler.before('normalize', 'normalize-font-strong', (state) => {
+    state.src = state.src.replace(fontStrongPattern, '<strong><font$1>$2</font></strong>')
+  })
+}
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Jasper Labs",
@@ -120,6 +128,7 @@ export default defineConfig({
       md.set({ html: true })
       md.use(groupIconMdPlugin)
       md.use(normalizeLooseInlineMath)
+      md.use(normalizeFontStrong)
 
       // 允许在内联代码反引号中直接渲染特定的 HTML（如 `<font ...>text</font>`）
       const defaultCodeInline = md.renderer.rules.code_inline
@@ -178,6 +187,7 @@ export default defineConfig({
       { text: '🏠 首页', link: '/' },
       { text: '🐍 Python', link: '/python/', activeMatch: '/python/' },
       { text: '🎯 算法', link: '/algorithm/', activeMatch: '/algorithm/' },
+      { text: '🤖 AI 专题', link: '/ai/', activeMatch: '/ai/' },
       { text: '📝 技术笔记', link: '/notes/', activeMatch: '/notes/' },
       { text: '🏷️ 标签', link: '/tags/', activeMatch: '/tags/' },
       { text: '🔧 常用工具', link: '/tools/', activeMatch: '/tools/' },

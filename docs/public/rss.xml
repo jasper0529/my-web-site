@@ -4,7 +4,7 @@
         <title>Jasper Labs</title>
         <link>https://jasper-labs.cn</link>
         <description>个人知识库和博客网站，包含Python、算法、技术笔记等内容</description>
-        <lastBuildDate>Fri, 20 Mar 2026 08:42:31 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Mar 2026 11:16:06 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -14,6 +14,29 @@
             <link>https://jasper-labs.cn</link>
         </image>
         <copyright>Copyright © 2026 Jasper</copyright>
+        <item>
+            <title><![CDATA[0、Vibe Coding简介]]></title>
+            <link>https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/</guid>
+            <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Vibe Coding（国内圈子里常开玩笑叫它“氛围编程”或者“感觉流编程”），这词听起来是不是挺玄乎？脑海里是不是浮现出：程序员点着香薰、放着 Lo-Fi 纯音乐、不用看屏幕就能盲打敲键盘的画面？ 大错特错！它其实是近期最硬核、最具颠覆性的软件开发新姿势。Vibe Coding（氛围编程） 这个词...]]></description>
+            <category>AI</category>
+            <category>Vibe Coding</category>
+        </item>
+        <item>
+            <title><![CDATA[AI 专题导航]]></title>
+            <link>https://jasper-labs.cn/ai//</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/ai//</guid>
+            <pubDate>Mon, 23 Mar 2026 09:42:13 GMT</pubDate>
+            <description><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的示例导航页，便于后续扩展与收录内容。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Untitled]]></title>
+            <link>https://jasper-labs.cn/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/</guid>
+            <pubDate>Mon, 23 Mar 2026 09:36:30 GMT</pubDate>
+            <description><![CDATA[Untitled]]></description>
+        </item>
         <item>
             <title><![CDATA[Linux常用命令]]></title>
             <link>https://jasper-labs.cn/notes/linux/Linux常用命令/</link>
@@ -94,13 +117,6 @@
             <description><![CDATA[可视化浏览网站结构]]></description>
         </item>
         <item>
-            <title><![CDATA[Untitled]]></title>
-            <link>https://jasper-labs.cn/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/</guid>
-            <pubDate>Tue, 17 Mar 2026 02:08:25 GMT</pubDate>
-            <description><![CDATA[Untitled]]></description>
-        </item>
-        <item>
             <title><![CDATA[网站更新记录]]></title>
             <link>https://jasper-labs.cn/others/update/</link>
             <guid isPermaLink="false">https://jasper-labs.cn/others/update/</guid>
@@ -156,22 +172,6 @@
             <guid isPermaLink="false">https://jasper-labs.cn/others//</guid>
             <pubDate>Fri, 13 Mar 2026 07:49:42 GMT</pubDate>
             <description><![CDATA[关于我、读书笔记、友情链接等内容。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Python高可用Redis连接池深度封装]]></title>
-            <link>https://jasper-labs.cn/python/advanced/Python高可用Redis连接池深度封装/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/python/advanced/Python高可用Redis连接池深度封装/</guid>
-            <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Redis作为高性能的内存数据库，已成为现代系统的关键基础设施。然而原生Redis客户端在复杂生产环境中暴露出诸多痛点： + 连接泄漏</...]]></description>
-            <category>Python</category>
-            <category>redis</category>
-        </item>
-        <item>
-            <title><![CDATA[技术笔记]]></title>
-            <link>https://jasper-labs.cn/notes//</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes//</guid>
-            <pubDate>Wed, 11 Mar 2026 09:57:55 GMT</pubDate>
-            <description><![CDATA[开发过程中遇到的问题与解决方案，技术探索与心得体会。]]></description>
         </item>
     </channel>
 </rss>

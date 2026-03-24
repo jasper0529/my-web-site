@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-03-20T08:42:31.121Z</updated>
+    <updated>2026-03-24T11:16:06.968Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -15,6 +15,29 @@
     <logo>https://jasper-labs.cn/images/logo.svg</logo>
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
+    <entry>
+        <title type="html"><![CDATA[0、Vibe Coding简介]]></title>
+        <id>https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/</id>
+        <link href="https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/"/>
+        <updated>2026-03-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Vibe Coding（国内圈子里常开玩笑叫它“氛围编程”或者“感觉流编程”），这词听起来是不是挺玄乎？脑海里是不是浮现出：程序员点着香薰、放着 Lo-Fi 纯音乐、不用看屏幕就能盲打敲键盘的画面？ 大错特错！它其实是近期最硬核、最具颠覆性的软件开发新姿势。Vibe Coding（氛围编程） 这个词...]]></summary>
+        <category label="AI"/>
+        <category label="Vibe Coding"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI 专题导航]]></title>
+        <id>https://jasper-labs.cn/ai//</id>
+        <link href="https://jasper-labs.cn/ai//"/>
+        <updated>2026-03-23T09:42:13.794Z</updated>
+        <summary type="html"><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的示例导航页，便于后续扩展与收录内容。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Untitled]]></title>
+        <id>https://jasper-labs.cn/</id>
+        <link href="https://jasper-labs.cn/"/>
+        <updated>2026-03-23T09:36:30.785Z</updated>
+        <summary type="html"><![CDATA[Untitled]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Linux常用命令]]></title>
         <id>https://jasper-labs.cn/notes/linux/Linux常用命令/</id>
@@ -95,13 +118,6 @@
         <summary type="html"><![CDATA[可视化浏览网站结构]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Untitled]]></title>
-        <id>https://jasper-labs.cn/</id>
-        <link href="https://jasper-labs.cn/"/>
-        <updated>2026-03-17T02:08:25.456Z</updated>
-        <summary type="html"><![CDATA[Untitled]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[网站更新记录]]></title>
         <id>https://jasper-labs.cn/others/update/</id>
         <link href="https://jasper-labs.cn/others/update/"/>
@@ -157,21 +173,5 @@
         <link href="https://jasper-labs.cn/others//"/>
         <updated>2026-03-13T07:49:42.226Z</updated>
         <summary type="html"><![CDATA[关于我、读书笔记、友情链接等内容。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python高可用Redis连接池深度封装]]></title>
-        <id>https://jasper-labs.cn/python/advanced/Python高可用Redis连接池深度封装/</id>
-        <link href="https://jasper-labs.cn/python/advanced/Python高可用Redis连接池深度封装/"/>
-        <updated>2026-03-12T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Redis作为高性能的内存数据库，已成为现代系统的关键基础设施。然而原生Redis客户端在复杂生产环境中暴露出诸多痛点： + 连接泄漏</...]]></summary>
-        <category label="Python"/>
-        <category label="redis"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[技术笔记]]></title>
-        <id>https://jasper-labs.cn/notes//</id>
-        <link href="https://jasper-labs.cn/notes//"/>
-        <updated>2026-03-11T09:57:55.146Z</updated>
-        <summary type="html"><![CDATA[开发过程中遇到的问题与解决方案，技术探索与心得体会。]]></summary>
     </entry>
 </feed>

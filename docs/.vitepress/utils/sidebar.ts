@@ -25,6 +25,7 @@ const categoryTitles: Record<string, string> = {
   'notes': '技术笔记',
   'tools': '常用工具',
   'others': '其他内容',
+  'ai': 'AI 专题',
   'basics': '基础',
   'advanced': '进阶特性',
   'libraries': '常用库',
@@ -188,7 +189,7 @@ export function generateSidebar(): SidebarConfig {
   const sidebar: SidebarConfig = {}
   
   // 主要章节
-  const sections = ['python', 'algorithm', 'notes', 'tools', 'others']
+  const sections = ['python', 'algorithm', 'notes', 'tools', 'others', 'ai']
   
   for (const section of sections) {
     const items = generateSidebarForPath(section)

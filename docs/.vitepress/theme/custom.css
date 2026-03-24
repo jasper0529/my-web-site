@@ -708,6 +708,18 @@
   line-height: 1.5;
 }
 
+/* 兼容 <font> 标签与内联颜色样式 */
+.vp-doc font {
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+
+.vp-doc strong font,
+.vp-doc font strong {
+  font-weight: 700;
+}
+
 /* 暗色模式文章可读性增强 */
 .dark .vp-doc {
   color: var(--vp-c-text-1);

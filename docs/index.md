@@ -14,6 +14,9 @@ hero:
       - theme: alt
         text: 最新文章
         link: /others/archives
+      - theme: alt
+        text: AI 专题导航
+        link: /ai/
 
 features:
   - icon: 🐍
@@ -63,6 +66,44 @@ const hotTagEntries = Array.from(tagCountMap.entries())
 
 const hotTags = hotTagEntries.map(([tag]) => tag)
 const tagStats = Object.fromEntries(hotTagEntries)
+
+const aiTopics = [
+  {
+    icon: '🤖',
+    title: '大模型基础',
+    desc: 'Prompt、RAG、向量检索与知识库构建的入门与最佳实践。',
+    link: '/ai/#大模型基础',
+    items: ['Prompt 工程', 'RAG 管线', '向量数据库']
+  },
+  {
+    icon: '🧭',
+    title: '智能体与编排',
+    desc: 'Agent 框架、工作流编排与复杂任务拆解案例。',
+    link: '/ai/#智能体与编排',
+    items: ['Agent 设计', '函数调用', '多步工作流']
+  },
+  {
+    icon: '🎨',
+    title: 'AIGC 生成',
+    desc: '文本、图片、音频的生成式应用与提示模板策略。',
+    link: '/ai/#aigc-生成',
+    items: ['文生图', '多模态', '提示模板']
+  },
+  {
+    icon: '🛠️',
+    title: '工程化与部署',
+    desc: '服务化部署、缓存加速、观测与安全防护全链路。',
+    link: '/ai/#工程化与部署',
+    items: ['API 网关', '缓存与检索', '安全防护']
+  },
+  {
+    icon: '📊',
+    title: '评测与优化',
+    desc: '质量评测、对齐调优与数据迭代的方法论。',
+    link: '/ai/#评测与优化',
+    items: ['自动化评测', '对齐与偏见', '数据迭代']
+  }
+]
 </script>
 
 <section class="home-section">
@@ -85,6 +126,24 @@ const tagStats = Object.fromEntries(hotTagEntries)
 
 <section class="home-section">
   <div class="section-header">
+    <p class="section-eyebrow">AI</p>
+    <h2>AI 专题导航</h2>
+    <p class="section-desc">覆盖大模型、RAG、Agent、AIGC、工程化与评测的专题入口，便于快速定位内容。</p>
+  </div>
+  <div class="ai-grid">
+    <a v-for="topic in aiTopics" :key="topic.title" class="ai-card" :href="topic.link">
+      <div class="ai-card-icon">{{ topic.icon }}</div>
+      <div class="ai-card-title">{{ topic.title }}</div>
+      <p class="ai-card-desc">{{ topic.desc }}</p>
+      <ul class="ai-card-list">
+        <li v-for="item in topic.items" :key="item">{{ item }}</li>
+      </ul>
+    </a>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="section-header">
     <p class="section-eyebrow">Hot Topics</p>
     <h2>热门标签</h2>
     <p class="section-desc">统计所有文章的标签出现频次，优先展示最常访问的主题方向。</p>
@@ -96,5 +155,53 @@ const tagStats = Object.fromEntries(hotTagEntries)
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+}
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.ai-card {
+  display: block;
+  padding: 16px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.ai-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+.ai-card-icon {
+  font-size: 24px;
+}
+
+.ai-card-title {
+  margin: 8px 0 4px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.ai-card-desc {
+  margin: 0 0 8px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+}
+
+.ai-card-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--vp-c-text-1);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ai-card-list li {
+  list-style: disc;
 }
 </style>
