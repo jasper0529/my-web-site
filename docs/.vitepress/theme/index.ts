@@ -13,6 +13,7 @@ import ToolCard from '../components/ToolCard.vue'
 import FeatureCard from '../components/FeatureCard.vue'
 import TagList from '../components/TagList.vue'
 import Layout from '../components/Layout.vue'
+import PromptLibrary from '../components/PromptLibrary.vue'
 
 export default {
   extends: DefaultTheme,
@@ -23,6 +24,7 @@ export default {
     app.component('ToolCard', ToolCard)
     app.component('FeatureCard', FeatureCard)
     app.component('TagList', TagList)
+    app.component('PromptLibrary', PromptLibrary)
   },
   setup() {
     const isClient = typeof window !== 'undefined'

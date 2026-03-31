@@ -190,6 +190,7 @@ export default defineConfig({
       { text: '🤖 AI 专题', link: '/ai/', activeMatch: '/ai/' },
       { text: '📝 技术笔记', link: '/notes/', activeMatch: '/notes/' },
       { text: '🏷️ 标签', link: '/tags/', activeMatch: '/tags/' },
+      { text: '💡 提示词库', link: '/prompts/', activeMatch: '/prompts/' },
       { text: '🔧 常用工具', link: '/tools/', activeMatch: '/tools/' },
       {
         text: '📋 更多',

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-03-24T12:32:53.380Z</updated>
+    <updated>2026-03-31T09:09:40.168Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -16,6 +16,28 @@
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
     <entry>
+        <title type="html"><![CDATA[Prompt 提示词库]]></title>
+        <id>https://jasper-labs.cn/prompts//</id>
+        <link href="https://jasper-labs.cn/prompts//"/>
+        <updated>2026-03-31T02:56:24.788Z</updated>
+        <summary type="html"><![CDATA[精选 AI 提示词集合，助你高效使用 AI 工具。涵盖写作、编程、数据分析、学习等多个领域。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI 专题导航]]></title>
+        <id>https://jasper-labs.cn/ai//</id>
+        <link href="https://jasper-labs.cn/ai//"/>
+        <updated>2026-03-30T07:06:19.320Z</updated>
+        <summary type="html"><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的示例导航页，便于后续扩展与收录内容。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vibe Coding 技术基础与前置知识全景指南]]></title>
+        <id>https://jasper-labs.cn/ai/vibe coding/1、Vibe Coding技术基础与前置知识/</id>
+        <link href="https://jasper-labs.cn/ai/vibe coding/1、Vibe Coding技术基础与前置知识/"/>
+        <updated>2026-03-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[从大语言模型（LLM）的底层逻辑到 Agent 智能体的实战驾驭，一文带你摸透 Vibe Coding 时代的核心心法与硬核前置知识。]]></summary>
+        <category label="Vibe Coding"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[0、Vibe Coding简介]]></title>
         <id>https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/</id>
         <link href="https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/"/>
@@ -23,13 +45,6 @@
         <summary type="html"><![CDATA[Vibe Coding（国内圈子里常开玩笑叫它“氛围编程”或者“感觉流编程”），这词听起来是不是挺玄乎？脑海里是不是浮现出：程序员点着香薰、放着 Lo-Fi 纯音乐、不用看屏幕就能盲打敲键盘的画面？ 大错特错！它其实是近期最硬核、最具颠覆性的软件开发新姿势。Vibe Coding（氛围编程） 这个词...]]></summary>
         <category label="AI"/>
         <category label="Vibe Coding"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AI 专题导航]]></title>
-        <id>https://jasper-labs.cn/ai//</id>
-        <link href="https://jasper-labs.cn/ai//"/>
-        <updated>2026-03-23T09:42:13.794Z</updated>
-        <summary type="html"><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的示例导航页，便于后续扩展与收录内容。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Untitled]]></title>
@@ -159,19 +174,5 @@
         <link href="https://jasper-labs.cn/algorithm/data-structure//"/>
         <updated>2026-03-16T11:08:54.066Z</updated>
         <summary type="html"><![CDATA[数组、链表、栈、队列、树、图等基础数据结构的原理与实现。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[文章归档]]></title>
-        <id>https://jasper-labs.cn/others/archives/</id>
-        <link href="https://jasper-labs.cn/others/archives/"/>
-        <updated>2026-03-16T08:56:57.466Z</updated>
-        <summary type="html"><![CDATA[按时间线浏览所有文章，方便查找历史内容。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[其他内容]]></title>
-        <id>https://jasper-labs.cn/others//</id>
-        <link href="https://jasper-labs.cn/others//"/>
-        <updated>2026-03-13T07:49:42.226Z</updated>
-        <summary type="html"><![CDATA[关于我、读书笔记、友情链接等内容。]]></summary>
     </entry>
 </feed>

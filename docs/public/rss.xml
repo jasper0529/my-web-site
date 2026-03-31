@@ -4,7 +4,7 @@
         <title>Jasper Labs</title>
         <link>https://jasper-labs.cn</link>
         <description>个人知识库和博客网站，包含Python、算法、技术笔记等内容</description>
-        <lastBuildDate>Tue, 24 Mar 2026 12:32:53 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 31 Mar 2026 09:09:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -15,6 +15,28 @@
         </image>
         <copyright>Copyright © 2026 Jasper</copyright>
         <item>
+            <title><![CDATA[Prompt 提示词库]]></title>
+            <link>https://jasper-labs.cn/prompts//</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/prompts//</guid>
+            <pubDate>Tue, 31 Mar 2026 02:56:24 GMT</pubDate>
+            <description><![CDATA[精选 AI 提示词集合，助你高效使用 AI 工具。涵盖写作、编程、数据分析、学习等多个领域。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[AI 专题导航]]></title>
+            <link>https://jasper-labs.cn/ai//</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/ai//</guid>
+            <pubDate>Mon, 30 Mar 2026 07:06:19 GMT</pubDate>
+            <description><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的示例导航页，便于后续扩展与收录内容。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Vibe Coding 技术基础与前置知识全景指南]]></title>
+            <link>https://jasper-labs.cn/ai/vibe coding/1、Vibe Coding技术基础与前置知识/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/ai/vibe coding/1、Vibe Coding技术基础与前置知识/</guid>
+            <pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[从大语言模型（LLM）的底层逻辑到 Agent 智能体的实战驾驭，一文带你摸透 Vibe Coding 时代的核心心法与硬核前置知识。]]></description>
+            <category>Vibe Coding</category>
+        </item>
+        <item>
             <title><![CDATA[0、Vibe Coding简介]]></title>
             <link>https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/</link>
             <guid isPermaLink="false">https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/</guid>
@@ -22,13 +44,6 @@
             <description><![CDATA[Vibe Coding（国内圈子里常开玩笑叫它“氛围编程”或者“感觉流编程”），这词听起来是不是挺玄乎？脑海里是不是浮现出：程序员点着香薰、放着 Lo-Fi 纯音乐、不用看屏幕就能盲打敲键盘的画面？ 大错特错！它其实是近期最硬核、最具颠覆性的软件开发新姿势。Vibe Coding（氛围编程） 这个词...]]></description>
             <category>AI</category>
             <category>Vibe Coding</category>
-        </item>
-        <item>
-            <title><![CDATA[AI 专题导航]]></title>
-            <link>https://jasper-labs.cn/ai//</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/ai//</guid>
-            <pubDate>Mon, 23 Mar 2026 09:42:13 GMT</pubDate>
-            <description><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的示例导航页，便于后续扩展与收录内容。]]></description>
         </item>
         <item>
             <title><![CDATA[Untitled]]></title>
@@ -158,20 +173,6 @@
             <guid isPermaLink="false">https://jasper-labs.cn/algorithm/data-structure//</guid>
             <pubDate>Mon, 16 Mar 2026 11:08:54 GMT</pubDate>
             <description><![CDATA[数组、链表、栈、队列、树、图等基础数据结构的原理与实现。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[文章归档]]></title>
-            <link>https://jasper-labs.cn/others/archives/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/others/archives/</guid>
-            <pubDate>Mon, 16 Mar 2026 08:56:57 GMT</pubDate>
-            <description><![CDATA[按时间线浏览所有文章，方便查找历史内容。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[其他内容]]></title>
-            <link>https://jasper-labs.cn/others//</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/others//</guid>
-            <pubDate>Fri, 13 Mar 2026 07:49:42 GMT</pubDate>
-            <description><![CDATA[关于我、读书笔记、友情链接等内容。]]></description>
         </item>
     </channel>
 </rss>

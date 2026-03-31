@@ -1,0 +1,9 @@
+[
+  { "id": "writing", "name": "写作助手", "icon": "✍️", "description": "文案写作、内容创作相关提示词" },
+  { "id": "coding", "name": "编程开发", "icon": "💻", "description": "代码编写、调试、技术文档相关提示词" },
+  { "id": "analysis", "name": "数据分析", "icon": "📊", "description": "数据处理、分析报告相关提示词" },
+  { "id": "learning", "name": "学习助手", "icon": "📚", "description": "知识学习、概念理解相关提示词" },
+  { "id": "productivity", "name": "效率提升", "icon": "🚀", "description": "工作流优化、任务管理相关提示词" },
+  { "id": "creative", "name": "创意灵感", "icon": "💡", "description": "头脑风暴、创意生成相关提示词" },
+  { "id": "image", "name": "AI绘图", "icon": "🎨", "description": "AI画图相关提示词" }
+]

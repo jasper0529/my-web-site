@@ -11,6 +11,32 @@
     },
     "items": [
         {
+            "id": "https://jasper-labs.cn/prompts//",
+            "content_html": "精选 AI 提示词集合，助你高效使用 AI 工具。涵盖写作、编程、数据分析、学习等多个领域。",
+            "url": "https://jasper-labs.cn/prompts//",
+            "title": "Prompt 提示词库",
+            "date_modified": "2026-03-31T02:56:24.788Z",
+            "tags": []
+        },
+        {
+            "id": "https://jasper-labs.cn/ai//",
+            "content_html": "覆盖大模型、RAG、Agent、AIGC、工程化与评测的示例导航页，便于后续扩展与收录内容。",
+            "url": "https://jasper-labs.cn/ai//",
+            "title": "AI 专题导航",
+            "date_modified": "2026-03-30T07:06:19.320Z",
+            "tags": []
+        },
+        {
+            "id": "https://jasper-labs.cn/ai/vibe coding/1、Vibe Coding技术基础与前置知识/",
+            "content_html": "从大语言模型（LLM）的底层逻辑到 Agent 智能体的实战驾驭，一文带你摸透 Vibe Coding 时代的核心心法与硬核前置知识。",
+            "url": "https://jasper-labs.cn/ai/vibe coding/1、Vibe Coding技术基础与前置知识/",
+            "title": "Vibe Coding 技术基础与前置知识全景指南",
+            "date_modified": "2026-03-26T00:00:00.000Z",
+            "tags": [
+                "Vibe Coding"
+            ]
+        },
+        {
             "id": "https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/",
             "content_html": "Vibe Coding（国内圈子里常开玩笑叫它“氛围编程”或者“感觉流编程”），这词听起来是不是挺玄乎？脑海里是不是浮现出：程序员点着香薰、放着 Lo-Fi 纯音乐、不用看屏幕就能盲打敲键盘的画面？ 大错特错！它其实是近期最硬核、最具颠覆性的软件开发新姿势。Vibe Coding（氛围编程） 这个词...",
             "url": "https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/",
@@ -20,14 +46,6 @@
                 "AI",
                 "Vibe Coding"
             ]
-        },
-        {
-            "id": "https://jasper-labs.cn/ai//",
-            "content_html": "覆盖大模型、RAG、Agent、AIGC、工程化与评测的示例导航页，便于后续扩展与收录内容。",
-            "url": "https://jasper-labs.cn/ai//",
-            "title": "AI 专题导航",
-            "date_modified": "2026-03-23T09:42:13.794Z",
-            "tags": []
         },
         {
             "id": "https://jasper-labs.cn/",
@@ -183,22 +201,6 @@
             "url": "https://jasper-labs.cn/algorithm/data-structure//",
             "title": "数据结构",
             "date_modified": "2026-03-16T11:08:54.066Z",
-            "tags": []
-        },
-        {
-            "id": "https://jasper-labs.cn/others/archives/",
-            "content_html": "按时间线浏览所有文章，方便查找历史内容。",
-            "url": "https://jasper-labs.cn/others/archives/",
-            "title": "文章归档",
-            "date_modified": "2026-03-16T08:56:57.466Z",
-            "tags": []
-        },
-        {
-            "id": "https://jasper-labs.cn/others//",
-            "content_html": "关于我、读书笔记、友情链接等内容。",
-            "url": "https://jasper-labs.cn/others//",
-            "title": "其他内容",
-            "date_modified": "2026-03-13T07:49:42.226Z",
             "tags": []
         }
     ]
