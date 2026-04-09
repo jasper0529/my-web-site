@@ -1,0 +1,10 @@
+{
+  "id": "unsplash",
+  "category": "design",
+  "name": "Unsplash",
+  "description": "高质量免费图片资源网站，商用免费。",
+  "url": "https://unsplash.com/",
+  "icon": "https://unsplash.com/favicon.ico",
+  "tags": ["图片", "免费", "商用"],
+  "featured": true
+}

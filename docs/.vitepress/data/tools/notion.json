@@ -1,0 +1,10 @@
+{
+  "id": "notion",
+  "category": "online-services",
+  "name": "Notion",
+  "description": "多功能协作工具，笔记、文档、项目管理一体化。",
+  "url": "https://www.notion.so/",
+  "icon": "https://www.notion.so/favicon.ico",
+  "tags": ["笔记", "协作", "项目管理"],
+  "featured": true
+}

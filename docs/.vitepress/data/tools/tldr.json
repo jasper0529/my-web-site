@@ -1,0 +1,10 @@
+{
+  "id": "tldr",
+  "category": "productivity",
+  "name": "TLDR",
+  "description": "简化版 man 手册，快速查看命令常用用法。",
+  "url": "https://tldr.sh/",
+  "icon": "https://tldr.sh/favicon.ico",
+  "tags": ["命令行", "文档", "免费"],
+  "featured": false
+}

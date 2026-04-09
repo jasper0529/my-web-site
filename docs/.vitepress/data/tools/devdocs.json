@@ -1,0 +1,10 @@
+{
+  "id": "devdocs",
+  "category": "dev-docs",
+  "name": "DevDocs",
+  "description": "整合多种 API 文档的在线平台，支持离线使用。",
+  "url": "https://devdocs.io/",
+  "icon": "https://devdocs.io/favicon.ico",
+  "tags": ["API文档", "免费", "离线"],
+  "featured": true
+}

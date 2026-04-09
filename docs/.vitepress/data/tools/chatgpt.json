@@ -1,0 +1,10 @@
+{
+  "id": "chatgpt",
+  "category": "ai-tools",
+  "name": "ChatGPT",
+  "description": "OpenAI 的对话式 AI 助手，支持文本生成、代码编写等。",
+  "url": "https://chat.openai.com/",
+  "icon": "https://chat.openai.com/favicon.ico",
+  "tags": ["AI对话", "GPT", "智能助手"],
+  "featured": true
+}

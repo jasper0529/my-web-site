@@ -1,0 +1,10 @@
+{
+  "id": "code-review",
+  "name": "code-review",
+  "category": "code-review",
+  "title": "代码审查助手",
+  "description": "全面的代码审查技能，帮助发现代码问题并提供改进建议",
+  "content": "---\nname: code-review\ndescription: 全面的代码审查技能，帮助发现代码问题并提供改进建议\n---\n\n# Code Review Skill\n\n## 概述\n这是一个用于代码审查的 Agent Skill，帮助你进行全面的代码质量检查。\n\n## 使用方法\n\n### 1. 启动审查\n当需要进行代码审查时，直接在对话中说明需要审查的代码范围。\n\n### 2. 审查维度\n- 代码可读性\n- 性能优化\n- 安全性检查\n- 错误处理\n- 代码规范\n- 最佳实践\n\n### 3. 输出格式\n审查结果将按照以下格式输出：\n- 问题描述\n- 严重程度（高/中/低）\n- 修复建议\n- 参考示例",
+  "tags": ["代码审查", "质量检查", "最佳实践"],
+  "source": "https://github.com/anthropics/claude-code-skills"
+}

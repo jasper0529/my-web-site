@@ -1,0 +1,10 @@
+{
+  "id": "netlify",
+  "category": "online-services",
+  "name": "Netlify",
+  "description": "静态网站托管平台，支持自动化部署和边缘函数。",
+  "url": "https://www.netlify.com/",
+  "icon": "https://www.netlify.com/favicon.ico",
+  "tags": ["托管", "静态网站", "免费"],
+  "featured": false
+}

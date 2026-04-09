@@ -1,0 +1,10 @@
+{
+  "id": "raycast",
+  "category": "productivity",
+  "name": "Raycast",
+  "description": "macOS 效率启动器，替代 Spotlight，支持扩展和 AI 功能。",
+  "url": "https://www.raycast.com/",
+  "icon": "https://www.raycast.com/favicon.ico",
+  "tags": ["启动器", "macOS", "效率"],
+  "featured": true
+}

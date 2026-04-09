@@ -11,6 +11,22 @@
     },
     "items": [
         {
+            "id": "https://jasper-labs.cn/skills//",
+            "content_html": "扩展 AI 编程助手能力的标准化功能模块库，涵盖代码审查、测试、重构、文档生成等场景。",
+            "url": "https://jasper-labs.cn/skills//",
+            "title": "Agent Skills 技能库",
+            "date_modified": "2026-04-03T09:49:14.134Z",
+            "tags": []
+        },
+        {
+            "id": "https://jasper-labs.cn/tools//",
+            "content_html": "精选开发工具推荐，提升效率的软件和在线服务。",
+            "url": "https://jasper-labs.cn/tools//",
+            "title": "常用工具",
+            "date_modified": "2026-04-03T03:06:21.917Z",
+            "tags": []
+        },
+        {
             "id": "https://jasper-labs.cn/prompts//",
             "content_html": "精选 AI 提示词集合，助你高效使用 AI 工具。涵盖写作、编程、数据分析、学习等多个领域。",
             "url": "https://jasper-labs.cn/prompts//",
@@ -137,14 +153,6 @@
             ]
         },
         {
-            "id": "https://jasper-labs.cn/tools//",
-            "content_html": "精选开发工具推荐，提升效率的软件和在线服务。",
-            "url": "https://jasper-labs.cn/tools//",
-            "title": "常用工具",
-            "date_modified": "2026-03-17T09:46:43.830Z",
-            "tags": []
-        },
-        {
             "id": "https://jasper-labs.cn/others/sitemap-page/",
             "content_html": "可视化浏览网站结构",
             "url": "https://jasper-labs.cn/others/sitemap-page/",
@@ -193,14 +201,6 @@
             "url": "https://jasper-labs.cn/algorithm/sorting//",
             "title": "排序算法",
             "date_modified": "2026-03-16T11:08:56.829Z",
-            "tags": []
-        },
-        {
-            "id": "https://jasper-labs.cn/algorithm/data-structure//",
-            "content_html": "数组、链表、栈、队列、树、图等基础数据结构的原理与实现。",
-            "url": "https://jasper-labs.cn/algorithm/data-structure//",
-            "title": "数据结构",
-            "date_modified": "2026-03-16T11:08:54.066Z",
             "tags": []
         }
     ]

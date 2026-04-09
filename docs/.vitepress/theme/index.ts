@@ -14,6 +14,9 @@ import FeatureCard from '../components/FeatureCard.vue'
 import TagList from '../components/TagList.vue'
 import Layout from '../components/Layout.vue'
 import PromptLibrary from '../components/PromptLibrary.vue'
+import ToolLibrary from '../components/ToolLibrary.vue'
+import SkillsPage from '../components/SkillsPage.vue'
+import SkillsLibrary from '../components/SkillsLibrary.vue'
 
 export default {
   extends: DefaultTheme,
@@ -25,6 +28,9 @@ export default {
     app.component('FeatureCard', FeatureCard)
     app.component('TagList', TagList)
     app.component('PromptLibrary', PromptLibrary)
+    app.component('ToolLibrary', ToolLibrary)
+    app.component('SkillsPage', SkillsPage)
+    app.component('SkillsLibrary', SkillsLibrary)
   },
   setup() {
     const isClient = typeof window !== 'undefined'

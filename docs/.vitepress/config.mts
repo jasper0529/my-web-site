@@ -191,6 +191,7 @@ export default defineConfig({
       { text: '📝 技术笔记', link: '/notes/', activeMatch: '/notes/' },
       { text: '🏷️ 标签', link: '/tags/', activeMatch: '/tags/' },
       { text: '💡 提示词库', link: '/prompts/', activeMatch: '/prompts/' },
+      { text: '🎯 Skills', link: '/skills/', activeMatch: '/skills/' },
       { text: '🔧 常用工具', link: '/tools/', activeMatch: '/tools/' },
       {
         text: '📋 更多',

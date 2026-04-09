@@ -1,0 +1,10 @@
+{
+  "id": "security-audit",
+  "name": "security-audit",
+  "category": "security",
+  "title": "安全审计助手",
+  "description": "检测代码中的安全漏洞和潜在风险",
+  "content": "---\nname: security-audit\ndescription: 检测代码中的安全漏洞和潜在风险\n---\n\n# Security Audit Skill\n\n## 概述\n这是一个用于代码安全审计的 Agent Skill。\n\n## 检查项目\n\n### 常见漏洞\n- SQL 注入\n- XSS 跨站脚本\n- CSRF 跨站请求伪造\n- 敏感信息泄露\n- 不安全的反序列化\n- 使用已知漏洞的库\n- 身份验证/授权问题\n\n### 安全最佳实践\n- 密码存储\n- 加密算法\n- 安全配置\n- 依赖检查",
+  "tags": ["安全", "审计", "漏洞检测"],
+  "source": "https://github.com/anthropics/claude-code-skills"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "vercel",
+  "category": "online-services",
+  "name": "Vercel",
+  "description": "前端项目部署平台，支持自动构建和 CDN 加速。",
+  "url": "https://vercel.com/",
+  "icon": "https://vercel.com/favicon.ico",
+  "tags": ["部署", "前端", "免费"],
+  "featured": true
+}

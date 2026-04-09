@@ -1,0 +1,22 @@
+[
+    {
+        "id": "naiyun",
+        "category": "vpn",
+        "name": "奈云",
+        "description": "科学上网工具，支持多协议和多平台。",
+        "url": "http://6.vip.v2ny.me?path=register&code=cMthYj0S",
+        "icon": "https://www.v2ny.com/favicon.ico",
+        "tags": ["科学上网", "低价", "稳定"],
+        "featured": true
+      },
+        {
+            "id": "shaoshuren",
+            "category": "vpn",
+            "name": "少数人",
+            "description": "科学上网工具，支持多协议和多平台。",
+            "url": "https://2.a.xn--gmqz83awjh.site/auth/register?code=LZrN",
+            "icon": "https://xn--gmqz83awjh.org/favicon.ico",
+            "tags": ["科学上网", "多协议", "跨平台"],
+            "featured": true
+        }
+]

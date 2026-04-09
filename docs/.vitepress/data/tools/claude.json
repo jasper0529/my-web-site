@@ -1,0 +1,10 @@
+{
+  "id": "claude",
+  "category": "ai-tools",
+  "name": "Claude",
+  "description": "Anthropic 的 AI 助手，擅长长文本理解和分析。",
+  "url": "https://claude.ai/",
+  "icon": "https://claude.ai/favicon.ico",
+  "tags": ["AI对话", "长文本", "智能助手"],
+  "featured": true
+}

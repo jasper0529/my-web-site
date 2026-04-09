@@ -1,0 +1,10 @@
+{
+  "id": "refactoring",
+  "name": "refactoring",
+  "category": "refactoring",
+  "title": "代码重构助手",
+  "description": "智能识别代码异味，提供重构方案并安全实施",
+  "content": "---\nname: refactoring\ndescription: 智能识别代码异味，提供重构方案并安全实施\n---\n\n# Refactoring Skill\n\n## 概述\n这是一个用于代码重构的 Agent Skill，帮助你改进代码结构和可维护性。\n\n## 识别的问题类型\n\n### 代码异味\n- 重复代码\n- 过长函数\n- 过大类\n- 过长参数列表\n- 散弹式修改\n- 特性依恋\n- 数据泥团\n- 基本类型偏执\n- 平行继承\n- 冗余类\n- 夸夸其谈的未来\n- 临时字段\n- 消息链\n- 中间人\n- 异曲同工\n- 循环操作\n\n### 重构技术\n- 提取函数\n- 移动函数\n- 替换算法\n- 引入参数对象\n- 分解条件表达式\n- 等等",
+  "tags": ["重构", "代码优化", "设计模式"],
+  "source": "https://github.com/anthropics/claude-code-skills"
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "dev-tools",
+    "name": "开发工具",
+    "icon": "💻",
+    "description": "代码编辑器、IDE、版本控制等开发必备工具"
+  },
+  {
+    "id": "online-services",
+    "name": "在线服务",
+    "icon": "☁️",
+    "description": "代码托管、部署、云服务等在线平台"
+  },
+  {
+    "id": "productivity",
+    "name": "效率工具",
+    "icon": "⚡",
+    "description": "提升工作效率的启动器、自动化工具等"
+  },
+  {
+    "id": "design",
+    "name": "设计资源",
+    "icon": "🎨",
+    "description": "UI/UX 设计、图标、图片等设计相关资源"
+  },
+  {
+    "id": "ai-tools",
+    "name": "AI 工具",
+    "icon": "🤖",
+    "description": "人工智能辅助工具、大模型应用等"
+  },
+  {
+    "id": "dev-docs",
+    "name": "开发文档",
+    "icon": "📚",
+    "description": "技术文档、API 参考、学习资源等"
+  },
+  {
+    "id": "vpn",
+    "name": "机场",
+    "icon": "🛫",
+    "description": "机场推荐"
+  }
+]

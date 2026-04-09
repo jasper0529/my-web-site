@@ -1,0 +1,10 @@
+{
+  "id": "midjourney",
+  "category": "ai-tools",
+  "name": "Midjourney",
+  "description": "AI 图像生成工具，通过文字描述生成高质量图片。",
+  "url": "https://www.midjourney.com/",
+  "icon": "https://www.midjourney.com/public/apple-touch-icon.png",
+  "tags": ["AI绘画", "图像生成", "创意"],
+  "featured": true
+}

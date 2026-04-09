@@ -1,0 +1,10 @@
+{
+  "id": "pycharm",
+  "category": "dev-tools",
+  "name": "PyCharm",
+  "description": "专业的 Python IDE，提供智能代码补全、调试和测试功能。",
+  "url": "https://www.jetbrains.com/pycharm/",
+  "icon": "https://www.jetbrains.com/pycharm/favicon.ico",
+  "tags": ["IDE", "Python", "JetBrains"],
+  "featured": true
+}

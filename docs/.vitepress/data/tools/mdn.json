@@ -1,0 +1,10 @@
+{
+  "id": "mdn",
+  "category": "dev-docs",
+  "name": "MDN Web Docs",
+  "description": "Mozilla 的 Web 开发文档，前端开发必备参考。",
+  "url": "https://developer.mozilla.org/",
+  "icon": "https://developer.mozilla.org/favicon.ico",
+  "tags": ["Web开发", "文档", "免费"],
+  "featured": true
+}

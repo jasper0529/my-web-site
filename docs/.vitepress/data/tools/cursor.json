@@ -1,0 +1,10 @@
+{
+  "id": "cursor",
+  "category": "dev-tools",
+  "name": "Cursor",
+  "description": "AI 驱动的代码编辑器，内置 GPT-4，智能代码生成和重构。",
+  "url": "https://cursor.sh/",
+  "icon": "https://cursor.sh/favicon.ico",
+  "tags": ["AI编辑器", "智能编程", "跨平台"],
+  "featured": true
+}

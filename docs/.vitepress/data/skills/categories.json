@@ -1,0 +1,10 @@
+[
+  { "id": "code-review", "name": "代码审查", "icon": "🔍", "description": "代码审查、质量分析相关 Skills" },
+  { "id": "refactoring", "name": "代码重构", "icon": "🔧", "description": "代码重构、优化相关 Skills" },
+  { "id": "testing", "name": "测试开发", "icon": "🧪", "description": "单元测试、集成测试相关 Skills" },
+  { "id": "documentation", "name": "文档生成", "icon": "📝", "description": "API 文档、注释生成相关 Skills" },
+  { "id": "debugging", "name": "调试排错", "icon": "🐛", "description": "Bug 定位、问题排查相关 Skills" },
+  { "id": "security", "name": "安全审计", "icon": "🔒", "description": "安全漏洞检测、代码审计相关 Skills" },
+  { "id": "devops", "name": "DevOps", "icon": "🚀", "description": "CI/CD、部署运维相关 Skills" },
+  { "id": "data", "name": "数据处理", "icon": "📊", "description": "数据清洗、分析相关 Skills" }
+]

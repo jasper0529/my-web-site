@@ -1,0 +1,10 @@
+{
+  "id": "canva",
+  "category": "design",
+  "name": "Canva",
+  "description": "在线设计平台，快速制作海报、演示文稿等。",
+  "url": "https://www.canva.com/",
+  "icon": "https://www.canva.com/favicon.ico",
+  "tags": ["设计", "模板", "免费"],
+  "featured": false
+}

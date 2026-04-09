@@ -1,0 +1,10 @@
+{
+  "id": "github",
+  "category": "online-services",
+  "name": "GitHub",
+  "description": "全球最大的代码托管平台，开源项目首选。",
+  "url": "https://github.com/",
+  "icon": "https://github.com/favicon.ico",
+  "tags": ["代码托管", "协作", "开源"],
+  "featured": true
+}

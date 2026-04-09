@@ -1,0 +1,10 @@
+{
+  "id": "figma",
+  "category": "design",
+  "name": "Figma",
+  "description": "在线协作设计工具，UI/UX 设计首选。",
+  "url": "https://www.figma.com/",
+  "icon": "https://www.figma.com/favicon.ico",
+  "tags": ["设计", "协作", "UI/UX"],
+  "featured": true
+}

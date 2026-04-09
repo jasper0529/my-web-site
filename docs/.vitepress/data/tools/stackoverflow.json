@@ -1,0 +1,10 @@
+{
+  "id": "stackoverflow",
+  "category": "dev-docs",
+  "name": "Stack Overflow",
+  "description": "全球最大的程序员问答社区。",
+  "url": "https://stackoverflow.com/",
+  "icon": "https://stackoverflow.com/favicon.ico",
+  "tags": ["问答社区", "免费", "技术支持"],
+  "featured": true
+}

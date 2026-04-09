@@ -1,0 +1,10 @@
+{
+  "id": "alfred",
+  "category": "productivity",
+  "name": "Alfred",
+  "description": "macOS 效率工具，工作流自动化神器。",
+  "url": "https://www.alfredapp.com/",
+  "icon": "https://www.alfredapp.com/favicon.ico",
+  "tags": ["启动器", "macOS", "自动化"],
+  "featured": false
+}

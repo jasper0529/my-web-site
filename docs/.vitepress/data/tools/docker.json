@@ -1,0 +1,10 @@
+{
+  "id": "docker",
+  "category": "dev-tools",
+  "name": "Docker",
+  "description": "容器化平台，简化应用部署和环境管理。",
+  "url": "https://www.docker.com/",
+  "icon": "https://www.docker.com/favicon.ico",
+  "tags": ["容器", "DevOps", "跨平台"],
+  "featured": true
+}

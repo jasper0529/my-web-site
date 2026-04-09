@@ -1,0 +1,10 @@
+{
+  "id": "unit-test",
+  "name": "unit-test",
+  "category": "testing",
+  "title": "单元测试生成器",
+  "description": "自动生成高质量的单元测试用例，覆盖各种边界情况",
+  "content": "---\nname: unit-test\ndescription: 自动生成高质量的单元测试用例，覆盖各种边界情况\n---\n\n# Unit Test Skill\n\n## 概述\n这是一个用于生成单元测试的 Agent Skill，帮助你快速创建全面的测试用例。\n\n## 功能特性\n\n### 1. 测试框架支持\n- Jest (JavaScript/TypeScript)\n- PyTest (Python)\n- JUnit (Java)\n- Go testing (Go)\n\n### 2. 测试类型\n- 单元测试\n- 集成测试\n- 边界测试\n- 异常处理测试\n\n### 3. 使用方法\n在需要生成测试时，说明：\n- 要测试的函数/方法\n- 使用的测试框架\n- 特定的边界条件",
+  "tags": ["单元测试", "测试用例", "TDD"],
+  "source": "https://github.com/anthropics/claude-code-skills"
+}

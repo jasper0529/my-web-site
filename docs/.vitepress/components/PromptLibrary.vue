@@ -157,9 +157,9 @@
 
     <!-- 分页控件 -->
     <div v-if="totalPages > 1" class="pagination">
-      <button 
-        class="page-btn" 
-        :disabled="currentPage === 1" 
+      <button
+        class="page-btn nav-btn"
+        :disabled="currentPage === 1"
         @click="currentPage--"
       >
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
@@ -167,16 +167,45 @@
         </svg>
         上一页
       </button>
-      
-      <div class="page-info">
-        <span class="page-current">{{ currentPage }}</span>
-        <span class="page-separator">/</span>
-        <span class="page-total">{{ totalPages }}</span>
+
+      <div class="page-numbers">
+        <!-- 首页 -->
+        <button
+          v-if="showFirstPage"
+          class="page-num"
+          :class="{ active: currentPage === 1 }"
+          @click="currentPage = 1"
+        >
+          1
+        </button>
+        <span v-if="showFirstPage && currentPage > 3" class="page-ellipsis">...</span>
+
+        <!-- 中间页码 -->
+        <button
+          v-for="page in visiblePages"
+          :key="page"
+          class="page-num"
+          :class="{ active: currentPage === page }"
+          @click="currentPage = page"
+        >
+          {{ page }}
+        </button>
+
+        <!-- 末页 -->
+        <span v-if="showLastPage && currentPage < totalPages - 2" class="page-ellipsis">...</span>
+        <button
+          v-if="showLastPage"
+          class="page-num"
+          :class="{ active: currentPage === totalPages }"
+          @click="currentPage = totalPages"
+        >
+          {{ totalPages }}
+        </button>
       </div>
-      
-      <button 
-        class="page-btn" 
-        :disabled="currentPage === totalPages" 
+
+      <button
+        class="page-btn nav-btn"
+        :disabled="currentPage === totalPages"
         @click="currentPage++"
       >
         下一页
@@ -279,6 +308,40 @@ const paginatedPrompts = computed(() => {
   const end = start + PAGE_SIZE
   return filteredPrompts.value.slice(start, end)
 })
+
+// 分页显示相关计算属性
+const maxVisiblePages = 5 // 最多显示5个页码
+
+const visiblePages = computed(() => {
+  const pages: number[] = []
+  const total = totalPages.value
+  const current = currentPage.value
+
+  if (total <= maxVisiblePages + 2) {
+    // 总页数较少，显示所有中间页码（排除首尾）
+    for (let i = 2; i < total; i++) {
+      pages.push(i)
+    }
+  } else {
+    // 计算显示范围
+    let start = Math.max(2, current - Math.floor(maxVisiblePages / 2))
+    let end = Math.min(total - 1, start + maxVisiblePages - 1)
+
+    // 调整范围确保显示足够的页码
+    if (end - start < maxVisiblePages - 1) {
+      start = Math.max(2, end - maxVisiblePages + 1)
+    }
+
+    for (let i = start; i <= end; i++) {
+      pages.push(i)
+    }
+  }
+
+  return pages
+})
+
+const showFirstPage = computed(() => totalPages.value > 1)
+const showLastPage = computed(() => totalPages.value > maxVisiblePages + 1)
 
 // 监听过滤条件变化，重置页码
 watch([searchQuery, activeCategory], () => {
@@ -800,25 +863,50 @@ async function copyPrompt(prompt: PromptItem) {
   cursor: not-allowed;
 }
 
-.page-info {
+/* 页码数字区域 */
+.page-numbers {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  font-size: 0.9rem;
+  gap: 0.35rem;
+}
+
+.page-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  border: 1.5px solid var(--vp-c-border);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
   color: var(--vp-c-text-2);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.page-current {
-  font-weight: 600;
+.page-num:hover {
+  border-color: var(--vp-c-brand-1);
   color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
 }
 
-.page-separator {
-  color: var(--vp-c-text-3);
+.page-num.active {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-1);
+  color: #fff;
+  font-weight: 600;
 }
 
-.page-total {
+.page-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
   color: var(--vp-c-text-3);
+  font-size: 0.875rem;
 }
 
 /* ---- 底部提示 ---- */

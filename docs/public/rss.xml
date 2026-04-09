@@ -4,7 +4,7 @@
         <title>Jasper Labs</title>
         <link>https://jasper-labs.cn</link>
         <description>个人知识库和博客网站，包含Python、算法、技术笔记等内容</description>
-        <lastBuildDate>Tue, 31 Mar 2026 09:09:40 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 09 Apr 2026 06:42:44 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -14,6 +14,20 @@
             <link>https://jasper-labs.cn</link>
         </image>
         <copyright>Copyright © 2026 Jasper</copyright>
+        <item>
+            <title><![CDATA[Agent Skills 技能库]]></title>
+            <link>https://jasper-labs.cn/skills//</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/skills//</guid>
+            <pubDate>Fri, 03 Apr 2026 09:49:14 GMT</pubDate>
+            <description><![CDATA[扩展 AI 编程助手能力的标准化功能模块库，涵盖代码审查、测试、重构、文档生成等场景。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[常用工具]]></title>
+            <link>https://jasper-labs.cn/tools//</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/tools//</guid>
+            <pubDate>Fri, 03 Apr 2026 03:06:21 GMT</pubDate>
+            <description><![CDATA[精选开发工具推荐，提升效率的软件和在线服务。]]></description>
+        </item>
         <item>
             <title><![CDATA[Prompt 提示词库]]></title>
             <link>https://jasper-labs.cn/prompts//</link>
@@ -118,13 +132,6 @@
             <category>Linux</category>
         </item>
         <item>
-            <title><![CDATA[常用工具]]></title>
-            <link>https://jasper-labs.cn/tools//</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/tools//</guid>
-            <pubDate>Tue, 17 Mar 2026 09:46:43 GMT</pubDate>
-            <description><![CDATA[精选开发工具推荐，提升效率的软件和在线服务。]]></description>
-        </item>
-        <item>
             <title><![CDATA[站点地图]]></title>
             <link>https://jasper-labs.cn/others/sitemap-page/</link>
             <guid isPermaLink="false">https://jasper-labs.cn/others/sitemap-page/</guid>
@@ -166,13 +173,6 @@
             <guid isPermaLink="false">https://jasper-labs.cn/algorithm/sorting//</guid>
             <pubDate>Mon, 16 Mar 2026 11:08:56 GMT</pubDate>
             <description><![CDATA[冒泡、快速、归并等经典排序算法的原理与复杂度分析。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[数据结构]]></title>
-            <link>https://jasper-labs.cn/algorithm/data-structure//</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/algorithm/data-structure//</guid>
-            <pubDate>Mon, 16 Mar 2026 11:08:54 GMT</pubDate>
-            <description><![CDATA[数组、链表、栈、队列、树、图等基础数据结构的原理与实现。]]></description>
         </item>
     </channel>
 </rss>

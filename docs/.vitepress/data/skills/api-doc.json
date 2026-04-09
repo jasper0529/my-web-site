@@ -1,0 +1,10 @@
+{
+  "id": "api-doc",
+  "name": "api-doc",
+  "category": "documentation",
+  "title": "API 文档生成器",
+  "description": "自动生成专业的 API 文档，包括请求/响应示例",
+  "content": "---\nname: api-doc\ndescription: 自动生成专业的 API 文档，包括请求/响应示例\n---\n\n# API Documentation Skill\n\n## 概述\n这是一个用于生成 API 文档的 Agent Skill。\n\n## 功能\n\n### 1. 文档格式支持\n- OpenAPI/Swagger\n- JSDoc\n- Markdown\n- Postman Collection\n\n### 2. 文档内容\n- 接口描述\n- 请求参数说明\n- 响应格式\n- 错误码定义\n- 使用示例\n\n### 3. 使用方法\n提供代码或接口定义，Skill 将自动生成完整的文档。",
+  "tags": ["API", "文档", "Swagger"],
+  "source": "https://github.com/anthropics/claude-code-skills"
+}

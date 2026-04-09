@@ -1,0 +1,10 @@
+{
+  "id": "vscode",
+  "category": "dev-tools",
+  "name": "VS Code",
+  "description": "轻量级但功能强大的代码编辑器，拥有丰富的插件生态系统。",
+  "url": "https://code.visualstudio.com/",
+  "icon": "https://code.visualstudio.com/favicon.ico",
+  "tags": ["编辑器", "免费", "跨平台"],
+  "featured": true
+}

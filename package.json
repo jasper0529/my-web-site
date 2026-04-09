@@ -32,6 +32,7 @@
   "dependencies": {
     "@giscus/vue": "^3.1.1",
     "katex": "^0.16.38",
+    "markdown-it": "^14.1.1",
     "markdown-it-mathjax3": "^4.3.2",
     "medium-zoom": "^1.1.0"
   }
