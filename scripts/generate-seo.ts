@@ -50,6 +50,13 @@ function sanitizeText(text: string): string {
 }
 
 /**
+ * 规范化 URL，移除双斜杠
+ */
+function normalizeUrl(url: string): string {
+  return url.replace(/\/+/g, '/').replace(/^(https?:\/)/, '$1/')
+}
+
+/**
  * 读取 markdown 文件的 frontmatter
  */
 function readMarkdownFile(filePath: string): PageData | null {
@@ -58,12 +65,19 @@ function readMarkdownFile(filePath: string): PageData | null {
     const { data, content: body } = matter(content)
     
     // 转换文件路径为 URL
-    const relativePath = path.relative(docsDir, filePath)
+    let relativePath = path.relative(docsDir, filePath)
       .replace(/\.md$/, '')
       .replace(/\\/g, '/')
-      .replace(/\/index$/, '/')
     
-    const url = relativePath === 'index' ? '/' : `/${relativePath}/`
+    // 规范化路径：处理 index 文件
+    if (relativePath === 'index') {
+      relativePath = ''
+    } else if (relativePath.endsWith('/index')) {
+      relativePath = relativePath.slice(0, -6)
+    }
+    
+    // 构建 URL，确保没有双斜杠
+    const url = relativePath === '' ? '/' : normalizeUrl(`/${relativePath}/`)
     
     // 检查是否在排除列表中
     if (EXCLUDE_PATHS.some(exclude => url.startsWith(exclude))) {
@@ -122,17 +136,29 @@ async function generateSitemap(pages: PageData[]): Promise<void> {
   
   // 添加首页
   sitemap.write({
-    url: SITE_URL,
+    url: '/',
     changefreq: 'daily',
     priority: 1.0,
     lastmod: new Date().toISOString()
   })
   
-  // 添加所有页面
+  // 去重：使用 Map 按 URL 去重，跳过首页（已手动添加）
+  const uniquePages = new Map<string, PageData>()
   for (const page of pages) {
+    // 跳过首页，避免与手动添加的首页重复
+    if (page.url === '/') continue
+    if (!uniquePages.has(page.url)) {
+      uniquePages.set(page.url, page)
+    }
+  }
+  
+  // 添加所有页面（已去重）
+  for (const page of uniquePages.values()) {
+    // 确保URL不以双斜杠开头
+    const cleanUrl = page.url.startsWith('/') ? page.url : `/${page.url}`
     sitemap.write({
-      url: `${SITE_URL}${page.url}`,
-      changefreq: 'weekly',
+      url: cleanUrl,
+      changefreq: getPageChangefreq(page.url),
       priority: getPagePriority(page.url),
       lastmod: page.date.toISOString()
     })
@@ -149,7 +175,16 @@ async function generateSitemap(pages: PageData[]): Promise<void> {
   }
   
   fs.writeFileSync(sitemapPath, sitemapXml.toString())
-  console.log(`✅ sitemap.xml generated: ${sitemapPath}`)
+  console.log(`✅ sitemap.xml generated with ${uniquePages.size} pages`)
+}
+
+/**
+ * 根据页面路径获取更新频率
+ */
+function getPageChangefreq(url: string): string {
+  if (url === '/') return 'daily'
+  if (url.endsWith('/') && url.split('/').length <= 3) return 'weekly'
+  return 'monthly'
 }
 
 /**
@@ -159,8 +194,11 @@ function getPagePriority(url: string): number {
   if (url === '/') return 1.0
   if (url.startsWith('/python/')) return 0.9
   if (url.startsWith('/algorithm/')) return 0.9
+  if (url.startsWith('/ai/')) return 0.9
   if (url.startsWith('/notes/')) return 0.8
   if (url.startsWith('/tools/')) return 0.7
+  if (url.startsWith('/skills/')) return 0.7
+  if (url.startsWith('/prompts/')) return 0.7
   return 0.6
 }
 

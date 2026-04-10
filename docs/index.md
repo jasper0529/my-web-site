@@ -1,12 +1,23 @@
 ---
 layout: home
+title: Jasper Labs - 个人技术知识库与博客
+description: Jasper Labs 是一个专注于 Python 编程、算法与数据结构、AI 技术、Linux 运维等领域的技术知识库，提供高质量的技术教程、学习笔记和最佳实践分享。
+keywords: [Python教程, 算法, 数据结构, LeetCode, Linux运维, AI, 技术博客, 编程学习, Vibe Coding]
+head:
+  - - meta
+    - name: robots
+      content: index, follow
+  - - link
+    - rel: canonical
+      href: https://jasper-labs.cn/
+
 hero:
     name: "Jasper Labs"
     text: "个人技术知识库与博客"
     tagline: 记录学习、分享知识、沉淀成长
     image:
       src: /images/hero-image.svg
-      alt: Jasper Labs
+      alt: Jasper Labs 技术知识库
     actions:
       - theme: brand
         text: 开始探索

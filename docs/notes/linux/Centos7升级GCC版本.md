@@ -1,8 +1,8 @@
 ---
-title: Centos7升级GCC版本
+title: CentOS 7 升级 GCC 版本至 8.3.1
 date: 2026-03-20
-tags: ['Linux']
-description: 在 CentOS 7 上升级 GCC 版本可以通过多种方法实现, 这里使用个人认为最简单的方式升级，CentOS SCL + Centos7 + gcc4.8.5 ->gcc8.3.1 由于scl源在国外，有时候安装很慢，这里把源换成国内阿里源 + 修改CentOS-SCLo-scl.repo 内容...
+tags: ['Linux', 'GCC', 'CentOS', 'SCL']
+description: 在 CentOS 7 上通过 CentOS SCL 方式将 GCC 从 4.8.5 升级到 8.3.1，包含国内阿里云镜像源配置、安装验证等完整步骤。
 ---
 
 <font style="color:rgb(31, 35, 40);">在 CentOS 7 上升级 GCC 版本可以通过多种方法实现, 这里使用个人认为最简单的方式升级，</font>`<font style="color:#F38F39;">CentOS SCL</font>`

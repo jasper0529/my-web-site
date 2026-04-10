@@ -44,19 +44,37 @@ function inferTags(filePath: string): string[] {
 
 // 生成描述
 function generateDescription(title: string, content: string): string {
-  // 从内容中提取前150个字符作为描述
+  // 从内容中提取前 160 个字符作为描述（搜索引擎通常显示 150-160 字符）
   const cleanContent = content
     .replace(/^---[\s\S]*?---/, '') // 移除 frontmatter
     .replace(/^#+\s.*$/gm, '') // 移除标题
     .replace(/```[\s\S]*?```/g, '') // 移除代码块
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // 移除链接
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // 移除链接，保留文本
     .replace(/<[^>]+>/g, '') // 移除 HTML 标签
     .replace(/[*_`~]/g, '') // 移除格式标记
+    .replace(/[+\-|]/g, '') // 移除列表标记
     .replace(/\s+/g, ' ') // 合并空白
     .trim()
 
-  const description = cleanContent.substring(0, 150)
-  return description.length < cleanContent.length ? description + '...' : description
+  // 截取 155 字符，在最近的完整句子或空格处截断
+  const maxLength = 155
+  if (cleanContent.length <= maxLength) return cleanContent
+  
+  const truncated = cleanContent.substring(0, maxLength)
+  // 尝试在句号、感叹号、问号处截断
+  const sentenceEnd = Math.max(
+    truncated.lastIndexOf('。'),
+    truncated.lastIndexOf('！'),
+    truncated.lastIndexOf('？'),
+    truncated.lastIndexOf('，'),
+    truncated.lastIndexOf('；'),
+    truncated.lastIndexOf(' ')
+  )
+  
+  if (sentenceEnd > maxLength * 0.6) {
+    return truncated.substring(0, sentenceEnd) + '…'
+  }
+  return truncated + '…'
 }
 
 // 处理单个文件

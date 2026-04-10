@@ -4,23 +4,34 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Sitemap
 Sitemap: https://jasper-labs.cn/sitemap.xml
 
-# RSS Feed
-# https://jasper-labs.cn/rss.xml
-
-# Disallow unnecessary paths
-Disallow: /api/
-Disallow: /*.json$
-Disallow: /tags/
-
-# Allow search engines to crawl all content
+# 允许爬取主要内容
 Allow: /python/
 Allow: /algorithm/
+Allow: /ai/
 Allow: /notes/
 Allow: /tools/
+Allow: /prompts/
+Allow: /skills/
+Allow: /tags/
 Allow: /others/
 
-# Crawl delay (optional, be nice to the server)
+# 禁止爬取不必要的路径
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /code-group-demo
+
+# 特殊爬虫规则
+
+# 百度爬虫 - 允许全部内容
+User-agent: Baiduspider
+Allow: /
+
+# Google 爬虫 - 允许全部内容
+User-agent: Googlebot
+Allow: /
+
+# 爬取频率限制（友好策略）
 Crawl-delay: 1

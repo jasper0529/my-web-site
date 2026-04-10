@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-04-09T06:42:44.963Z</updated>
+    <updated>2026-04-10T06:22:41.892Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -16,30 +16,37 @@
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
     <entry>
+        <title type="html"><![CDATA[Jasper Labs - 个人技术知识库与博客]]></title>
+        <id>https://jasper-labs.cn/</id>
+        <link href="https://jasper-labs.cn/"/>
+        <updated>2026-04-10T03:59:01.368Z</updated>
+        <summary type="html"><![CDATA[Jasper Labs 是一个专注于 Python 编程、算法与数据结构、AI 技术、Linux 运维等领域的技术知识库，提供高质量的技术教程、学习笔记和最佳实践分享。]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Agent Skills 技能库]]></title>
-        <id>https://jasper-labs.cn/skills//</id>
-        <link href="https://jasper-labs.cn/skills//"/>
+        <id>https://jasper-labs.cn/skills/</id>
+        <link href="https://jasper-labs.cn/skills/"/>
         <updated>2026-04-03T09:49:14.134Z</updated>
         <summary type="html"><![CDATA[扩展 AI 编程助手能力的标准化功能模块库，涵盖代码审查、测试、重构、文档生成等场景。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[常用工具]]></title>
-        <id>https://jasper-labs.cn/tools//</id>
-        <link href="https://jasper-labs.cn/tools//"/>
+        <id>https://jasper-labs.cn/tools/</id>
+        <link href="https://jasper-labs.cn/tools/"/>
         <updated>2026-04-03T03:06:21.917Z</updated>
         <summary type="html"><![CDATA[精选开发工具推荐，提升效率的软件和在线服务。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Prompt 提示词库]]></title>
-        <id>https://jasper-labs.cn/prompts//</id>
-        <link href="https://jasper-labs.cn/prompts//"/>
+        <id>https://jasper-labs.cn/prompts/</id>
+        <link href="https://jasper-labs.cn/prompts/"/>
         <updated>2026-03-31T02:56:24.788Z</updated>
         <summary type="html"><![CDATA[精选 AI 提示词集合，助你高效使用 AI 工具。涵盖写作、编程、数据分析、学习等多个领域。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[AI 专题导航]]></title>
-        <id>https://jasper-labs.cn/ai//</id>
-        <link href="https://jasper-labs.cn/ai//"/>
+        <id>https://jasper-labs.cn/ai/</id>
+        <link href="https://jasper-labs.cn/ai/"/>
         <updated>2026-03-30T07:06:19.320Z</updated>
         <summary type="html"><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的示例导航页，便于后续扩展与收录内容。]]></summary>
     </entry>
@@ -61,27 +68,26 @@
         <category label="Vibe Coding"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Untitled]]></title>
-        <id>https://jasper-labs.cn/</id>
-        <link href="https://jasper-labs.cn/"/>
-        <updated>2026-03-23T09:36:30.785Z</updated>
-        <summary type="html"><![CDATA[Untitled]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linux常用命令]]></title>
+        <title type="html"><![CDATA[Linux 常用命令速查手册]]></title>
         <id>https://jasper-labs.cn/notes/linux/Linux常用命令/</id>
         <link href="https://jasper-labs.cn/notes/linux/Linux常用命令/"/>
         <updated>2026-03-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Linux常用命令...]]></summary>
+        <summary type="html"><![CDATA[全面整理 Linux 常用命令，包括缓存清理、文件搜索、磁盘管理、进程管理等运维必备命令，附带参数说明和使用示例，适合日常快速查阅。]]></summary>
         <category label="Linux"/>
+        <category label="运维"/>
+        <category label="命令行"/>
+        <category label="速查手册"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Centos7升级GCC版本]]></title>
+        <title type="html"><![CDATA[CentOS 7 升级 GCC 版本至 8.3.1]]></title>
         <id>https://jasper-labs.cn/notes/linux/Centos7升级GCC版本/</id>
         <link href="https://jasper-labs.cn/notes/linux/Centos7升级GCC版本/"/>
         <updated>2026-03-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[在 CentOS 7 上升级 GCC 版本可以通过多种方法实现, 这里使用个人认为最简单的方式升级，CentOS SCL + Centos7 + gcc4.8.5 ->gcc8.3.1 由于scl源在国外，有时候安装很慢，这里把源换成国内阿里源 + 修改CentOS-SCLo-scl.repo 内容...]]></summary>
+        <summary type="html"><![CDATA[在 CentOS 7 上通过 CentOS SCL 方式将 GCC 从 4.8.5 升级到 8.3.1，包含国内阿里云镜像源配置、安装验证等完整步骤。]]></summary>
         <category label="Linux"/>
+        <category label="GCC"/>
+        <category label="CentOS"/>
+        <category label="SCL"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[ARM架构下编译安装Nmap7.95]]></title>
@@ -100,21 +106,25 @@
         <category label="邮箱"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Python生成并插入百万数据到MySQL]]></title>
+        <title type="html"><![CDATA[Python 生成并插入百万数据到 MySQL 的最佳实践]]></title>
         <id>https://jasper-labs.cn/python/advanced/Python生成并插入百万数据到MySQL/</id>
         <link href="https://jasper-labs.cn/python/advanced/Python生成并插入百万数据到MySQL/"/>
         <updated>2026-03-19T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[在进行API接口性能优化时，测试百万级别数据的处理能力是非常重要的环节。为了高效完成这一任务，本文将详细介绍如何生成大量数据并将其快速插入数据库中。 在插入数据之前，首先需要生成大量数据。Python提供了多种库和方法来生成数据，以下是几种常见的方法。 Mimesis 是一个用于生成假数据的 Pyt...]]></summary>
+        <summary type="html"><![CDATA[本文介绍如何使用 Python 高效生成百万级测试数据并批量插入 MySQL，涵盖 Mimesis 数据生成、executemany 批量插入、事务优化等关键技巧，适用于 API 性能测试场景。]]></summary>
         <category label="Python"/>
-        <category label="mysql"/>
+        <category label="MySQL"/>
+        <category label="性能优化"/>
+        <category label="数据生成"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Python删除列表元素]]></title>
+        <title type="html"><![CDATA[Python 删除列表元素的 6 种方法详解]]></title>
         <id>https://jasper-labs.cn/python/advanced/Python删除列表元素/</id>
         <link href="https://jasper-labs.cn/python/advanced/Python删除列表元素/"/>
         <updated>2026-03-19T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[在python中删除列表中元素是比较常见的操作，删除的方法也比较多，这里列一下最常见的做法 !画板 pop() 方法用于删除指定位置的元素，默认删除最后一个元素，返回值为该元素。如果索引超出范围，将引发 IndexError 异常。 注意： + 需要知道要删除元素的指定索引位置。 + 索引超出范围，...]]></summary>
+        <summary type="html"><![CDATA[全面讲解 Python 删除列表元素的 6 种常用方法，包括 pop()、remove()、del、列表推导式、clear() 和切片赋值，附带使用场景对比和注意事项。]]></summary>
         <category label="Python"/>
+        <category label="列表"/>
+        <category label="数据结构"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[构建生产级 Linux LVM 磁盘自动扩容]]></title>
@@ -125,12 +135,15 @@
         <category label="Linux"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Centos7编译安装Python3.12.6]]></title>
+        <title type="html"><![CDATA[CentOS 7 编译安装 Python 3.12.6 完整指南]]></title>
         <id>https://jasper-labs.cn/notes/linux/Centos7编译安装Python3.12.6/</id>
         <link href="https://jasper-labs.cn/notes/linux/Centos7编译安装Python3.12.6/"/>
         <updated>2026-03-19T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[+ Centos7 + Python3.12.6 访问Python的官方网站，下载最新的源码包,这里下载的是Python3.12.6 + --enable-optimizations 选项用于启用额外的优化，使 Python 运行更快。 + --prefix 指定python安装目录 + make ...]]></summary>
+        <summary type="html"><![CDATA[在 CentOS 7 上从源码编译安装 Python 3.12.6 的完整教程，包含依赖安装、编译优化配置（--enable-optimizations）、指定安装路径等关键步骤详解。]]></summary>
         <category label="Linux"/>
+        <category label="Python"/>
+        <category label="CentOS"/>
+        <category label="编译安装"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[站点地图]]></title>
@@ -170,8 +183,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[排序算法]]></title>
-        <id>https://jasper-labs.cn/algorithm/sorting//</id>
-        <link href="https://jasper-labs.cn/algorithm/sorting//"/>
+        <id>https://jasper-labs.cn/algorithm/sorting/</id>
+        <link href="https://jasper-labs.cn/algorithm/sorting/"/>
         <updated>2026-03-16T11:08:56.829Z</updated>
         <summary type="html"><![CDATA[冒泡、快速、归并等经典排序算法的原理与复杂度分析。]]></summary>
     </entry>

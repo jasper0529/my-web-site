@@ -70,10 +70,11 @@ function normalizeFontStrong(md) {
 }
 
 // https://vitepress.dev/reference/site-config
+// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Jasper Labs",
-  titleTemplate: "Jasper Labs",
-  description: "个人知识库和博客网站，包含Python、算法、技术笔记等内容",
+  titleTemplate: "%s | Jasper Labs",
+  description: "Jasper Labs - 个人技术知识库与博客，专注 Python 编程、算法与数据结构、Linux 运维、AI 技术等高质量技术内容分享",
   lang: 'zh-CN',
   
   // SEO 相关配置
@@ -81,32 +82,49 @@ export default defineConfig({
     // 基础 meta
     ['meta', { name: 'theme-color', content: '#2563EB' }],
     ['meta', { name: 'referrer', content: 'no-referrer' }],
+    ['meta', { name: 'author', content: 'Jasper' }],
+    ['meta', { name: 'robots', content: 'index, follow' }],
+    ['meta', { name: 'googlebot', content: 'index, follow' }],
+    ['meta', { name: 'baiduspider', content: 'index, follow' }],
     
     // Open Graph 标签
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:locale', content: 'zh-CN' }],
+    ['meta', { property: 'og:locale', content: 'zh_CN' }],
     ['meta', { property: 'og:site_name', content: 'Jasper Labs' }],
     ['meta', { property: 'og:image', content: 'https://jasper-labs.cn/images/logo.svg' }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    ['meta', { property: 'og:image:alt', content: 'Jasper Labs - 个人技术知识库' }],
     ['meta', { property: 'og:url', content: 'https://jasper-labs.cn/' }],
     
     // Twitter Card
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:site', content: '@jasper_labs' }],
     ['meta', { name: 'twitter:image', content: 'https://jasper-labs.cn/images/logo.svg' }],
+    ['meta', { name: 'twitter:image:alt', content: 'Jasper Labs - 个人技术知识库' }],
     
     // Favicon
     ['link', { rel: 'icon', href: '/images/logo.ico' }],
     ['link', { rel: 'apple-touch-icon', href: '/images/logo.svg' }],
+    ['link', { rel: 'mask-icon', href: '/images/logo.svg', color: '#2563EB' }],
     
     // RSS Feed
-    ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'RSS Feed', href: '/rss.xml' }],
-    ['link', { rel: 'alternate', type: 'application/atom+xml', title: 'Atom Feed', href: '/atom.xml' }],
+    ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'Jasper Labs RSS Feed', href: '/rss.xml' }],
+    ['link', { rel: 'alternate', type: 'application/atom+xml', title: 'Jasper Labs Atom Feed', href: '/atom.xml' }],
+    ['link', { rel: 'alternate', type: 'application/feed+json', title: 'Jasper Labs JSON Feed', href: '/feed.json' }],
     
-    // Canonical URL (通过 transformHead 动态设置)
     // Sitemap
     ['link', { rel: 'sitemap', type: 'application/xml', title: 'Sitemap', href: '/sitemap.xml' }],
+    
+    // 预连接到常用域名
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://cdn.jsdelivr.net' }],
+    
+    // Manifest (PWA 支持)
+    ['meta', { name: 'application-name', content: 'Jasper Labs' }],
+    ['meta', { name: 'apple-mobile-web-app-title', content: 'Jasper Labs' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }],
   ],
-
   // 最后更新时间
   lastUpdated: true,
   
@@ -280,20 +298,70 @@ export default defineConfig({
 
   // 动态 SEO 标签
   transformHead({ pageData, siteConfig }) {
-    const url = `${SITE_URL}${pageData.relativePath.replace(/\.md$/, '').replace(/\/index$/, '/') || '/'}`
+    const relativePath = pageData.relativePath
+      .replace(/\.md$/, '')
+      .replace(/\\/g, '/')
+      .replace(/\/index$/, '/')
+    const url = relativePath === 'index' ? `${SITE_URL}/` : `${SITE_URL}/${relativePath}/`
     const title = pageData.frontmatter.title || pageData.title
     const description = pageData.frontmatter.description || siteConfig.site.description
+    const tags = pageData.frontmatter.tags || []
+    const date = pageData.frontmatter.date
+    const image = pageData.frontmatter.image
+      ? `${SITE_URL}${pageData.frontmatter.image}`
+      : `${SITE_URL}/images/logo.svg`
     
-    return [
-      // Canonical URL
+    // 获取文章类型
+    const isArticle = !!date && pageData.frontmatter.layout !== 'home'
+    const ogType = isArticle ? 'article' : 'website'
+    
+    const headTags: any[] = [
+      // Canonical URL - 确保没有双斜杠
       ['link', { rel: 'canonical', href: url }],
+      
       // Open Graph 动态标签
       ['meta', { property: 'og:title', content: title }],
       ['meta', { property: 'og:description', content: description }],
       ['meta', { property: 'og:url', content: url }],
+      ['meta', { property: 'og:image', content: image }],
+      ['meta', { property: 'og:type', content: ogType }],
+      
       // Twitter 动态标签
       ['meta', { name: 'twitter:title', content: title }],
       ['meta', { name: 'twitter:description', content: description }],
+      ['meta', { name: 'twitter:image', content: image }],
     ]
+    
+    // 文章页面添加额外标签
+    if (isArticle) {
+      // 文章发布时间
+      const publishedTime = new Date(date).toISOString()
+      headTags.push(
+        ['meta', { property: 'article:published_time', content: publishedTime }],
+        ['meta', { property: 'article:author', content: pageData.frontmatter.author || 'Jasper' }],
+        ['meta', { property: 'article:section', content: getArticleSection(relativePath) }],
+      )
+      // 文章标签
+      tags.forEach((tag: string) => {
+        headTags.push(['meta', { property: 'article:tag', content: tag }])
+      })
+    }
+    
+    // 关键词 meta 标签
+    if (tags.length > 0) {
+      headTags.push(['meta', { name: 'keywords', content: tags.join(', ') }])
+    }
+    
+    return headTags
   }
 })
+
+// 获取文章分类
+function getArticleSection(path: string): string {
+  if (path.startsWith('python')) return 'Python 编程'
+  if (path.startsWith('algorithm')) return '算法与数据结构'
+  if (path.startsWith('ai')) return 'AI 人工智能'
+  if (path.startsWith('notes')) return '技术笔记'
+  if (path.startsWith('tools')) return '工具推荐'
+  return '技术'
+}

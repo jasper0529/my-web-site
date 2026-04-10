@@ -1,8 +1,8 @@
 ---
-title: Python生成并插入百万数据到MySQL
+title: Python 生成并插入百万数据到 MySQL 的最佳实践
 date: 2026-03-19
-tags: ['Python', 'mysql']
-description: 在进行API接口性能优化时，测试百万级别数据的处理能力是非常重要的环节。为了高效完成这一任务，本文将详细介绍如何生成大量数据并将其快速插入数据库中。 在插入数据之前，首先需要生成大量数据。Python提供了多种库和方法来生成数据，以下是几种常见的方法。 Mimesis 是一个用于生成假数据的 Pyt...
+tags: ['Python', 'MySQL', '性能优化', '数据生成']
+description: 本文介绍如何使用 Python 高效生成百万级测试数据并批量插入 MySQL，涵盖 Mimesis 数据生成、executemany 批量插入、事务优化等关键技巧，适用于 API 性能测试场景。
 ---
 
 <font style="color:rgb(44, 44, 54);">在进行API接口性能优化时，测试百万级别数据的处理能力是非常重要的环节。为了高效完成这一任务，本文将详细介绍如何生成大量数据并将其快速插入数据库中。</font>

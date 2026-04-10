@@ -1,8 +1,8 @@
 ---
-title: Python删除列表元素
+title: Python 删除列表元素的 6 种方法详解
 date: 2026-03-19
-tags: ['Python']
-description: 在python中删除列表中元素是比较常见的操作，删除的方法也比较多，这里列一下最常见的做法 !画板 pop() 方法用于删除指定位置的元素，默认删除最后一个元素，返回值为该元素。如果索引超出范围，将引发 IndexError 异常。 注意： + 需要知道要删除元素的指定索引位置。 + 索引超出范围，...
+tags: ['Python', '列表', '数据结构']
+description: 全面讲解 Python 删除列表元素的 6 种常用方法，包括 pop()、remove()、del、列表推导式、clear() 和切片赋值，附带使用场景对比和注意事项。
 ---
 
 <font style="color:rgb(0, 0, 0);">在python中删除列表中元素是比较常见的操作，删除的方法也比较多，这里列一下最常见的做法</font>

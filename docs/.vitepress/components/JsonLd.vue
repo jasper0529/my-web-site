@@ -14,20 +14,26 @@ const jsonLd = computed(() => {
   const date = frontmatter.value.date
   const tags = frontmatter.value.tags || []
   
-  // 如果是文章页面，添加 Article 结构化数据
+  // 如果是文章页面，添加 Article 结构化数据（TechArticle 更精确）
   if (date && frontmatter.value.layout !== 'home') {
+    const publishedDate = new Date(date).toISOString()
+    // dateModified 优先使用 lastUpdated，否则使用发布时间
+    const modifiedDate = frontmatter.value.lastUpdated
+      ? new Date(frontmatter.value.lastUpdated).toISOString()
+      : publishedDate
+    
     return {
       '@context': 'https://schema.org',
-      '@type': 'Article',
+      '@type': 'TechArticle',
       'headline': title,
       'description': description,
       'url': url,
-      'datePublished': new Date(date).toISOString(),
-      'dateModified': new Date(date).toISOString(),
+      'datePublished': publishedDate,
+      'dateModified': modifiedDate,
       'inLanguage': 'zh-CN',
       'author': {
         '@type': 'Person',
-        'name': 'Jasper',
+        'name': frontmatter.value.author || 'Jasper',
         'url': siteUrl
       },
       'publisher': {
@@ -44,7 +50,8 @@ const jsonLd = computed(() => {
         '@id': url
       },
       'keywords': tags.join(', '),
-      'articleSection': getArticleSection(page.value.relativePath)
+      'articleSection': getArticleSection(page.value.relativePath),
+      'wordCount': frontmatter.value.wordCount || undefined
     }
   }
   
@@ -86,10 +93,13 @@ const jsonLd = computed(() => {
 
 // 获取文章分类
 function getArticleSection(path: string): string {
-  if (path.startsWith('python/')) return 'Python'
-  if (path.startsWith('algorithm/')) return '算法'
+  if (path.startsWith('python/')) return 'Python 编程'
+  if (path.startsWith('algorithm/')) return '算法与数据结构'
+  if (path.startsWith('ai/')) return 'AI 人工智能'
   if (path.startsWith('notes/')) return '技术笔记'
-  if (path.startsWith('tools/')) return '工具'
+  if (path.startsWith('tools/')) return '工具推荐'
+  if (path.startsWith('prompts/')) return '提示词工程'
+  if (path.startsWith('skills/')) return '技能提升'
   return '技术'
 }
 

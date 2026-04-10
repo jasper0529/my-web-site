@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted, watch } from 'vue'
 import { useData } from 'vitepress'
 
 const { page, frontmatter } = useData()
+const siteUrl = 'https://jasper-labs.cn'
 
 // 通用名称格式化（避免每个目录手动硬编码）
 const formatSegmentName = (segment: string) =>
@@ -22,7 +23,11 @@ const pathMap: Record<string, { name: string, icon: string }> = {
   'advanced': { name: '进阶特性', icon: '⚡' },
   'data-structure': { name: '数据结构', icon: '🏗️' },
   'leetcode': { name: 'LeetCode', icon: '🎯' },
-  'sorting': { name: '排序算法', icon: '📈' }
+  'sorting': { name: '排序算法', icon: '📈' },
+  'ai': { name: 'AI 专题', icon: '🤖' },
+  'prompts': { name: '提示词库', icon: '💡' },
+  'skills': { name: 'Skills', icon: '🎯' },
+  'linux': { name: 'Linux', icon: '🐧' }
 }
 
 // 计算面包屑路径
@@ -83,6 +88,54 @@ const breadcrumbs = computed(() => {
 // 是否显示面包屑（首页不显示）
 const showBreadcrumb = computed(() => {
   return breadcrumbs.value.length > 1
+})
+
+// 生成 BreadcrumbList JSON-LD 结构化数据
+const breadcrumbJsonLd = computed(() => {
+  if (!showBreadcrumb.value) return null
+  
+  const items = breadcrumbs.value.map((item, index) => ({
+    '@type': 'ListItem',
+    'position': index + 1,
+    'name': item.name,
+    ...(item.path ? { 'item': `${siteUrl}${item.path}` } : {})
+  }))
+  
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': items
+  }
+})
+
+// 动态插入 BreadcrumbList JSON-LD
+function insertBreadcrumbJsonLd() {
+  if (typeof document === 'undefined' || !breadcrumbJsonLd.value) return
+  
+  // 移除旧的面包屑 JSON-LD
+  const oldScript = document.querySelector('script[type="application/ld+json"]#breadcrumb-json-ld')
+  if (oldScript) {
+    oldScript.remove()
+  }
+  
+  // 创建新的 JSON-LD 标签
+  const script = document.createElement('script')
+  script.type = 'application/ld+json'
+  script.id = 'breadcrumb-json-ld'
+  script.textContent = JSON.stringify(breadcrumbJsonLd.value)
+  document.head.appendChild(script)
+}
+
+// 监听路由变化
+watch(
+  () => page.value.path,
+  () => {
+    setTimeout(insertBreadcrumbJsonLd, 150)
+  }
+)
+
+onMounted(() => {
+  setTimeout(insertBreadcrumbJsonLd, 100)
 })
 </script>
 
