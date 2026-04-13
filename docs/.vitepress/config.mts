@@ -207,13 +207,13 @@ export default defineConfig({
       { text: '🎯 算法', link: '/algorithm/', activeMatch: '/algorithm/' },
       { text: '🤖 AI 专题', link: '/ai/', activeMatch: '/ai/' },
       { text: '📝 技术笔记', link: '/notes/', activeMatch: '/notes/' },
-      { text: '🏷️ 标签', link: '/tags/', activeMatch: '/tags/' },
       { text: '💡 提示词库', link: '/prompts/', activeMatch: '/prompts/' },
       { text: '🎯 Skills', link: '/skills/', activeMatch: '/skills/' },
       { text: '🔧 常用工具', link: '/tools/', activeMatch: '/tools/' },
       {
         text: '📋 更多',
         items: [
+          { text: '🏷️ 标签', link: '/tags/' },
           { text: '📚 文章归档', link: '/others/archives' },
           { text: '🗺️ 站点地图', link: '/others/sitemap-page' },
           { text: '📡 RSS 订阅', link: '/rss.xml' },

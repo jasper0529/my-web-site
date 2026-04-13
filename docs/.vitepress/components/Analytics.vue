@@ -3,7 +3,7 @@ import { onMounted, watch } from 'vue'
 import { useRoute } from 'vitepress'
 
 // Google Analytics 配置
-const GA_ID = '' // 在这里填入你的 Google Analytics ID，如 'G-XXXXXXXXXX'
+const GA_ID = 'G-8DKGELKCKF' // 在这里填入你的 Google Analytics ID，如 'G-XXXXXXXXXX'
 
 // 百度统计配置
 const BA_ID = '' // 在这里填入你的百度统计 ID
