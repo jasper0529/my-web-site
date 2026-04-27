@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-04-13T06:30:04.207Z</updated>
+    <updated>2026-04-27T01:51:04.136Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -15,6 +15,15 @@
     <logo>https://jasper-labs.cn/images/logo.svg</logo>
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
+    <entry>
+        <title type="html"><![CDATA[2、LLM基础 底层机制]]></title>
+        <id>https://jasper-labs.cn/ai/vibe coding/2、LLM基础-底层机制/</id>
+        <link href="https://jasper-labs.cn/ai/vibe coding/2、LLM基础-底层机制/"/>
+        <updated>2026-04-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[你身边是不是也有这样的人—— 一种人把 AI 当神仙，丢一句"帮我写个登录功能"，代码出来了直接合入主分支，出了 Bug 一脸懵逼："AI 写的啊，它怎么会错？另一种人把 AI 当骗子，试了两次发现生成的代码跑不起来，从此逢人就说："AI 编程？割韭菜的，根本不能用。]]></summary>
+        <category label="AI"/>
+        <category label="Vibe Coding"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Jasper Labs - 个人技术知识库与博客]]></title>
         <id>https://jasper-labs.cn/</id>
@@ -51,17 +60,9 @@
         <summary type="html"><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的示例导航页，便于后续扩展与收录内容。]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Vibe Coding 技术基础与前置知识全景指南]]></title>
-        <id>https://jasper-labs.cn/ai/vibe coding/1、Vibe Coding技术基础与前置知识/</id>
-        <link href="https://jasper-labs.cn/ai/vibe coding/1、Vibe Coding技术基础与前置知识/"/>
-        <updated>2026-03-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[从大语言模型（LLM）的底层逻辑到 Agent 智能体的实战驾驭，一文带你摸透 Vibe Coding 时代的核心心法与硬核前置知识。]]></summary>
-        <category label="Vibe Coding"/>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[0、Vibe Coding简介]]></title>
-        <id>https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/</id>
-        <link href="https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/"/>
+        <id>https://jasper-labs.cn/ai/vibe coding/1、vibe coding简介/</id>
+        <link href="https://jasper-labs.cn/ai/vibe coding/1、vibe coding简介/"/>
         <updated>2026-03-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Vibe Coding（国内圈子里常开玩笑叫它“氛围编程”或者“感觉流编程”），这词听起来是不是挺玄乎？脑海里是不是浮现出：程序员点着香薰、放着 Lo-Fi 纯音乐、不用看屏幕就能盲打敲键盘的画面？ 大错特错！它其实是近期最硬核、最具颠覆性的软件开发新姿势。Vibe Coding（氛围编程） 这个词...]]></summary>
         <category label="AI"/>

@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "https://jasper-labs.cn/ai/vibe coding/2、LLM基础-底层机制/",
+            "content_html": "你身边是不是也有这样的人—— 一种人把 AI 当神仙，丢一句\"帮我写个登录功能\"，代码出来了直接合入主分支，出了 Bug 一脸懵逼：\"AI 写的啊，它怎么会错？另一种人把 AI 当骗子，试了两次发现生成的代码跑不起来，从此逢人就说：\"AI 编程？割韭菜的，根本不能用。",
+            "url": "https://jasper-labs.cn/ai/vibe coding/2、LLM基础-底层机制/",
+            "title": "2、LLM基础 底层机制",
+            "date_modified": "2026-04-24T00:00:00.000Z",
+            "tags": [
+                "AI",
+                "Vibe Coding"
+            ]
+        },
+        {
             "id": "https://jasper-labs.cn/",
             "content_html": "Jasper Labs 是一个专注于 Python 编程、算法与数据结构、AI 技术、Linux 运维等领域的技术知识库，提供高质量的技术教程、学习笔记和最佳实践分享。",
             "url": "https://jasper-labs.cn/",
@@ -51,19 +62,9 @@
             "tags": []
         },
         {
-            "id": "https://jasper-labs.cn/ai/vibe coding/1、Vibe Coding技术基础与前置知识/",
-            "content_html": "从大语言模型（LLM）的底层逻辑到 Agent 智能体的实战驾驭，一文带你摸透 Vibe Coding 时代的核心心法与硬核前置知识。",
-            "url": "https://jasper-labs.cn/ai/vibe coding/1、Vibe Coding技术基础与前置知识/",
-            "title": "Vibe Coding 技术基础与前置知识全景指南",
-            "date_modified": "2026-03-26T00:00:00.000Z",
-            "tags": [
-                "Vibe Coding"
-            ]
-        },
-        {
-            "id": "https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/",
+            "id": "https://jasper-labs.cn/ai/vibe coding/1、vibe coding简介/",
             "content_html": "Vibe Coding（国内圈子里常开玩笑叫它“氛围编程”或者“感觉流编程”），这词听起来是不是挺玄乎？脑海里是不是浮现出：程序员点着香薰、放着 Lo-Fi 纯音乐、不用看屏幕就能盲打敲键盘的画面？ 大错特错！它其实是近期最硬核、最具颠覆性的软件开发新姿势。Vibe Coding（氛围编程） 这个词...",
-            "url": "https://jasper-labs.cn/ai/vibe coding/0、vibe coding简介/",
+            "url": "https://jasper-labs.cn/ai/vibe coding/1、vibe coding简介/",
             "title": "0、Vibe Coding简介",
             "date_modified": "2026-03-24T00:00:00.000Z",
             "tags": [
