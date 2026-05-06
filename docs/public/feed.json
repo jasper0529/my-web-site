@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "https://jasper-labs.cn/ai/vibe coding/3、prompt工程体系进化/",
+            "content_html": "prompt工程体系进化",
+            "url": "https://jasper-labs.cn/ai/vibe coding/3、prompt工程体系进化/",
+            "title": "3、prompt工程体系进化",
+            "date_modified": "2026-04-28T00:00:00.000Z",
+            "tags": [
+                "AI",
+                "Vibe Coding"
+            ]
+        },
+        {
             "id": "https://jasper-labs.cn/ai/vibe coding/2、LLM基础-底层机制/",
             "content_html": "你身边是不是也有这样的人—— 一种人把 AI 当神仙，丢一句\"帮我写个登录功能\"，代码出来了直接合入主分支，出了 Bug 一脸懵逼：\"AI 写的啊，它怎么会错？另一种人把 AI 当骗子，试了两次发现生成的代码跑不起来，从此逢人就说：\"AI 编程？割韭菜的，根本不能用。",
             "url": "https://jasper-labs.cn/ai/vibe coding/2、LLM基础-底层机制/",
@@ -208,14 +219,6 @@
                 "算法",
                 "数据结构"
             ]
-        },
-        {
-            "id": "https://jasper-labs.cn/algorithm/sorting/",
-            "content_html": "冒泡、快速、归并等经典排序算法的原理与复杂度分析。",
-            "url": "https://jasper-labs.cn/algorithm/sorting/",
-            "title": "排序算法",
-            "date_modified": "2026-03-16T11:08:56.829Z",
-            "tags": []
         }
     ]
 }

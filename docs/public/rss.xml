@@ -4,7 +4,7 @@
         <title>Jasper Labs</title>
         <link>https://jasper-labs.cn</link>
         <description>个人知识库和博客网站，包含Python、算法、技术笔记等内容</description>
-        <lastBuildDate>Mon, 27 Apr 2026 01:51:04 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 06 May 2026 01:50:33 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -14,6 +14,15 @@
             <link>https://jasper-labs.cn</link>
         </image>
         <copyright>Copyright © 2026 Jasper</copyright>
+        <item>
+            <title><![CDATA[3、prompt工程体系进化]]></title>
+            <link>https://jasper-labs.cn/ai/vibe coding/3、prompt工程体系进化/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/ai/vibe coding/3、prompt工程体系进化/</guid>
+            <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[prompt工程体系进化]]></description>
+            <category>AI</category>
+            <category>Vibe Coding</category>
+        </item>
         <item>
             <title><![CDATA[2、LLM基础 底层机制]]></title>
             <link>https://jasper-labs.cn/ai/vibe coding/2、LLM基础-底层机制/</link>
@@ -180,13 +189,6 @@
             <description><![CDATA[时间复杂度是衡量算法效率的核心指标，描述算法运行时间与输入规模的关系。它不关注具体运行时间（如毫秒数），而是关注随着输入规模 n 增大时，算法运行时间的增长趋势。 1. 评估效率： 比较不同算法在解决同一个问题时的效率,则优选择。 2. 预测性能： 预测算法在处理大规模数据时的表现。 3. 优化算法...]]></description>
             <category>算法</category>
             <category>数据结构</category>
-        </item>
-        <item>
-            <title><![CDATA[排序算法]]></title>
-            <link>https://jasper-labs.cn/algorithm/sorting/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/algorithm/sorting/</guid>
-            <pubDate>Mon, 16 Mar 2026 11:08:56 GMT</pubDate>
-            <description><![CDATA[冒泡、快速、归并等经典排序算法的原理与复杂度分析。]]></description>
         </item>
     </channel>
 </rss>
