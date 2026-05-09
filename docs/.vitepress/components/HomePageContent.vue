@@ -2,7 +2,7 @@
 import { data } from '../posts.data'
 import TypeWriter from './TypeWriter.vue'
 
-const latestPosts = data.posts.slice(0, 6)
+const latestPosts = data.posts.slice(0, 4)
 const recommendedPosts = (() => {
   const tagged = data.posts.filter(post => post.tags?.includes('推荐'))
   return (tagged.length ? tagged : data.posts).slice(0, 3)
@@ -67,7 +67,7 @@ const aiTopics = [
 
   <section class="home-section section-blue">
     <div class="section-header">
-      <p class="section-eyebrow">Latest</p>
+      <p class="section-eyebrow">最新内容</p>
       <h2>最新文章</h2>
       <p class="section-desc">实时更新的文章动态，快速了解本站最新内容。</p>
     </div>
@@ -80,7 +80,7 @@ const aiTopics = [
 
   <section class="home-section section-orange">
     <div class="section-header">
-      <p class="section-eyebrow">Recommended</p>
+      <p class="section-eyebrow">推荐阅读</p>
       <h2>推荐阅读</h2>
       <p class="section-desc">优先展示带「推荐」标签的精选文章，若暂未标注则展示最新文章。</p>
     </div>
@@ -93,7 +93,7 @@ const aiTopics = [
 
   <section class="home-section section-green">
     <div class="section-header">
-      <p class="section-eyebrow">AI</p>
+      <p class="section-eyebrow">AI 专题</p>
       <h2>AI 专题导航</h2>
       <p class="section-desc">覆盖大模型、RAG、Agent、AIGC、工程化与评测的专题入口，便于快速定位内容。</p>
     </div>
@@ -115,7 +115,7 @@ const aiTopics = [
 
   <section class="home-section section-purple">
     <div class="section-header">
-      <p class="section-eyebrow">Hot Topics</p>
+      <p class="section-eyebrow">热门主题</p>
       <h2>热门标签</h2>
       <p class="section-desc">统计所有文章的标签出现频次，优先展示最常访问的主题方向。</p>
     </div>

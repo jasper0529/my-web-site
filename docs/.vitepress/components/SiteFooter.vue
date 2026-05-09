@@ -96,7 +96,7 @@ const currentYear = new Date().getFullYear()
         </div>
         <div class="footer-meta">
           <span class="footer-separator">|</span>
-          <a href="/public/robots.txt" target="_blank">Robots</a>
+          <a href="/robots.txt" target="_blank" rel="noopener">Robots</a>
           <span class="footer-separator">·</span>
           <a href="/sitemap.xml" target="_blank">Sitemap</a>
           <span class="footer-separator">·</span>

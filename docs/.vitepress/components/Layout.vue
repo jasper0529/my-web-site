@@ -6,7 +6,6 @@ import DocMeta from './DocMeta.vue'
 import BackToTop from './BackToTop.vue'
 import GiscusComment from './GiscusComment.vue' // 评论模块
 import ArticleCopyright from './ArticleCopyright.vue' // 版权信息
-import JsonLd from './JsonLd.vue' // JSON-LD 结构化数据
 import ReadingProgress from './ReadingProgress.vue' // 阅读进度条
 import Announcement from './Announcement.vue' // 公告栏
 import Analytics from './Analytics.vue' // 分析工具
@@ -15,6 +14,7 @@ import Breadcrumb from './Breadcrumb.vue' // 面包屑导航
 import RelatedPosts from './RelatedPosts.vue' // 相关文章推荐
 import HeroParticles from './HeroParticles.vue' // Hero 粒子动画背景
 import SiteFooter from './SiteFooter.vue' // 自定义页脚
+import NotFoundContent from './NotFoundContent.vue' // 自定义 404 页面内容
 
 const { Layout } = DefaultTheme
 const { frontmatter } = useData()
@@ -61,16 +61,16 @@ const announcementConfig = computed(() => {
 
 <template>
   <Layout>
-    <!-- 在 head 中插入 JSON-LD 结构化数据 -->
-    <template #head>
-      <JsonLd />
-    </template>
-
     <!-- 阅读进度条、加载动画和首页粒子背景 - 放在 layout-top 插槽中 -->
     <template #layout-top>
       <ReadingProgress />
       <LoadingOverlay />
       <HeroParticles v-if="isHome" />
+    </template>
+
+    <!-- 自定义 404 页面 -->
+    <template #not-found>
+      <NotFoundContent />
     </template>
 
     <!-- 在文档内容前插入面包屑和元信息 -->

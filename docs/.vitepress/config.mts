@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { generateSidebar } from './utils/sidebar'
-import { groupIconMdPlugin, groupIconVitePlugin,localIconLoader } from 'vitepress-plugin-group-icons'
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 const SITE_URL = 'https://jasper-labs.cn'
 
@@ -71,8 +71,8 @@ function normalizeFontStrong(md) {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Jasper Labs",
-  titleTemplate: "%s | Jasper Labs",
+  title: 'Jasper Labs',
+  titleTemplate: 'Jasper Labs',
   description: "Jasper Labs - 个人技术知识库与博客，专注 Python 编程、算法与数据结构、Linux 运维、AI 技术等高质量技术内容分享",
   lang: 'zh-CN',
   
@@ -87,20 +87,12 @@ export default defineConfig({
     ['meta', { name: 'baiduspider', content: 'index, follow' }],
     
     // Open Graph 标签
-    ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
     ['meta', { property: 'og:site_name', content: 'Jasper Labs' }],
-    ['meta', { property: 'og:image', content: 'https://jasper-labs.cn/images/og-image.svg' }],
-    ['meta', { property: 'og:image:width', content: '1200' }],
-    ['meta', { property: 'og:image:height', content: '630' }],
-    ['meta', { property: 'og:image:alt', content: 'Jasper Labs - 个人技术知识库与博客' }],
-    ['meta', { property: 'og:url', content: 'https://jasper-labs.cn/' }],
     
     // Twitter Card
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:site', content: '@jasper_labs' }],
-    ['meta', { name: 'twitter:image', content: 'https://jasper-labs.cn/images/og-image.svg' }],
-    ['meta', { name: 'twitter:image:alt', content: 'Jasper Labs - 个人技术知识库与博客' }],
     
     // Favicon
     ['link', { rel: 'icon', href: '/images/logo.ico' }],
@@ -114,12 +106,6 @@ export default defineConfig({
     
     // Sitemap
     ['link', { rel: 'sitemap', type: 'application/xml', title: 'Sitemap', href: '/sitemap.xml' }],
-    
-    // 加载 Fira Code 等宽字体（代码块使用）
-    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
-    ['link', { rel: 'preconnect', href: 'https://cdn.jsdelivr.net' }],
-    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
-    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap' }],
     
     // Apple Web App 支持
     ['meta', { name: 'apple-mobile-web-app-title', content: 'Jasper Labs' }],
@@ -313,18 +299,21 @@ export default defineConfig({
 
   // 动态 SEO 标签
   transformHead({ pageData, siteConfig }) {
-    const relativePath = pageData.relativePath
+    const relativePath = pageData.relativePath.replace(/\\/g, '/')
+    const normalizedPath = relativePath
+      .replace(/index\.md$/, '')
       .replace(/\.md$/, '')
-      .replace(/\\/g, '/')
-      .replace(/\/index$/, '/')
-    const url = relativePath === 'index' ? `${SITE_URL}/` : `${SITE_URL}/${relativePath}/`
-    const title = pageData.frontmatter.title || pageData.title
+      .replace(/\/$/, '')
+    const url = normalizedPath ? `${SITE_URL}/${normalizedPath}/` : `${SITE_URL}/`
+    const title = pageData.frontmatter.title || pageData.title || siteConfig.site.title
     const description = pageData.frontmatter.description || siteConfig.site.description
-    const tags = pageData.frontmatter.tags || []
+    const tags = Array.isArray(pageData.frontmatter.tags) ? pageData.frontmatter.tags : []
     const date = pageData.frontmatter.date
-    const image = pageData.frontmatter.image
-      ? `${SITE_URL}${pageData.frontmatter.image}`
-      : `${SITE_URL}/images/logo.svg`
+    const lastUpdated = pageData.lastUpdated ? new Date(pageData.lastUpdated).toISOString() : null
+    const imagePath = pageData.frontmatter.cover || pageData.frontmatter.image || '/images/og-image.svg'
+    const image = String(imagePath).startsWith('http')
+      ? String(imagePath)
+      : `${SITE_URL}${imagePath}`
     
     // 获取文章类型
     const isArticle = !!date && pageData.frontmatter.layout !== 'home'
@@ -339,12 +328,16 @@ export default defineConfig({
       ['meta', { property: 'og:description', content: description }],
       ['meta', { property: 'og:url', content: url }],
       ['meta', { property: 'og:image', content: image }],
+      ['meta', { property: 'og:image:width', content: '1200' }],
+      ['meta', { property: 'og:image:height', content: '630' }],
+      ['meta', { property: 'og:image:alt', content: title }],
       ['meta', { property: 'og:type', content: ogType }],
       
       // Twitter 动态标签
       ['meta', { name: 'twitter:title', content: title }],
       ['meta', { name: 'twitter:description', content: description }],
       ['meta', { name: 'twitter:image', content: image }],
+      ['meta', { name: 'twitter:image:alt', content: title }],
     ]
     
     // 文章页面添加额外标签
@@ -353,8 +346,9 @@ export default defineConfig({
       const publishedTime = new Date(date).toISOString()
       headTags.push(
         ['meta', { property: 'article:published_time', content: publishedTime }],
+        ['meta', { property: 'article:modified_time', content: lastUpdated || publishedTime }],
         ['meta', { property: 'article:author', content: pageData.frontmatter.author || 'Jasper' }],
-        ['meta', { property: 'article:section', content: getArticleSection(relativePath) }],
+        ['meta', { property: 'article:section', content: getArticleSection(normalizedPath) }],
       )
       // 文章标签
       tags.forEach((tag: string) => {
@@ -366,6 +360,49 @@ export default defineConfig({
     if (tags.length > 0) {
       headTags.push(['meta', { name: 'keywords', content: tags.join(', ') }])
     }
+
+    const jsonLd = isArticle
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'TechArticle',
+          headline: title,
+          description,
+          url,
+          datePublished: new Date(date).toISOString(),
+          dateModified: lastUpdated || new Date(date).toISOString(),
+          inLanguage: 'zh-CN',
+          author: {
+            '@type': 'Person',
+            name: pageData.frontmatter.author || 'Jasper',
+            url: SITE_URL
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Jasper Labs',
+            url: SITE_URL,
+            logo: {
+              '@type': 'ImageObject',
+              url: `${SITE_URL}/images/logo.svg`
+            }
+          },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': url
+          },
+          image,
+          keywords: tags.join(', '),
+          articleSection: getArticleSection(normalizedPath)
+        }
+      : {
+          '@context': 'https://schema.org',
+          '@type': pageData.frontmatter.layout === 'home' ? 'WebSite' : 'WebPage',
+          name: title,
+          description,
+          url,
+          inLanguage: 'zh-CN'
+        }
+
+    headTags.push(['script', { type: 'application/ld+json' }, JSON.stringify(jsonLd)])
     
     return headTags
   }

@@ -21,6 +21,7 @@ import TypeWriter from '../components/TypeWriter.vue'
 import HeroParticles from '../components/HeroParticles.vue'
 import SvgIcon from '../components/SvgIcon.vue'
 import HomePageContent from '../components/HomePageContent.vue'
+import NotFoundContent from '../components/NotFoundContent.vue'
 
 export default {
   extends: DefaultTheme,
@@ -39,6 +40,7 @@ export default {
     app.component('HeroParticles', HeroParticles)
     app.component('SvgIcon', SvgIcon)
     app.component('HomePageContent', HomePageContent)
+    app.component('NotFoundContent', NotFoundContent)
   },
   setup() {
     const isClient = typeof window !== 'undefined'

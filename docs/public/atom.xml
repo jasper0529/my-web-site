@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-05-09T02:50:10.050Z</updated>
+    <updated>2026-05-09T07:05:21.068Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -16,53 +16,74 @@
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
     <entry>
-        <title type="html"><![CDATA[Jasper Labs - 个人技术知识库与博客]]></title>
-        <id>https://jasper-labs.cn/</id>
-        <link href="https://jasper-labs.cn/"/>
-        <updated>2026-05-09T02:32:57.663Z</updated>
-        <summary type="html"><![CDATA[Jasper Labs 是一个专注于 Python 编程、算法与数据结构、AI 技术、Linux 运维等领域的技术知识库，提供高质量的技术教程、学习笔记和最佳实践分享。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[技术笔记]]></title>
-        <id>https://jasper-labs.cn/notes/</id>
-        <link href="https://jasper-labs.cn/notes/"/>
-        <updated>2026-05-08T14:25:55.585Z</updated>
-        <summary type="html"><![CDATA[开发过程中遇到的问题与解决方案，技术探索与心得体会。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[页面未找到]]></title>
-        <id>https://jasper-labs.cn/404/</id>
-        <link href="https://jasper-labs.cn/404/"/>
-        <updated>2026-05-08T13:34:55.490Z</updated>
-        <summary type="html"><![CDATA[页面未找到]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[AI 专题导航]]></title>
         <id>https://jasper-labs.cn/ai/</id>
         <link href="https://jasper-labs.cn/ai/"/>
-        <updated>2026-05-08T13:29:34.614Z</updated>
+        <updated>2026-05-09T06:25:57.994Z</updated>
         <summary type="html"><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的专题导航，便于后续扩展与收录内容。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[算法与数据结构]]></title>
         <id>https://jasper-labs.cn/algorithm/</id>
         <link href="https://jasper-labs.cn/algorithm/"/>
-        <updated>2026-05-08T10:08:52.398Z</updated>
+        <updated>2026-05-09T06:25:57.991Z</updated>
         <summary type="html"><![CDATA[深入理解算法原理，LeetCode 刷题笔记，可视化图解复杂概念。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数据结构]]></title>
+        <id>https://jasper-labs.cn/algorithm/data-structure/</id>
+        <link href="https://jasper-labs.cn/algorithm/data-structure/"/>
+        <updated>2026-05-09T06:25:57.991Z</updated>
+        <summary type="html"><![CDATA[数组、链表、栈、队列、树、图等基础数据结构的原理与实现。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[技术笔记]]></title>
+        <id>https://jasper-labs.cn/notes/</id>
+        <link href="https://jasper-labs.cn/notes/"/>
+        <updated>2026-05-09T06:25:57.990Z</updated>
+        <summary type="html"><![CDATA[开发过程中遇到的问题与解决方案，技术探索与心得体会。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[排序算法]]></title>
+        <id>https://jasper-labs.cn/algorithm/sorting/</id>
+        <link href="https://jasper-labs.cn/algorithm/sorting/"/>
+        <updated>2026-05-09T06:25:57.990Z</updated>
+        <summary type="html"><![CDATA[冒泡、快速、归并等经典排序算法的原理与复杂度分析。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Prompt 提示词库]]></title>
+        <id>https://jasper-labs.cn/prompts/</id>
+        <link href="https://jasper-labs.cn/prompts/"/>
+        <updated>2026-05-09T06:25:57.988Z</updated>
+        <summary type="html"><![CDATA[精选 AI 提示词集合，助你高效使用 AI 工具。涵盖写作、编程、数据分析、学习等多个领域。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[其他内容]]></title>
+        <id>https://jasper-labs.cn/others/</id>
+        <link href="https://jasper-labs.cn/others/"/>
+        <updated>2026-05-09T06:25:57.988Z</updated>
+        <summary type="html"><![CDATA[关于我、读书笔记、友情链接等内容。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Python 学习]]></title>
         <id>https://jasper-labs.cn/python/</id>
         <link href="https://jasper-labs.cn/python/"/>
-        <updated>2026-05-08T10:08:00.477Z</updated>
+        <updated>2026-05-09T06:25:57.986Z</updated>
         <summary type="html"><![CDATA[系统学习 Python 编程，从基础语法到高级特性，包含常用库的使用教程和最佳实践。]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[文章归档]]></title>
-        <id>https://jasper-labs.cn/others/archives/</id>
-        <link href="https://jasper-labs.cn/others/archives/"/>
-        <updated>2026-05-08T07:50:50.828Z</updated>
-        <summary type="html"><![CDATA[按时间线浏览所有文章，方便查找历史内容。]]></summary>
+        <title type="html"><![CDATA[常用工具]]></title>
+        <id>https://jasper-labs.cn/tools/</id>
+        <link href="https://jasper-labs.cn/tools/"/>
+        <updated>2026-05-09T06:25:57.984Z</updated>
+        <summary type="html"><![CDATA[精选开发工具推荐，提升效率的软件和在线服务。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Agent Skills 技能库]]></title>
+        <id>https://jasper-labs.cn/skills/</id>
+        <link href="https://jasper-labs.cn/skills/"/>
+        <updated>2026-05-09T06:25:57.984Z</updated>
+        <summary type="html"><![CDATA[扩展 AI 编程助手能力的标准化功能模块库，涵盖代码审查、测试、重构、文档生成等场景。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[3、prompt工程体系进化]]></title>
@@ -81,27 +102,6 @@
         <summary type="html"><![CDATA[你身边是不是也有这样的人—— 一种人把 AI 当神仙，丢一句"帮我写个登录功能"，代码出来了直接合入主分支，出了 Bug 一脸懵逼："AI 写的啊，它怎么会错？另一种人把 AI 当骗子，试了两次发现生成的代码跑不起来，从此逢人就说："AI 编程？割韭菜的，根本不能用。]]></summary>
         <category label="AI"/>
         <category label="Vibe Coding"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Agent Skills 技能库]]></title>
-        <id>https://jasper-labs.cn/skills/</id>
-        <link href="https://jasper-labs.cn/skills/"/>
-        <updated>2026-04-03T09:49:14.134Z</updated>
-        <summary type="html"><![CDATA[扩展 AI 编程助手能力的标准化功能模块库，涵盖代码审查、测试、重构、文档生成等场景。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[常用工具]]></title>
-        <id>https://jasper-labs.cn/tools/</id>
-        <link href="https://jasper-labs.cn/tools/"/>
-        <updated>2026-04-03T03:06:21.917Z</updated>
-        <summary type="html"><![CDATA[精选开发工具推荐，提升效率的软件和在线服务。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Prompt 提示词库]]></title>
-        <id>https://jasper-labs.cn/prompts/</id>
-        <link href="https://jasper-labs.cn/prompts/"/>
-        <updated>2026-03-31T02:56:24.788Z</updated>
-        <summary type="html"><![CDATA[精选 AI 提示词集合，助你高效使用 AI 工具。涵盖写作、编程、数据分析、学习等多个领域。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[1、Vibe Coding简介]]></title>

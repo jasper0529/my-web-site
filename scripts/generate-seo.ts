@@ -25,9 +25,12 @@ const AUTHOR_EMAIL = 'fanren123@protonmail.com'
 
 // 需要排除的路径
 const EXCLUDE_PATHS = [
+  '/404/',
   '/tags/',
   '/others/about',
-  '/others/index'
+  '/others/index',
+  '/others/archives/',
+  '/others/sitemap-page/'
 ]
 
 interface PageData {
@@ -47,6 +50,18 @@ function sanitizeText(text: string): string {
         .replace(/\s+/g, ' ')
         .trim()
     : ''
+}
+
+function isNonArticlePage(url: string): boolean {
+  return [
+    '/',
+    '/404/',
+    '/tags/',
+    '/others/about/',
+    '/others/archives/',
+    '/others/sitemap-page/',
+    '/others/update/'
+  ].includes(url)
 }
 
 /**
@@ -139,7 +154,9 @@ async function generateSitemap(pages: PageData[]): Promise<void> {
     url: '/',
     changefreq: 'daily',
     priority: 1.0,
-    lastmod: new Date().toISOString()
+    lastmod: pages.length
+      ? new Date(Math.max(...pages.map(page => page.date.getTime()))).toISOString()
+      : new Date().toISOString()
   })
   
   // 去重：使用 Map 按 URL 去重，跳过首页（已手动添加）
@@ -232,6 +249,7 @@ async function generateRSSFeed(pages: PageData[]): Promise<void> {
   
   // 按日期排序，取最新的 20 篇文章
   const recentPages = pages
+    .filter(page => !isNonArticlePage(page.url))
     .filter(page => page.date && page.title !== '概览')
     .sort((a, b) => b.date.getTime() - a.date.getTime())
     .slice(0, 20)

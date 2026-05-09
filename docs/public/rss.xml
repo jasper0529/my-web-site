@@ -4,7 +4,7 @@
         <title>Jasper Labs</title>
         <link>https://jasper-labs.cn</link>
         <description>个人知识库和博客网站，包含Python、算法、技术笔记等内容</description>
-        <lastBuildDate>Sat, 09 May 2026 02:50:10 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 09 May 2026 07:05:21 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -15,53 +15,74 @@
         </image>
         <copyright>Copyright © 2026 Jasper</copyright>
         <item>
-            <title><![CDATA[Jasper Labs - 个人技术知识库与博客]]></title>
-            <link>https://jasper-labs.cn/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/</guid>
-            <pubDate>Sat, 09 May 2026 02:32:57 GMT</pubDate>
-            <description><![CDATA[Jasper Labs 是一个专注于 Python 编程、算法与数据结构、AI 技术、Linux 运维等领域的技术知识库，提供高质量的技术教程、学习笔记和最佳实践分享。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[技术笔记]]></title>
-            <link>https://jasper-labs.cn/notes/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes/</guid>
-            <pubDate>Fri, 08 May 2026 14:25:55 GMT</pubDate>
-            <description><![CDATA[开发过程中遇到的问题与解决方案，技术探索与心得体会。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[页面未找到]]></title>
-            <link>https://jasper-labs.cn/404/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/404/</guid>
-            <pubDate>Fri, 08 May 2026 13:34:55 GMT</pubDate>
-            <description><![CDATA[页面未找到]]></description>
-        </item>
-        <item>
             <title><![CDATA[AI 专题导航]]></title>
             <link>https://jasper-labs.cn/ai/</link>
             <guid isPermaLink="false">https://jasper-labs.cn/ai/</guid>
-            <pubDate>Fri, 08 May 2026 13:29:34 GMT</pubDate>
+            <pubDate>Sat, 09 May 2026 06:25:57 GMT</pubDate>
             <description><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的专题导航，便于后续扩展与收录内容。]]></description>
         </item>
         <item>
             <title><![CDATA[算法与数据结构]]></title>
             <link>https://jasper-labs.cn/algorithm/</link>
             <guid isPermaLink="false">https://jasper-labs.cn/algorithm/</guid>
-            <pubDate>Fri, 08 May 2026 10:08:52 GMT</pubDate>
+            <pubDate>Sat, 09 May 2026 06:25:57 GMT</pubDate>
             <description><![CDATA[深入理解算法原理，LeetCode 刷题笔记，可视化图解复杂概念。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[数据结构]]></title>
+            <link>https://jasper-labs.cn/algorithm/data-structure/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/algorithm/data-structure/</guid>
+            <pubDate>Sat, 09 May 2026 06:25:57 GMT</pubDate>
+            <description><![CDATA[数组、链表、栈、队列、树、图等基础数据结构的原理与实现。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[技术笔记]]></title>
+            <link>https://jasper-labs.cn/notes/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/</guid>
+            <pubDate>Sat, 09 May 2026 06:25:57 GMT</pubDate>
+            <description><![CDATA[开发过程中遇到的问题与解决方案，技术探索与心得体会。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[排序算法]]></title>
+            <link>https://jasper-labs.cn/algorithm/sorting/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/algorithm/sorting/</guid>
+            <pubDate>Sat, 09 May 2026 06:25:57 GMT</pubDate>
+            <description><![CDATA[冒泡、快速、归并等经典排序算法的原理与复杂度分析。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Prompt 提示词库]]></title>
+            <link>https://jasper-labs.cn/prompts/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/prompts/</guid>
+            <pubDate>Sat, 09 May 2026 06:25:57 GMT</pubDate>
+            <description><![CDATA[精选 AI 提示词集合，助你高效使用 AI 工具。涵盖写作、编程、数据分析、学习等多个领域。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[其他内容]]></title>
+            <link>https://jasper-labs.cn/others/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/others/</guid>
+            <pubDate>Sat, 09 May 2026 06:25:57 GMT</pubDate>
+            <description><![CDATA[关于我、读书笔记、友情链接等内容。]]></description>
         </item>
         <item>
             <title><![CDATA[Python 学习]]></title>
             <link>https://jasper-labs.cn/python/</link>
             <guid isPermaLink="false">https://jasper-labs.cn/python/</guid>
-            <pubDate>Fri, 08 May 2026 10:08:00 GMT</pubDate>
+            <pubDate>Sat, 09 May 2026 06:25:57 GMT</pubDate>
             <description><![CDATA[系统学习 Python 编程，从基础语法到高级特性，包含常用库的使用教程和最佳实践。]]></description>
         </item>
         <item>
-            <title><![CDATA[文章归档]]></title>
-            <link>https://jasper-labs.cn/others/archives/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/others/archives/</guid>
-            <pubDate>Fri, 08 May 2026 07:50:50 GMT</pubDate>
-            <description><![CDATA[按时间线浏览所有文章，方便查找历史内容。]]></description>
+            <title><![CDATA[常用工具]]></title>
+            <link>https://jasper-labs.cn/tools/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/tools/</guid>
+            <pubDate>Sat, 09 May 2026 06:25:57 GMT</pubDate>
+            <description><![CDATA[精选开发工具推荐，提升效率的软件和在线服务。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Agent Skills 技能库]]></title>
+            <link>https://jasper-labs.cn/skills/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/skills/</guid>
+            <pubDate>Sat, 09 May 2026 06:25:57 GMT</pubDate>
+            <description><![CDATA[扩展 AI 编程助手能力的标准化功能模块库，涵盖代码审查、测试、重构、文档生成等场景。]]></description>
         </item>
         <item>
             <title><![CDATA[3、prompt工程体系进化]]></title>
@@ -80,27 +101,6 @@
             <description><![CDATA[你身边是不是也有这样的人—— 一种人把 AI 当神仙，丢一句"帮我写个登录功能"，代码出来了直接合入主分支，出了 Bug 一脸懵逼："AI 写的啊，它怎么会错？另一种人把 AI 当骗子，试了两次发现生成的代码跑不起来，从此逢人就说："AI 编程？割韭菜的，根本不能用。]]></description>
             <category>AI</category>
             <category>Vibe Coding</category>
-        </item>
-        <item>
-            <title><![CDATA[Agent Skills 技能库]]></title>
-            <link>https://jasper-labs.cn/skills/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/skills/</guid>
-            <pubDate>Fri, 03 Apr 2026 09:49:14 GMT</pubDate>
-            <description><![CDATA[扩展 AI 编程助手能力的标准化功能模块库，涵盖代码审查、测试、重构、文档生成等场景。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[常用工具]]></title>
-            <link>https://jasper-labs.cn/tools/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/tools/</guid>
-            <pubDate>Fri, 03 Apr 2026 03:06:21 GMT</pubDate>
-            <description><![CDATA[精选开发工具推荐，提升效率的软件和在线服务。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Prompt 提示词库]]></title>
-            <link>https://jasper-labs.cn/prompts/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/prompts/</guid>
-            <pubDate>Tue, 31 Mar 2026 02:56:24 GMT</pubDate>
-            <description><![CDATA[精选 AI 提示词集合，助你高效使用 AI 工具。涵盖写作、编程、数据分析、学习等多个领域。]]></description>
         </item>
         <item>
             <title><![CDATA[1、Vibe Coding简介]]></title>
