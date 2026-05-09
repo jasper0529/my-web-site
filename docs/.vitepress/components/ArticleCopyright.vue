@@ -13,13 +13,13 @@ const articleInfo = computed(() => {
   const permalink = frontmatter.value.permalink || ''
   
   // 构建完整链接
+  // 构建完整链接（cleanUrls 模式下不含 .html 后缀）
   const baseUrl = site.value.base || '/'
   const pageUrl = page.value.relativePath || ''
   const origin = isClient ? window.location.origin : ''
-  const fullUrl = permalink 
+  const fullUrl = permalink
     ? `${origin}${permalink}`
-    : `${origin}${baseUrl}${pageUrl.replace(/\.md$/, '.html')}`
-  
+    : `${origin}${baseUrl}${pageUrl.replace(/\.md$/, '')}`
   return {
     title,
     author,

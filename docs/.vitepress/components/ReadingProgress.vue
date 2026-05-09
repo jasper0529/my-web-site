@@ -55,7 +55,9 @@ onUnmounted(() => {
       class="reading-progress"
       :style="{ '--progress': `${progress}%` }"
     >
-      <div class="progress-bar"></div>
+      <div class="progress-bar">
+        <div class="progress-glow-dot"></div>
+      </div>
     </div>
   </Transition>
 </template>
@@ -72,11 +74,37 @@ onUnmounted(() => {
 }
 
 .progress-bar {
+  position: relative;
   height: 100%;
   width: var(--progress);
-  background: linear-gradient(90deg, #2563EB 0%, #3B82F6 100%);
+  background: linear-gradient(90deg, #2563EB 0%, #7C3AED 50%, #EC4899 100%);
   transition: width 0.1s ease-out;
-  box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.4), 0 0 16px rgba(37, 99, 235, 0.2);
+  border-radius: 0 2px 2px 0;
+}
+
+.progress-glow-dot {
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #EC4899;
+  box-shadow: 0 0 6px rgba(236, 72, 153, 0.8), 0 0 12px rgba(236, 72, 153, 0.4), 0 0 20px rgba(236, 72, 153, 0.2);
+  animation: glow-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(236, 72, 153, 0.8), 0 0 12px rgba(236, 72, 153, 0.4), 0 0 20px rgba(236, 72, 153, 0.2);
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    box-shadow: 0 0 8px rgba(236, 72, 153, 1), 0 0 16px rgba(236, 72, 153, 0.6), 0 0 28px rgba(236, 72, 153, 0.3);
+    transform: translateY(-50%) scale(1.2);
+  }
 }
 
 .progress-fade-enter-active,
@@ -93,7 +121,12 @@ onUnmounted(() => {
 <style>
 /* 深色模式适配 */
 .dark .reading-progress .progress-bar {
-  background: linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%);
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  background: linear-gradient(90deg, #3B82F6 0%, #A78BFA 50%, #F472B6 100%);
+  box-shadow: 0 0 8px rgba(167, 139, 250, 0.4), 0 0 16px rgba(59, 130, 246, 0.2);
+}
+
+.dark .reading-progress .progress-glow-dot {
+  background: #F472B6;
+  box-shadow: 0 0 6px rgba(244, 114, 182, 0.8), 0 0 12px rgba(244, 114, 182, 0.4), 0 0 20px rgba(244, 114, 182, 0.2);
 }
 </style>

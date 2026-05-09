@@ -12,22 +12,21 @@ head:
       href: https://jasper-labs.cn/
 
 hero:
-    name: "Jasper Labs"
-    text: "个人技术知识库与博客"
-    tagline: 记录学习、分享知识、沉淀成长
-    image:
-      src: /images/hero-image.svg
-      alt: Jasper Labs 技术知识库
-    actions:
-      - theme: brand
-        text: 开始探索
-        link: /python/
-      - theme: alt
-        text: 最新文章
-        link: /others/archives
-      - theme: alt
-        text: AI 专题导航
-        link: /ai/
+  name: "Jasper Labs"
+  text: "个人技术知识库与博客"
+  image:
+    src: /images/hero-image.svg
+    alt: Jasper Labs 技术知识库
+  actions:
+    - theme: brand
+      text: 开始探索
+      link: /python/
+    - theme: alt
+      text: 最新文章
+      link: /others/archives
+    - theme: alt
+      text: AI 专题导航
+      link: /ai/
 
 features:
   - icon: 🐍
@@ -58,6 +57,7 @@ features:
 
 <script setup lang="ts">
 import { data } from './.vitepress/posts.data'
+import TypeWriter from './.vitepress/components/TypeWriter.vue'
 
 const latestPosts = data.posts.slice(0, 6)
 const recommendedPosts = (() => {
@@ -117,7 +117,11 @@ const aiTopics = [
 ]
 </script>
 
-<section class="home-section">
+<div class="hero-tagline-typewriter">
+  <TypeWriter :texts="['记录学习', '分享知识', '沉淀成长', '探索技术']" :type-speed="120" :delete-speed="60" :pause-duration="2500" />
+</div>
+
+<section class="home-section section-blue">
   <div class="section-header">
     <p class="section-eyebrow">Latest</p>
     <h2>最新文章</h2>
@@ -126,7 +130,11 @@ const aiTopics = [
   <PostList :data="latestPosts" />
 </section>
 
-<section class="home-section">
+
+<div class="section-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 Q300 0 600 20 T1200 20 V40 H0Z" fill="var(--vp-c-bg-soft)"/></svg>
+</div>
+<section class="home-section section-orange">
   <div class="section-header">
     <p class="section-eyebrow">Recommended</p>
     <h2>推荐阅读</h2>
@@ -135,7 +143,11 @@ const aiTopics = [
   <PostList :data="recommendedPosts" />
 </section>
 
-<section class="home-section">
+<div class="section-divider section-divider-flip" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 0 H1200 V20 Q900 40 600 20 T0 20Z" fill="var(--vp-c-bg-soft)"/></svg>
+</div>
+
+<section class="home-section section-green">
   <div class="section-header">
     <p class="section-eyebrow">AI</p>
     <h2>AI 专题导航</h2>
@@ -153,7 +165,10 @@ const aiTopics = [
   </div>
 </section>
 
-<section class="home-section">
+<div class="section-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 C200 40 400 0 600 20 S1000 40 1200 20 V40 H0Z" fill="var(--vp-c-bg-soft)"/></svg>
+</div>
+<section class="home-section section-purple">
   <div class="section-header">
     <p class="section-eyebrow">Hot Topics</p>
     <h2>热门标签</h2>
@@ -166,6 +181,37 @@ const aiTopics = [
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+}
+
+/* 打字机 tagline 区域 */
+.hero-tagline-typewriter {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  margin: -1.5rem auto 2rem;
+  padding: 0.75rem 1.5rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 粒子动画定位到 Hero 区域 */
+.hero-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 确保 Hero 内容在粒子之上 */
+.VPHero {
+  position: relative;
+  z-index: 1;
 }
 
 .ai-grid {

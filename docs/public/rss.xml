@@ -4,7 +4,7 @@
         <title>Jasper Labs</title>
         <link>https://jasper-labs.cn</link>
         <description>个人知识库和博客网站，包含Python、算法、技术笔记等内容</description>
-        <lastBuildDate>Wed, 06 May 2026 01:50:33 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 09 May 2026 01:39:45 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -15,9 +15,58 @@
         </image>
         <copyright>Copyright © 2026 Jasper</copyright>
         <item>
+            <title><![CDATA[技术笔记]]></title>
+            <link>https://jasper-labs.cn/notes/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/</guid>
+            <pubDate>Fri, 08 May 2026 14:25:55 GMT</pubDate>
+            <description><![CDATA[开发过程中遇到的问题与解决方案，技术探索与心得体会。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[页面未找到]]></title>
+            <link>https://jasper-labs.cn/404/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/404/</guid>
+            <pubDate>Fri, 08 May 2026 13:34:55 GMT</pubDate>
+            <description><![CDATA[页面未找到]]></description>
+        </item>
+        <item>
+            <title><![CDATA[AI 专题导航]]></title>
+            <link>https://jasper-labs.cn/ai/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/ai/</guid>
+            <pubDate>Fri, 08 May 2026 13:29:34 GMT</pubDate>
+            <description><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的专题导航，便于后续扩展与收录内容。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[算法与数据结构]]></title>
+            <link>https://jasper-labs.cn/algorithm/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/algorithm/</guid>
+            <pubDate>Fri, 08 May 2026 10:08:52 GMT</pubDate>
+            <description><![CDATA[深入理解算法原理，LeetCode 刷题笔记，可视化图解复杂概念。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Python 学习]]></title>
+            <link>https://jasper-labs.cn/python/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/python/</guid>
+            <pubDate>Fri, 08 May 2026 10:08:00 GMT</pubDate>
+            <description><![CDATA[系统学习 Python 编程，从基础语法到高级特性，包含常用库的使用教程和最佳实践。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Jasper Labs - 个人技术知识库与博客]]></title>
+            <link>https://jasper-labs.cn/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/</guid>
+            <pubDate>Fri, 08 May 2026 09:16:50 GMT</pubDate>
+            <description><![CDATA[Jasper Labs 是一个专注于 Python 编程、算法与数据结构、AI 技术、Linux 运维等领域的技术知识库，提供高质量的技术教程、学习笔记和最佳实践分享。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[文章归档]]></title>
+            <link>https://jasper-labs.cn/others/archives/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/others/archives/</guid>
+            <pubDate>Fri, 08 May 2026 07:50:50 GMT</pubDate>
+            <description><![CDATA[按时间线浏览所有文章，方便查找历史内容。]]></description>
+        </item>
+        <item>
             <title><![CDATA[3、prompt工程体系进化]]></title>
-            <link>https://jasper-labs.cn/ai/vibe coding/3、prompt工程体系进化/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/ai/vibe coding/3、prompt工程体系进化/</guid>
+            <link>https://jasper-labs.cn/ai/vibe-coding/03-prompt-engineering-evolution/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/ai/vibe-coding/03-prompt-engineering-evolution/</guid>
             <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[prompt工程体系进化]]></description>
             <category>AI</category>
@@ -25,19 +74,12 @@
         </item>
         <item>
             <title><![CDATA[2、LLM基础 底层机制]]></title>
-            <link>https://jasper-labs.cn/ai/vibe coding/2、LLM基础-底层机制/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/ai/vibe coding/2、LLM基础-底层机制/</guid>
+            <link>https://jasper-labs.cn/ai/vibe-coding/02-llm-fundamentals/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/ai/vibe-coding/02-llm-fundamentals/</guid>
             <pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[你身边是不是也有这样的人—— 一种人把 AI 当神仙，丢一句"帮我写个登录功能"，代码出来了直接合入主分支，出了 Bug 一脸懵逼："AI 写的啊，它怎么会错？另一种人把 AI 当骗子，试了两次发现生成的代码跑不起来，从此逢人就说："AI 编程？割韭菜的，根本不能用。]]></description>
             <category>AI</category>
             <category>Vibe Coding</category>
-        </item>
-        <item>
-            <title><![CDATA[Jasper Labs - 个人技术知识库与博客]]></title>
-            <link>https://jasper-labs.cn/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/</guid>
-            <pubDate>Fri, 10 Apr 2026 03:59:01 GMT</pubDate>
-            <description><![CDATA[Jasper Labs 是一个专注于 Python 编程、算法与数据结构、AI 技术、Linux 运维等领域的技术知识库，提供高质量的技术教程、学习笔记和最佳实践分享。]]></description>
         </item>
         <item>
             <title><![CDATA[Agent Skills 技能库]]></title>
@@ -61,16 +103,9 @@
             <description><![CDATA[精选 AI 提示词集合，助你高效使用 AI 工具。涵盖写作、编程、数据分析、学习等多个领域。]]></description>
         </item>
         <item>
-            <title><![CDATA[AI 专题导航]]></title>
-            <link>https://jasper-labs.cn/ai/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/ai/</guid>
-            <pubDate>Mon, 30 Mar 2026 07:06:19 GMT</pubDate>
-            <description><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的示例导航页，便于后续扩展与收录内容。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[0、Vibe Coding简介]]></title>
-            <link>https://jasper-labs.cn/ai/vibe coding/1、vibe coding简介/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/ai/vibe coding/1、vibe coding简介/</guid>
+            <title><![CDATA[1、Vibe Coding简介]]></title>
+            <link>https://jasper-labs.cn/ai/vibe-coding/01-vibe-coding-intro/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/ai/vibe-coding/01-vibe-coding-intro/</guid>
             <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[Vibe Coding（国内圈子里常开玩笑叫它“氛围编程”或者“感觉流编程”），这词听起来是不是挺玄乎？脑海里是不是浮现出：程序员点着香薰、放着 Lo-Fi 纯音乐、不用看屏幕就能盲打敲键盘的画面？ 大错特错！它其实是近期最硬核、最具颠覆性的软件开发新姿势。Vibe Coding（氛围编程） 这个词...]]></description>
             <category>AI</category>
@@ -78,8 +113,8 @@
         </item>
         <item>
             <title><![CDATA[Linux 常用命令速查手册]]></title>
-            <link>https://jasper-labs.cn/notes/linux/Linux常用命令/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/Linux常用命令/</guid>
+            <link>https://jasper-labs.cn/notes/linux/linux-commands/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/linux-commands/</guid>
             <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[全面整理 Linux 常用命令，包括缓存清理、文件搜索、磁盘管理、进程管理等运维必备命令，附带参数说明和使用示例，适合日常快速查阅。]]></description>
             <category>Linux</category>
@@ -89,8 +124,8 @@
         </item>
         <item>
             <title><![CDATA[CentOS 7 升级 GCC 版本至 8.3.1]]></title>
-            <link>https://jasper-labs.cn/notes/linux/Centos7升级GCC版本/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/Centos7升级GCC版本/</guid>
+            <link>https://jasper-labs.cn/notes/linux/centos7-upgrade-gcc/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/centos7-upgrade-gcc/</guid>
             <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[在 CentOS 7 上通过 CentOS SCL 方式将 GCC 从 4.8.5 升级到 8.3.1，包含国内阿里云镜像源配置、安装验证等完整步骤。]]></description>
             <category>Linux</category>
@@ -100,24 +135,24 @@
         </item>
         <item>
             <title><![CDATA[ARM架构下编译安装Nmap7.95]]></title>
-            <link>https://jasper-labs.cn/notes/linux/ARM架构下编译安装nmap7.95/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/ARM架构下编译安装nmap7.95/</guid>
+            <link>https://jasper-labs.cn/notes/linux/arm-compile-nmap/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/arm-compile-nmap/</guid>
             <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[从 nmap 官方网站下载源代码并在 ARM 平台编译安装 nmap-7.95 的全过程，含常见依赖问题处理]]></description>
             <category>Linux</category>
         </item>
         <item>
             <title><![CDATA[无限域名邮箱打造]]></title>
-            <link>https://jasper-labs.cn/notes/无限域名邮箱打造/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes/无限域名邮箱打造/</guid>
+            <link>https://jasper-labs.cn/notes/unlimited-domain-email/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/unlimited-domain-email/</guid>
             <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[无限域名邮箱指的是一种可以生成多个别名邮箱地址的域名邮箱，这些别名都指向同一个主邮箱，用于接收邮件。这种方式的主要优点是保护隐私、方便管理邮件和减少垃圾邮件。 无限域名邮箱的核心在于“别名”的概念。你可以为你的域名邮箱设置多个别名，例如：yourname+alias1@yourdomain.com,...]]></description>
             <category>邮箱</category>
         </item>
         <item>
             <title><![CDATA[Python 生成并插入百万数据到 MySQL 的最佳实践]]></title>
-            <link>https://jasper-labs.cn/python/advanced/Python生成并插入百万数据到MySQL/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/python/advanced/Python生成并插入百万数据到MySQL/</guid>
+            <link>https://jasper-labs.cn/python/advanced/python-insert-millions-to-mysql/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/python/advanced/python-insert-millions-to-mysql/</guid>
             <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[本文介绍如何使用 Python 高效生成百万级测试数据并批量插入 MySQL，涵盖 Mimesis 数据生成、executemany 批量插入、事务优化等关键技巧，适用于 API 性能测试场景。]]></description>
             <category>Python</category>
@@ -127,8 +162,8 @@
         </item>
         <item>
             <title><![CDATA[Python 删除列表元素的 6 种方法详解]]></title>
-            <link>https://jasper-labs.cn/python/advanced/Python删除列表元素/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/python/advanced/Python删除列表元素/</guid>
+            <link>https://jasper-labs.cn/python/advanced/python-delete-list-elements/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/python/advanced/python-delete-list-elements/</guid>
             <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[全面讲解 Python 删除列表元素的 6 种常用方法，包括 pop()、remove()、del、列表推导式、clear() 和切片赋值，附带使用场景对比和注意事项。]]></description>
             <category>Python</category>
@@ -137,58 +172,11 @@
         </item>
         <item>
             <title><![CDATA[构建生产级 Linux LVM 磁盘自动扩容]]></title>
-            <link>https://jasper-labs.cn/notes/linux/构建生产级 Linux LVM 磁盘自动扩容/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/构建生产级 Linux LVM 磁盘自动扩容/</guid>
+            <link>https://jasper-labs.cn/notes/linux/linux-lvm-auto-extend/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/linux-lvm-auto-extend/</guid>
             <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[在当今的云和虚拟化环境中，动态调整服务器资源已是常态。然而，手动扩展磁盘分区，尤其是在使用了 LVM (Logical Volume Manager) 的 Linux 系统上，仍然是一项繁琐且有风险的任务。一个错误的命令就可能导致数据丢失。 那么，如何实现“即插即用”的磁盘扩容，让服务器在检测到新磁...]]></description>
             <category>Linux</category>
-        </item>
-        <item>
-            <title><![CDATA[CentOS 7 编译安装 Python 3.12.6 完整指南]]></title>
-            <link>https://jasper-labs.cn/notes/linux/Centos7编译安装Python3.12.6/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/Centos7编译安装Python3.12.6/</guid>
-            <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[在 CentOS 7 上从源码编译安装 Python 3.12.6 的完整教程，包含依赖安装、编译优化配置（--enable-optimizations）、指定安装路径等关键步骤详解。]]></description>
-            <category>Linux</category>
-            <category>Python</category>
-            <category>CentOS</category>
-            <category>编译安装</category>
-        </item>
-        <item>
-            <title><![CDATA[站点地图]]></title>
-            <link>https://jasper-labs.cn/others/sitemap-page/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/others/sitemap-page/</guid>
-            <pubDate>Tue, 17 Mar 2026 03:57:14 GMT</pubDate>
-            <description><![CDATA[可视化浏览网站结构]]></description>
-        </item>
-        <item>
-            <title><![CDATA[网站更新记录]]></title>
-            <link>https://jasper-labs.cn/others/update/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/others/update/</guid>
-            <pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[记录站点历史更新、规划与目前支持的功能能力]]></description>
-            <category>其他</category>
-        </item>
-        <item>
-            <title><![CDATA[Python构造数据神器 Mimesis]]></title>
-            <link>https://jasper-labs.cn/python/advanced/ Python构造数据神器-mimesis/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/python/advanced/ Python构造数据神器-mimesis/</guid>
-            <pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Mimesis 是一个用于生成假数据的 Python 库，支持多种语言和数据类型。它的设计目标是提供一个简单而灵活的 API，以便用户能够快速生成所需的假数据。官方文档：mimesis 主要特点 + 多语言：支持47种不同国家语言 + 可扩展性：支持自定义数据生成和自定义数据处理 + 性能：比fa...]]></description>
-            <category>Python</category>
-            <category>Mimesis</category>
-            <category>数据生成</category>
-            <category>测试</category>
-            <category>工具</category>
-        </item>
-        <item>
-            <title><![CDATA[算法时间复杂度]]></title>
-            <link>https://jasper-labs.cn/algorithm/data-structure/算法时间复杂度/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/algorithm/data-structure/算法时间复杂度/</guid>
-            <pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[时间复杂度是衡量算法效率的核心指标，描述算法运行时间与输入规模的关系。它不关注具体运行时间（如毫秒数），而是关注随着输入规模 n 增大时，算法运行时间的增长趋势。 1. 评估效率： 比较不同算法在解决同一个问题时的效率,则优选择。 2. 预测性能： 预测算法在处理大规模数据时的表现。 3. 优化算法...]]></description>
-            <category>算法</category>
-            <category>数据结构</category>
         </item>
     </channel>
 </rss>

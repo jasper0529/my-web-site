@@ -16,7 +16,7 @@
     "blog",
     "knowledge-base"
   ],
-  "author": "",
+  "author": "Jasper <fanren123@protonmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^25.4.0",

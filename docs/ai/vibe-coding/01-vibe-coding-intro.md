@@ -1,5 +1,5 @@
 ---
-title: 0、Vibe Coding简介
+title: 1、Vibe Coding简介
 date: 2026-03-24
 tags: ["AI", "Vibe Coding"]
 description: Vibe Coding（国内圈子里常开玩笑叫它“氛围编程”或者“感觉流编程”），这词听起来是不是挺玄乎？脑海里是不是浮现出：程序员点着香薰、放着 Lo-Fi 纯音乐、不用看屏幕就能盲打敲键盘的画面？ 大错特错！它其实是近期最硬核、最具颠覆性的软件开发新姿势。Vibe Coding（氛围编程） 这个词...

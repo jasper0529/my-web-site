@@ -5,6 +5,10 @@ tags:
   - VitePress
   - 教程
   - 前端
+head:
+  - - meta
+    - name: robots
+      content: noindex, nofollow
 ---
 
 # 代码组与阅读统计功能演示

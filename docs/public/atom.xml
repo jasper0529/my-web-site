@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-05-06T01:50:33.029Z</updated>
+    <updated>2026-05-09T01:39:45.513Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
-        <email>jasper@example.com</email>
+        <email>fanren123@protonmail.com</email>
         <uri>https://jasper-labs.cn</uri>
     </author>
     <link rel="alternate" href="https://jasper-labs.cn"/>
@@ -16,9 +16,58 @@
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
     <entry>
+        <title type="html"><![CDATA[技术笔记]]></title>
+        <id>https://jasper-labs.cn/notes/</id>
+        <link href="https://jasper-labs.cn/notes/"/>
+        <updated>2026-05-08T14:25:55.585Z</updated>
+        <summary type="html"><![CDATA[开发过程中遇到的问题与解决方案，技术探索与心得体会。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[页面未找到]]></title>
+        <id>https://jasper-labs.cn/404/</id>
+        <link href="https://jasper-labs.cn/404/"/>
+        <updated>2026-05-08T13:34:55.490Z</updated>
+        <summary type="html"><![CDATA[页面未找到]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI 专题导航]]></title>
+        <id>https://jasper-labs.cn/ai/</id>
+        <link href="https://jasper-labs.cn/ai/"/>
+        <updated>2026-05-08T13:29:34.614Z</updated>
+        <summary type="html"><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的专题导航，便于后续扩展与收录内容。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[算法与数据结构]]></title>
+        <id>https://jasper-labs.cn/algorithm/</id>
+        <link href="https://jasper-labs.cn/algorithm/"/>
+        <updated>2026-05-08T10:08:52.398Z</updated>
+        <summary type="html"><![CDATA[深入理解算法原理，LeetCode 刷题笔记，可视化图解复杂概念。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python 学习]]></title>
+        <id>https://jasper-labs.cn/python/</id>
+        <link href="https://jasper-labs.cn/python/"/>
+        <updated>2026-05-08T10:08:00.477Z</updated>
+        <summary type="html"><![CDATA[系统学习 Python 编程，从基础语法到高级特性，包含常用库的使用教程和最佳实践。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Jasper Labs - 个人技术知识库与博客]]></title>
+        <id>https://jasper-labs.cn/</id>
+        <link href="https://jasper-labs.cn/"/>
+        <updated>2026-05-08T09:16:50.523Z</updated>
+        <summary type="html"><![CDATA[Jasper Labs 是一个专注于 Python 编程、算法与数据结构、AI 技术、Linux 运维等领域的技术知识库，提供高质量的技术教程、学习笔记和最佳实践分享。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[文章归档]]></title>
+        <id>https://jasper-labs.cn/others/archives/</id>
+        <link href="https://jasper-labs.cn/others/archives/"/>
+        <updated>2026-05-08T07:50:50.828Z</updated>
+        <summary type="html"><![CDATA[按时间线浏览所有文章，方便查找历史内容。]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[3、prompt工程体系进化]]></title>
-        <id>https://jasper-labs.cn/ai/vibe coding/3、prompt工程体系进化/</id>
-        <link href="https://jasper-labs.cn/ai/vibe coding/3、prompt工程体系进化/"/>
+        <id>https://jasper-labs.cn/ai/vibe-coding/03-prompt-engineering-evolution/</id>
+        <link href="https://jasper-labs.cn/ai/vibe-coding/03-prompt-engineering-evolution/"/>
         <updated>2026-04-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[prompt工程体系进化]]></summary>
         <category label="AI"/>
@@ -26,19 +75,12 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[2、LLM基础 底层机制]]></title>
-        <id>https://jasper-labs.cn/ai/vibe coding/2、LLM基础-底层机制/</id>
-        <link href="https://jasper-labs.cn/ai/vibe coding/2、LLM基础-底层机制/"/>
+        <id>https://jasper-labs.cn/ai/vibe-coding/02-llm-fundamentals/</id>
+        <link href="https://jasper-labs.cn/ai/vibe-coding/02-llm-fundamentals/"/>
         <updated>2026-04-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[你身边是不是也有这样的人—— 一种人把 AI 当神仙，丢一句"帮我写个登录功能"，代码出来了直接合入主分支，出了 Bug 一脸懵逼："AI 写的啊，它怎么会错？另一种人把 AI 当骗子，试了两次发现生成的代码跑不起来，从此逢人就说："AI 编程？割韭菜的，根本不能用。]]></summary>
         <category label="AI"/>
         <category label="Vibe Coding"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Jasper Labs - 个人技术知识库与博客]]></title>
-        <id>https://jasper-labs.cn/</id>
-        <link href="https://jasper-labs.cn/"/>
-        <updated>2026-04-10T03:59:01.368Z</updated>
-        <summary type="html"><![CDATA[Jasper Labs 是一个专注于 Python 编程、算法与数据结构、AI 技术、Linux 运维等领域的技术知识库，提供高质量的技术教程、学习笔记和最佳实践分享。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Agent Skills 技能库]]></title>
@@ -62,16 +104,9 @@
         <summary type="html"><![CDATA[精选 AI 提示词集合，助你高效使用 AI 工具。涵盖写作、编程、数据分析、学习等多个领域。]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[AI 专题导航]]></title>
-        <id>https://jasper-labs.cn/ai/</id>
-        <link href="https://jasper-labs.cn/ai/"/>
-        <updated>2026-03-30T07:06:19.320Z</updated>
-        <summary type="html"><![CDATA[覆盖大模型、RAG、Agent、AIGC、工程化与评测的示例导航页，便于后续扩展与收录内容。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0、Vibe Coding简介]]></title>
-        <id>https://jasper-labs.cn/ai/vibe coding/1、vibe coding简介/</id>
-        <link href="https://jasper-labs.cn/ai/vibe coding/1、vibe coding简介/"/>
+        <title type="html"><![CDATA[1、Vibe Coding简介]]></title>
+        <id>https://jasper-labs.cn/ai/vibe-coding/01-vibe-coding-intro/</id>
+        <link href="https://jasper-labs.cn/ai/vibe-coding/01-vibe-coding-intro/"/>
         <updated>2026-03-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Vibe Coding（国内圈子里常开玩笑叫它“氛围编程”或者“感觉流编程”），这词听起来是不是挺玄乎？脑海里是不是浮现出：程序员点着香薰、放着 Lo-Fi 纯音乐、不用看屏幕就能盲打敲键盘的画面？ 大错特错！它其实是近期最硬核、最具颠覆性的软件开发新姿势。Vibe Coding（氛围编程） 这个词...]]></summary>
         <category label="AI"/>
@@ -79,8 +114,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Linux 常用命令速查手册]]></title>
-        <id>https://jasper-labs.cn/notes/linux/Linux常用命令/</id>
-        <link href="https://jasper-labs.cn/notes/linux/Linux常用命令/"/>
+        <id>https://jasper-labs.cn/notes/linux/linux-commands/</id>
+        <link href="https://jasper-labs.cn/notes/linux/linux-commands/"/>
         <updated>2026-03-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[全面整理 Linux 常用命令，包括缓存清理、文件搜索、磁盘管理、进程管理等运维必备命令，附带参数说明和使用示例，适合日常快速查阅。]]></summary>
         <category label="Linux"/>
@@ -90,8 +125,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[CentOS 7 升级 GCC 版本至 8.3.1]]></title>
-        <id>https://jasper-labs.cn/notes/linux/Centos7升级GCC版本/</id>
-        <link href="https://jasper-labs.cn/notes/linux/Centos7升级GCC版本/"/>
+        <id>https://jasper-labs.cn/notes/linux/centos7-upgrade-gcc/</id>
+        <link href="https://jasper-labs.cn/notes/linux/centos7-upgrade-gcc/"/>
         <updated>2026-03-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[在 CentOS 7 上通过 CentOS SCL 方式将 GCC 从 4.8.5 升级到 8.3.1，包含国内阿里云镜像源配置、安装验证等完整步骤。]]></summary>
         <category label="Linux"/>
@@ -101,24 +136,24 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[ARM架构下编译安装Nmap7.95]]></title>
-        <id>https://jasper-labs.cn/notes/linux/ARM架构下编译安装nmap7.95/</id>
-        <link href="https://jasper-labs.cn/notes/linux/ARM架构下编译安装nmap7.95/"/>
+        <id>https://jasper-labs.cn/notes/linux/arm-compile-nmap/</id>
+        <link href="https://jasper-labs.cn/notes/linux/arm-compile-nmap/"/>
         <updated>2026-03-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[从 nmap 官方网站下载源代码并在 ARM 平台编译安装 nmap-7.95 的全过程，含常见依赖问题处理]]></summary>
         <category label="Linux"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[无限域名邮箱打造]]></title>
-        <id>https://jasper-labs.cn/notes/无限域名邮箱打造/</id>
-        <link href="https://jasper-labs.cn/notes/无限域名邮箱打造/"/>
+        <id>https://jasper-labs.cn/notes/unlimited-domain-email/</id>
+        <link href="https://jasper-labs.cn/notes/unlimited-domain-email/"/>
         <updated>2026-03-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[无限域名邮箱指的是一种可以生成多个别名邮箱地址的域名邮箱，这些别名都指向同一个主邮箱，用于接收邮件。这种方式的主要优点是保护隐私、方便管理邮件和减少垃圾邮件。 无限域名邮箱的核心在于“别名”的概念。你可以为你的域名邮箱设置多个别名，例如：yourname+alias1@yourdomain.com,...]]></summary>
         <category label="邮箱"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Python 生成并插入百万数据到 MySQL 的最佳实践]]></title>
-        <id>https://jasper-labs.cn/python/advanced/Python生成并插入百万数据到MySQL/</id>
-        <link href="https://jasper-labs.cn/python/advanced/Python生成并插入百万数据到MySQL/"/>
+        <id>https://jasper-labs.cn/python/advanced/python-insert-millions-to-mysql/</id>
+        <link href="https://jasper-labs.cn/python/advanced/python-insert-millions-to-mysql/"/>
         <updated>2026-03-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[本文介绍如何使用 Python 高效生成百万级测试数据并批量插入 MySQL，涵盖 Mimesis 数据生成、executemany 批量插入、事务优化等关键技巧，适用于 API 性能测试场景。]]></summary>
         <category label="Python"/>
@@ -128,8 +163,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Python 删除列表元素的 6 种方法详解]]></title>
-        <id>https://jasper-labs.cn/python/advanced/Python删除列表元素/</id>
-        <link href="https://jasper-labs.cn/python/advanced/Python删除列表元素/"/>
+        <id>https://jasper-labs.cn/python/advanced/python-delete-list-elements/</id>
+        <link href="https://jasper-labs.cn/python/advanced/python-delete-list-elements/"/>
         <updated>2026-03-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[全面讲解 Python 删除列表元素的 6 种常用方法，包括 pop()、remove()、del、列表推导式、clear() 和切片赋值，附带使用场景对比和注意事项。]]></summary>
         <category label="Python"/>
@@ -138,57 +173,10 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[构建生产级 Linux LVM 磁盘自动扩容]]></title>
-        <id>https://jasper-labs.cn/notes/linux/构建生产级 Linux LVM 磁盘自动扩容/</id>
-        <link href="https://jasper-labs.cn/notes/linux/构建生产级 Linux LVM 磁盘自动扩容/"/>
+        <id>https://jasper-labs.cn/notes/linux/linux-lvm-auto-extend/</id>
+        <link href="https://jasper-labs.cn/notes/linux/linux-lvm-auto-extend/"/>
         <updated>2026-03-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[在当今的云和虚拟化环境中，动态调整服务器资源已是常态。然而，手动扩展磁盘分区，尤其是在使用了 LVM (Logical Volume Manager) 的 Linux 系统上，仍然是一项繁琐且有风险的任务。一个错误的命令就可能导致数据丢失。 那么，如何实现“即插即用”的磁盘扩容，让服务器在检测到新磁...]]></summary>
         <category label="Linux"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CentOS 7 编译安装 Python 3.12.6 完整指南]]></title>
-        <id>https://jasper-labs.cn/notes/linux/Centos7编译安装Python3.12.6/</id>
-        <link href="https://jasper-labs.cn/notes/linux/Centos7编译安装Python3.12.6/"/>
-        <updated>2026-03-19T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[在 CentOS 7 上从源码编译安装 Python 3.12.6 的完整教程，包含依赖安装、编译优化配置（--enable-optimizations）、指定安装路径等关键步骤详解。]]></summary>
-        <category label="Linux"/>
-        <category label="Python"/>
-        <category label="CentOS"/>
-        <category label="编译安装"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[站点地图]]></title>
-        <id>https://jasper-labs.cn/others/sitemap-page/</id>
-        <link href="https://jasper-labs.cn/others/sitemap-page/"/>
-        <updated>2026-03-17T03:57:14.352Z</updated>
-        <summary type="html"><![CDATA[可视化浏览网站结构]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[网站更新记录]]></title>
-        <id>https://jasper-labs.cn/others/update/</id>
-        <link href="https://jasper-labs.cn/others/update/"/>
-        <updated>2026-03-17T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[记录站点历史更新、规划与目前支持的功能能力]]></summary>
-        <category label="其他"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python构造数据神器 Mimesis]]></title>
-        <id>https://jasper-labs.cn/python/advanced/ Python构造数据神器-mimesis/</id>
-        <link href="https://jasper-labs.cn/python/advanced/ Python构造数据神器-mimesis/"/>
-        <updated>2026-03-17T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Mimesis 是一个用于生成假数据的 Python 库，支持多种语言和数据类型。它的设计目标是提供一个简单而灵活的 API，以便用户能够快速生成所需的假数据。官方文档：mimesis 主要特点 + 多语言：支持47种不同国家语言 + 可扩展性：支持自定义数据生成和自定义数据处理 + 性能：比fa...]]></summary>
-        <category label="Python"/>
-        <category label="Mimesis"/>
-        <category label="数据生成"/>
-        <category label="测试"/>
-        <category label="工具"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[算法时间复杂度]]></title>
-        <id>https://jasper-labs.cn/algorithm/data-structure/算法时间复杂度/</id>
-        <link href="https://jasper-labs.cn/algorithm/data-structure/算法时间复杂度/"/>
-        <updated>2026-03-17T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[时间复杂度是衡量算法效率的核心指标，描述算法运行时间与输入规模的关系。它不关注具体运行时间（如毫秒数），而是关注随着输入规模 n 增大时，算法运行时间的增长趋势。 1. 评估效率： 比较不同算法在解决同一个问题时的效率,则优选择。 2. 预测性能： 预测算法在处理大规模数据时的表现。 3. 优化算法...]]></summary>
-        <category label="算法"/>
-        <category label="数据结构"/>
     </entry>
 </feed>

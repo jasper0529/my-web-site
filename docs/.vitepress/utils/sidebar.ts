@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
+import matter from 'gray-matter'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -33,10 +34,14 @@ const categoryTitles: Record<string, string> = {
   'leetcode': 'LeetCode 刷题',
   'sorting': '排序算法',
   'topics': '专题系列',
+  'vibe-coding': 'Vibe Coding',
+  'linux': 'Linux',
+  'prompts': '提示词库',
+  'skills': '技能库',
   '2024': '2024'
 }
 
-// 特定文件的标题覆盖
+// 特定文件的标题覆盖（当 frontmatter 中无 title 时使用）
 const fileTitleOverrides: Record<string, string> = {
   'others/about': '关于我',
   'others/archives': '文章归档',
@@ -44,14 +49,25 @@ const fileTitleOverrides: Record<string, string> = {
   'others/update': '网站更新记录'
 }
 
-// 从文件名生成标题
+// 从 markdown 文件的 frontmatter 中提取 title
+function extractTitleFromFrontmatter(filePath: string): string | null {
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8')
+    const { data } = matter(content)
+    return data.title || null
+  } catch {
+    return null
+  }
+}
+
+// 从文件名生成标题（仅作为 fallback）
 function generateTitle(filename: string): string {
   // 移除扩展名
   const name = filename.replace(/\.md$/, '')
-  
+
   // 处理特殊文件名
   if (name === 'index') return '概览'
-  
+
   // 将 kebab-case 或空格分隔转换为标题
   return name
     .replace(/[-_]/g, ' ')
@@ -110,13 +126,23 @@ function generateSidebarItems(
       const link = fileName === 'index' ? basePath : `${basePath}${fileName}`
       const relativeKey = `${categoryPath}/${fileName}`
       const overrideTitle = fileTitleOverrides[relativeKey]
-      
-      return {
-        text: fileName === 'index'
-          ? `${categoryTitle}概览`
-          : overrideTitle || generateTitle(file),
-        link: link
+
+      // 优先从 frontmatter 读取标题，其次使用覆盖映射，最后 fallback 到文件名
+      const filePath = path.join(dirPath, file)
+      const frontmatterTitle = extractTitleFromFrontmatter(filePath)
+
+      let text: string
+      if (fileName === 'index') {
+        text = `${categoryTitle}概览`
+      } else if (frontmatterTitle) {
+        text = frontmatterTitle
+      } else if (overrideTitle) {
+        text = overrideTitle
+      } else {
+        text = generateTitle(file)
       }
+
+      return { text, link }
     })
 
     // 如果是顶级目录且有子目录，返回多个分组
@@ -189,7 +215,7 @@ export function generateSidebar(): SidebarConfig {
   const sidebar: SidebarConfig = {}
   
   // 主要章节
-  const sections = ['python', 'algorithm', 'notes', 'tools', 'others', 'ai']
+  const sections = ['python', 'algorithm', 'notes', 'tools', 'others', 'ai', 'prompts', 'skills']
   
   for (const section of sections) {
     const items = generateSidebarForPath(section)

@@ -17,3 +17,9 @@ pnpm-debug.log*
 .env.*
 .idea/
 .vscode/
+
+# SEO 构建产物（由 scripts/generate-seo.ts 生成）
+docs/public/sitemap.xml
+docs/public/rss.xml
+docs/public/atom.xml
+docs/public/feed.json

@@ -21,7 +21,7 @@ const SITE_URL = process.env.SITE_URL || 'https://jasper-labs.cn'
 const SITE_TITLE = 'Jasper Labs'
 const SITE_DESCRIPTION = '个人知识库和博客网站，包含Python、算法、技术笔记等内容'
 const AUTHOR_NAME = 'Jasper'
-const AUTHOR_EMAIL = 'jasper@example.com'
+const AUTHOR_EMAIL = 'fanren123@protonmail.com'
 
 // 需要排除的路径
 const EXCLUDE_PATHS = [

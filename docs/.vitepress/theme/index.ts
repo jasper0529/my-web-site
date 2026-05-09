@@ -17,6 +17,8 @@ import PromptLibrary from '../components/PromptLibrary.vue'
 import ToolLibrary from '../components/ToolLibrary.vue'
 import SkillsPage from '../components/SkillsPage.vue'
 import SkillsLibrary from '../components/SkillsLibrary.vue'
+import TypeWriter from '../components/TypeWriter.vue'
+import HeroParticles from '../components/HeroParticles.vue'
 
 export default {
   extends: DefaultTheme,
@@ -31,6 +33,8 @@ export default {
     app.component('ToolLibrary', ToolLibrary)
     app.component('SkillsPage', SkillsPage)
     app.component('SkillsLibrary', SkillsLibrary)
+    app.component('TypeWriter', TypeWriter)
+    app.component('HeroParticles', HeroParticles)
   },
   setup() {
     const isClient = typeof window !== 'undefined'

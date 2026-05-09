@@ -13,15 +13,20 @@ import Analytics from './Analytics.vue' // 分析工具
 import LoadingOverlay from './LoadingOverlay.vue' // 页面切换加载动画
 import Breadcrumb from './Breadcrumb.vue' // 面包屑导航
 import RelatedPosts from './RelatedPosts.vue' // 相关文章推荐
+import HeroParticles from './HeroParticles.vue' // Hero 粒子动画背景
+import SiteFooter from './SiteFooter.vue' // 自定义页脚
 
 const { Layout } = DefaultTheme
 const { frontmatter } = useData()
 
+// 判断是否为首页
+const isHome = computed(() => frontmatter.value.layout === 'home')
+
 // 判断是否显示文档元信息
 const showDocMeta = () => {
   return frontmatter.value.date ||
-         (frontmatter.value.tags && frontmatter.value.tags.length > 0) ||
-         frontmatter.value.title
+    (frontmatter.value.tags && frontmatter.value.tags.length > 0) ||
+    frontmatter.value.title
 }
 
 const defaultAnnouncement = {
@@ -60,28 +65,30 @@ const announcementConfig = computed(() => {
     <template #head>
       <JsonLd />
     </template>
-    
-    <!-- 阅读进度条和加载动画 - 放在 layout-top 插槽中 -->
+
+    <!-- 阅读进度条、加载动画和首页粒子背景 - 放在 layout-top 插槽中 -->
     <template #layout-top>
       <ReadingProgress />
       <LoadingOverlay />
+      <HeroParticles v-if="isHome" />
     </template>
-    
+
     <!-- 在文档内容前插入面包屑和元信息 -->
     <template #doc-before>
       <Breadcrumb />
       <DocMeta v-if="showDocMeta()" />
     </template>
-    
+
     <!-- 在文档内容后插入相关文章、版权信息和评论 -->
     <template #doc-after>
       <RelatedPosts />
       <ArticleCopyright />
       <GiscusComment />
     </template>
-    
+
     <!-- 在布局后插入返回顶部按钮和公告栏 -->
     <template #layout-bottom>
+    <SiteFooter />
       <Analytics />
       <BackToTop />
       <Announcement

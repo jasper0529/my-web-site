@@ -79,27 +79,35 @@ export default createContentLoader(['**/*.md'], {
     // 过滤并转换数据
     const allPosts: Post[] = raw
       .filter(page => {
-        // 排除 index.md 文件（目录首页）
-        if (page.url === '/' || page.url.endsWith('/')) {
+        // 排除站点首页
+        if (page.url === '/') {
           return false
         }
+  
+        // 排除目录首页（以 / 结尾且非根路径的 index 页面）
+        if (page.url !== '/' && page.url.endsWith('/')) {
+          return false
+        }
+  
         // 排除特殊页面
         const excludePatterns = [
           '/others/about',
           '/others/archives',
           '/others/sitemap-page',
-          '/tags/'
+          '/others/update',
+          '/tags/',
+          '/notes/code-group-demo'
         ]
         if (excludePatterns.some(pattern => page.url.includes(pattern))) {
           return false
         }
-        
-        // 确保有 frontmatter
+  
+        // 确保有 frontmatter 和 date（只有带 date 的才是文章）
         const frontmatter = page.frontmatter
-        if (!frontmatter || !frontmatter.title) {
+        if (!frontmatter || !frontmatter.title || !frontmatter.date) {
           return false
         }
-        
+  
         return true
       })
       .map(page => {

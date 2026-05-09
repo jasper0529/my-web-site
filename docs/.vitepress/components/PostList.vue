@@ -4,10 +4,10 @@
       <a :href="post.url" class="post-link">
         <article class="post-card">
           <div class="post-cover" :class="{ 'has-image': post.cover }" aria-hidden="true">
-            <img v-if="post.cover" :src="post.cover" :alt="post.title" loading="lazy" />
-            <span v-else class="cover-placeholder">{{ getInitial(post.title) }}</span>
-            <span class="cover-glow"></span>
-          </div>
+                    <img v-if="post.cover" :src="post.cover" :alt="post.title" loading="lazy" />
+                    <CoverPlaceholder v-else :title="post.title" :category="post.tags?.[0]" />
+                    <span class="cover-glow"></span>
+                  </div>
           <div class="post-body">
             <div class="post-header">
               <p class="post-meta">
@@ -43,6 +43,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import CoverPlaceholder from './CoverPlaceholder.vue'
 
 interface Post {
   title: string
@@ -77,8 +78,8 @@ const getInitial = (title: string) => (title?.[0] || 'J').toUpperCase()
 <style scoped>
 .post-list {
   display: grid;
-  gap: 1.75rem;
-  margin: 2.5rem 0 1.5rem;
+  gap: 1.25rem;
+  margin: 1.5rem 0 1rem;
 }
 
 .post-item {
@@ -97,19 +98,19 @@ const getInitial = (title: string) => (title?.[0] || 'J').toUpperCase()
 
 .post-card {
   display: grid;
-  grid-template-columns: minmax(120px, 180px) 1fr;
-  gap: 1.5rem;
-  padding: 1.75rem;
-  border-radius: 20px;
+  grid-template-columns: minmax(100px, 150px) 1fr;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border-radius: 16px;
   background: var(--vp-c-bg);
   border: 1px solid color-mix(in srgb, var(--vp-c-border), transparent 30%);
-  box-shadow: 0 25px 65px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .post-card:hover {
   border-color: var(--vp-c-brand-1);
-  box-shadow: 0 35px 75px rgba(37, 99, 235, 0.18);
+  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.12);
 }
 
 .post-cover {
@@ -255,7 +256,7 @@ const getInitial = (title: string) => (title?.[0] || 'J').toUpperCase()
 
 .dark .post-card {
   background: color-mix(in srgb, var(--vp-c-bg), rgba(255, 255, 255, 0.02));
-  box-shadow: 0 20px 55px rgba(2, 6, 23, 0.75);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.5);
 }
 
 .dark .post-cover .cover-glow {

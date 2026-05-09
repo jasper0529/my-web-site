@@ -74,6 +74,20 @@
   --vp-border-radius: 8px;
   --vp-border-radius-soft: 12px;
   --vp-border-radius-large: 16px;
+
+  /* 标签系统 */
+  --tag-bg: var(--vp-c-brand-soft);
+  --tag-border: var(--vp-c-brand-1-dimm, rgba(37, 99, 235, 0.15));
+  --tag-text: var(--vp-c-brand-1);
+  --tag-hover-bg: var(--vp-c-brand-1);
+  --tag-hover-text: #FFFFFF;
+  --tag-hover-border: var(--vp-c-brand-1);
+  --tag-hover-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+  --tag-active-bg: var(--vp-c-brand-1);
+  --tag-active-text: #FFFFFF;
+  --tag-radius: 12px;
+  --tag-font-size: 0.75rem;
+  --tag-padding: 0.125rem 0.5rem;
 }
 
 /* ========================================
@@ -86,37 +100,49 @@
   --vp-c-brand-2: #2563EB;
   --vp-c-brand-3: #1D4ED8;
   --vp-c-brand-soft: rgba(59, 130, 246, 0.15);
-  
-  /* 背景色 - 深邃的午夜蓝 */
+
+  /* 背景色 - 深邃的午夜蓝，层级拉开 */
   --vp-c-bg: #0B0F19;
-  --vp-c-bg-soft: #111827;
-  --vp-c-bg-mute: #1F2937;
+  --vp-c-bg-soft: #0F172A;
+  --vp-c-bg-mute: #1E293B;
   --vp-c-bg-alt: #111827;
-  
-  /* 文字色 */
-  --vp-c-text-1: #F8FAFC;
+
+  /* 文字色 - 提升对比度 */
+  --vp-c-text-1: #F1F5F9;
   --vp-c-text-2: #94A3B8;
   --vp-c-text-3: #64748B;
-  
-  /* 边框色 */
-  --vp-c-border: #1E293B;
+
+  /* 边框色 - 微光效果 */
+  --vp-c-border: rgba(59, 130, 246, 0.12);
   --vp-c-divider: #1E293B;
   --vp-c-gutter: #1E293B;
-  
+
+  /* 微光边框变量 */
+  --glow-border: 1px solid rgba(59, 130, 246, 0.15);
+  --glow-border-hover: 1px solid rgba(59, 130, 246, 0.3);
+  --glow-shadow: 0 0 15px rgba(59, 130, 246, 0.06);
+  --glow-shadow-hover: 0 0 20px rgba(59, 130, 246, 0.12);
+
   /* 英雄区渐变 */
   --vp-home-hero-name-background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
   --vp-home-hero-image-background-image: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
-  
+
   /* 按钮样式 */
   --vp-button-brand-bg: #2563EB;
   --vp-button-brand-hover-bg: #3B82F6;
   --vp-button-brand-active-bg: #1D4ED8;
-  
+
   /* 侧边栏 */
-  --vp-sidebar-bg-color: #111827;
-  
+  --vp-sidebar-bg-color: #0F172A;
+
   /* 代码块 */
-  --vp-code-block-bg: #111827;
+  --vp-code-block-bg: #0F172A;
+
+  /* 标签系统 - 暗色模式 */
+  --tag-bg: rgba(59, 130, 246, 0.12);
+  --tag-border: rgba(59, 130, 246, 0.2);
+  --tag-text: #60A5FA;
+  --tag-hover-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
 }
 
 /* ========================================
@@ -348,10 +374,10 @@
 }
 
 .home-section {
-  margin: 4rem 0;
-  padding: clamp(2rem, 3vw, 3rem);
-  border-radius: calc(var(--vp-border-radius-large) * 1.25);
-  background: linear-gradient(145deg, rgba(37, 99, 235, 0.06), rgba(37, 99, 235, 0.02));
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: var(--vp-border-radius-large);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(29, 78, 216, 0.05));
   border: 1px solid rgba(37, 99, 235, 0.12);
   position: relative;
   overflow: hidden;
@@ -370,74 +396,7 @@
 }
 
 .home-section + .home-section {
-  margin-top: 2.5rem;
-}
-
-.dark .home-section {
-  background: linear-gradient(145deg, rgba(59, 130, 246, 0.12), rgba(2, 6, 23, 0.8));
-  border-color: rgba(59, 130, 246, 0.25);
-}
-
-.home-section .section-header {
-  margin-bottom: 1.75rem;
-}
-
-
-.home-section .section-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.3rem 0.9rem;
-  border-radius: 999px;
-  background: rgba(37, 99, 235, 0.15);
-  color: var(--vp-c-brand-1);
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  position: relative;
-  overflow: hidden;
-}
-
-.home-section .section-eyebrow::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.35), transparent);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.home-section:hover .section-eyebrow::after {
-  opacity: 1;
-}
-
-.dark .home-section .section-eyebrow {
-  background: rgba(59, 130, 246, 0.25);
-}
-
-.home-section h2 {
-  margin: 0.35rem 0;
-  font-size: clamp(1.75rem, 1.5rem + 0.5vw, 2.2rem);
-}
-
-.home-section .section-desc {
-  margin: 0;
-  color: var(--vp-c-text-2);
-  max-width: 720px;
-  font-size: 1rem;
-}
-
-.home-section {
-  margin: 3rem 0;
-  padding: 2.5rem;
-  border-radius: var(--vp-border-radius-large);
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(29, 78, 216, 0.05));
-  border: 1px solid rgba(37, 99, 235, 0.12);
-}
-
-.home-section + .home-section {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .dark .home-section {
@@ -461,6 +420,21 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-section .section-eyebrow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.35), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.home-section:hover .section-eyebrow::after {
+  opacity: 1;
 }
 
 .dark .home-section .section-eyebrow {
@@ -476,6 +450,104 @@
   margin: 0;
   color: var(--vp-c-text-2);
   max-width: 720px;
+}
+
+/* ── Section 差异化背景 ── */
+.home-section.section-blue {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(29, 78, 216, 0.05));
+  border-color: rgba(37, 99, 235, 0.12);
+}
+.home-section.section-blue::before {
+  background: radial-gradient(circle at 30% 20%, rgba(37, 99, 235, 0.1), transparent 60%);
+}
+.dark .home-section.section-blue {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(29, 78, 216, 0.1));
+  border-color: rgba(59, 130, 246, 0.35);
+}
+.home-section.section-blue .section-eyebrow {
+  background: rgba(37, 99, 235, 0.12);
+  color: #2563eb;
+}
+.dark .home-section.section-blue .section-eyebrow {
+  background: rgba(59, 130, 246, 0.18);
+  color: #60a5fa;
+}
+
+.home-section.section-orange {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.08), rgba(234, 88, 12, 0.05));
+  border-color: rgba(249, 115, 22, 0.12);
+}
+.home-section.section-orange::before {
+  background: radial-gradient(circle at 70% 30%, rgba(249, 115, 22, 0.1), transparent 60%);
+}
+.dark .home-section.section-orange {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(234, 88, 12, 0.1));
+  border-color: rgba(249, 115, 22, 0.35);
+}
+.home-section.section-orange .section-eyebrow {
+  background: rgba(249, 115, 22, 0.12);
+  color: #ea580c;
+}
+.dark .home-section.section-orange .section-eyebrow {
+  background: rgba(249, 115, 22, 0.18);
+  color: #fb923c;
+}
+
+.home-section.section-green {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(5, 150, 105, 0.05));
+  border-color: rgba(16, 185, 129, 0.12);
+}
+.home-section.section-green::before {
+  background: radial-gradient(circle at 50% 10%, rgba(16, 185, 129, 0.1), transparent 60%);
+}
+.dark .home-section.section-green {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(5, 150, 105, 0.1));
+  border-color: rgba(16, 185, 129, 0.35);
+}
+.home-section.section-green .section-eyebrow {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+}
+.dark .home-section.section-green .section-eyebrow {
+  background: rgba(16, 185, 129, 0.18);
+  color: #34d399;
+}
+
+.home-section.section-purple {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(124, 58, 237, 0.05));
+  border-color: rgba(139, 92, 246, 0.12);
+}
+.home-section.section-purple::before {
+  background: radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.1), transparent 60%);
+}
+.dark .home-section.section-purple {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(124, 58, 237, 0.1));
+  border-color: rgba(139, 92, 246, 0.35);
+}
+.home-section.section-purple .section-eyebrow {
+  background: rgba(139, 92, 246, 0.12);
+  color: #7c3aed;
+}
+.dark .home-section.section-purple .section-eyebrow {
+  background: rgba(139, 92, 246, 0.18);
+  color: #a78bfa;
+}
+
+/* ── SVG Section 分隔线 ── */
+.section-divider {
+  width: 100%;
+  height: 28px;
+  margin: -1px 0;
+  line-height: 0;
+  overflow: hidden;
+}
+.section-divider svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.section-divider-flip {
+  transform: scaleY(-1);
 }
 
 .dark .feature-card:hover,
@@ -512,29 +584,39 @@
 .feature-card a:hover {
   text-decoration: underline;
 }
-
 /* ========================================
-   标签样式
-   ======================================== */
+  标签样式（全局统一，使用 CSS 变量）
+  ======================================== */
 
 .tag {
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.75rem;
-  border-radius: 999px;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-  border: 1px solid transparent;
-  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--tag-padding);
+  font-size: var(--tag-font-size);
+  font-weight: 500;
+  border-radius: var(--tag-radius);
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border: 1px solid var(--tag-border);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 1.6;
 }
 
 .tag:hover {
-  border-color: var(--vp-c-brand-1);
+  background: var(--tag-hover-bg);
+  color: var(--tag-hover-text);
+  border-color: var(--tag-hover-border);
+  box-shadow: var(--tag-hover-shadow);
+  transform: translateY(-1px);
 }
 
 .tag.active {
-  background: var(--vp-c-brand-1);
-  color: #FFFFFF;
+  background: var(--tag-active-bg);
+  color: var(--tag-active-text);
+  border-color: transparent;
 }
 
 /* ========================================
@@ -970,9 +1052,10 @@
     font-size: 1rem;
   }
   
-  .VPNavBar .VPNavBarMenu {
-    display: none;
-  }
+  /* VitePress 自带移动端响应式菜单切换，无需手动隐藏 */
+
+
+
   
   .VPSidebar {
     width: 280px !important;
@@ -1186,13 +1269,19 @@
 .vp-code-group .tabs::before {
   content: " ";
   position: absolute;
-  top: 12px;
-  left: 12px;
-  height: 12px;
-  width: 12px;
+  top: 13px;
+  left: 14px;
+  height: 10px;
+  width: 10px;
   background: #fc625d;
   border-radius: 50%;
-  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  box-shadow: 16px 0 #fdbc40, 32px 0 #35cd4b;
+}
+
+/* 亮色模式：代码组圆点降低饱和度 */
+:not(.dark) .vp-code-group .tabs::before {
+  background: #f9a8a6;
+  box-shadow: 16px 0 #fde68a, 32px 0 #86efac;
 }
 
 /* 代码组：修正倒角、阴影、边距 */
@@ -1249,16 +1338,32 @@
   content: "";
   display: block;
   position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 12px;
-  height: 12px;
+  top: 13px;
+  left: 14px;
+  width: 10px;
+  height: 10px;
   background-color: #ff5f56;
   border-radius: 50%;
-  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
   z-index: 1;
 }
 
+/* 亮色模式：单个代码块圆点降低饱和度 */
+:not(.dark) .vp-doc div[class*="language-"]::before {
+  background-color: #f9a8a6;
+  box-shadow: 16px 0 0 #fde68a, 32px 0 0 #86efac;
+}
+
+
+
+/* 亮色模式：代码块阴影降低 */
+:not(.dark) .vp-code-group {
+  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 8%);
+}
+
+:not(.dark) .vp-doc div[class*="language-"] {
+  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 8%);
+}
 /* 代码块：下移行号 隐藏右侧竖线 */
 .vp-doc .line-numbers-wrapper {
   padding-top: 40px;
@@ -1538,4 +1643,281 @@
 /* 复制成功状态 */
 .vp-doc div[class*="language-"] > button.copy.copied {
   background-color: rgba(16, 185, 129, 0.1) !important;
+}
+
+/* ========================================
+导航栏 SVG 图标样式
+======================================== */
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: -2px;
+  margin-right: 3px;
+  line-height: 1;
+}
+
+.nav-icon svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ========================================
+暗色模式微光边框 & 背景层级
+======================================== */
+
+/* 侧边栏微光边框 */
+.dark .VPSidebar {
+  border-right: var(--glow-border);
+  box-shadow: var(--glow-shadow);
+}
+
+/* 导航栏微光边框 */
+.dark .VPNavBar {
+  border-bottom: var(--glow-border) !important;
+}
+
+/* 内容区域卡片微光 */
+.dark .post-card,
+.dark .feature-card,
+.dark .tool-card {
+  border: var(--glow-border);
+  box-shadow: var(--glow-shadow);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.dark .post-card:hover,
+.dark .feature-card:hover,
+.dark .tool-card:hover {
+  border: var(--glow-border-hover);
+  box-shadow: var(--glow-shadow-hover);
+}
+
+/* 代码块微光边框 */
+.dark .vp-doc div[class*='language-'] {
+  border: var(--glow-border);
+  box-shadow: var(--glow-shadow);
+}
+
+/* 自定义容器微光 */
+.dark .custom-block.tip,
+.dark .custom-block.warning,
+.dark .custom-block.danger {
+  border: var(--glow-border);
+  box-shadow: var(--glow-shadow);
+}
+
+/* 表格微光 */
+.dark .vp-doc table {
+  border: var(--glow-border);
+}
+
+/* 引用块微光 */
+.dark .vp-doc blockquote {
+  border-left-color: rgba(59, 130, 246, 0.4);
+}
+
+/* 暗色模式侧边栏链接 hover 微光 */
+.dark .VPSidebar .VPLink:hover {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+/* 暗色模式 Local Nav 微光 */
+.dark .VPLocalNav {
+  border-bottom: var(--glow-border);
+  box-shadow: var(--glow-shadow);
+}
+
+/* ========================================
+  TOC 侧边栏增强
+  ======================================== */
+
+/* 隐藏默认 outline-marker 避免与自定义 border-left 重叠 */
+.VPDocAsideOutline .outline-marker {
+  display: none !important;
+}
+
+/* TOC 标题样式增强 */
+.VPDocAsideOutline .title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* TOC 链接基础样式 */
+.VPDocAsideOutline .outline-link {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  transition: all 0.2s ease;
+  border-left: 2px solid transparent;
+  padding-left: 8px;
+  margin-left: -10px;
+}
+
+/* TOC 当前位置高亮增强 */
+.VPDocAsideOutline .outline-link.active {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+  border-left-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  border-radius: 0 4px 4px 0;
+}
+
+/* TOC 悬停效果 */
+.VPDocAsideOutline .outline-link:hover {
+  color: var(--vp-c-brand-1);
+  border-left-color: var(--vp-c-brand-2);
+}
+
+/* TOC 层级缩进指示 */
+.VPDocAsideOutline .outline-link.depth-3 {
+  padding-left: 20px;
+}
+
+.VPDocAsideOutline .outline-link.depth-4 {
+  padding-left: 32px;
+}
+
+/* 暗色模式 TOC */
+.dark .VPDocAsideOutline .outline-link.active {
+  background: rgba(59, 130, 246, 0.1);
+  border-left-color: var(--vp-c-brand-1);
+}
+
+.dark .VPDocAsideOutline .outline-link:hover {
+  border-left-color: var(--vp-c-brand-1);
+}
+
+
+/* ========================================
+  代码块语言标识标签
+  ======================================== */
+
+/* 在代码块右上角显示语言标识 */
+.vp-doc div[class*="language-"] {
+  position: relative;
+}
+
+.vp-doc div[class*="language-"]::after {
+  content: attr(data-lang);
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--vp-c-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.vp-doc div[class*="language-"]:hover::after {
+  opacity: 0;
+}
+
+/* 代码组中的语言标签 */
+.vp-code-group .tabs {
+  padding-right: 60px;
+}
+
+/* 复制成功 Toast 动画 */
+@keyframes copy-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes copy-toast-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+}
+
+/* ========================================
+  页面过渡动画
+  ======================================== */
+
+/* 内容区淡入动画 */
+.vp-doc {
+  animation: page-fade-in 0.3s ease-out;
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 侧边栏过渡 */
+.VPSidebar {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+
+/* 隐藏默认页脚（已使用自定义 SiteFooter 组件替代） */
+.VPFooter {
+  display: none !important;
+}
+
+/* ========================================
+   无障碍：减少动画偏好
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-particles {
+    display: none !important;
+  }
+
+  .VPHero .image-bg,
+  .VPHero .image-container {
+    animation: none !important;
+  }
+}
+
+/* ========================================
+   暗色模式 Hero 渐变增强（加入橙色点缀）
+   ======================================== */
+
+.dark .VPHero::after {
+  background: radial-gradient(circle at 75% 35%, rgba(249, 115, 22, 0.1), transparent 50%);
+  animation-duration: 11s;
+  mix-blend-mode: screen;
+}
+
+/* ========================================
+   暗色模式代码块阴影优化（降低对比度）
+   ======================================== */
+
+.dark .vp-code-group {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dark .vp-doc div[class*="language-"] {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
