@@ -1,0 +1,286 @@
+/**
+ * 代码块样式
+ * macOS 风格三色点、语言标签、代码组、折叠功能、复制按钮
+ */
+
+/* ========================================
+   代码块基础样式
+   ======================================== */
+
+.vp-doc div[class*='language-'] {
+  border-radius: var(--vp-border-radius-soft);
+  background: var(--vp-code-block-bg);
+  border: 1px solid var(--vp-c-border);
+  margin: 1.5em 0;
+  box-shadow: 0 10px 30px 0 rgb(0 0 0 / 40%);
+  padding-top: 20px;
+  position: relative;
+  padding-bottom: 32px;
+}
+
+/* 亮色模式阴影降低 */
+:not(.dark) .vp-doc div[class*="language-"] {
+  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 8%);
+}
+
+/* macOS 风格三色点 */
+.vp-doc div[class*="language-"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  width: 10px;
+  height: 10px;
+  background-color: #ff5f56;
+  border-radius: 50%;
+  box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
+  z-index: 1;
+}
+
+/* 亮色模式圆点降低饱和度 */
+:not(.dark) .vp-doc div[class*="language-"]::before {
+  background-color: #f9a8a6;
+  box-shadow: 16px 0 0 #fde68a, 32px 0 0 #86efac;
+}
+
+/* 语言标识标签 */
+.vp-doc div[class*="language-"]::after {
+  content: attr(data-lang);
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--vp-c-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.vp-doc div[class*="language-"]:hover::after {
+  opacity: 0;
+}
+
+/* 行号模式下移 */
+.vp-doc .line-numbers-wrapper {
+  padding-top: 40px;
+  border-right: none;
+}
+
+/* 行号右侧竖线 */
+.vp-doc .line-numbers-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 0;
+  border-right: 1px solid var(--vp-code-block-divider-color);
+  height: calc(100% - 60px);
+}
+
+.vp-doc div[class*="language-"].line-numbers-mode {
+  margin-bottom: 20px;
+}
+
+/* ========================================
+   代码组样式
+   ======================================== */
+
+.vp-code-group .tabs {
+  padding-top: 20px;
+  padding-right: 60px;
+}
+
+.vp-code-group {
+  color: var(--vp-c-black-soft);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px 0 rgb(0 0 0 / 40%);
+}
+
+/* 代码组 macOS 圆点 */
+.vp-code-group .tabs::before {
+  content: " ";
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  height: 10px;
+  width: 10px;
+  background: #fc625d;
+  border-radius: 50%;
+  box-shadow: 16px 0 #fdbc40, 32px 0 #35cd4b;
+}
+
+:not(.dark) .vp-code-group .tabs::before {
+  background: #f9a8a6;
+  box-shadow: 16px 0 #fde68a, 32px 0 #86efac;
+}
+
+:not(.dark) .vp-code-group {
+  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 8%);
+}
+
+/* 代码组内容区域修正 */
+.vp-code-group div[class*="language-"].vp-adaptive-theme.line-numbers-mode,
+.vp-code-group div[class*="language-"].vp-adaptive-theme {
+  border-radius: 8px;
+  box-shadow: none;
+  padding-top: 0px;
+}
+
+.vp-code-group div[class*="language-"].vp-adaptive-theme.line-numbers-mode::before,
+.vp-code-group div[class*="language-"].vp-adaptive-theme::before {
+  display: none;
+}
+
+.vp-code-group .line-numbers-mode .line-numbers-wrapper {
+  padding-top: 20px;
+}
+
+.vp-code-group .line-numbers-mode .line-numbers-wrapper::after {
+  top: 24px;
+  height: calc(100% - 45px);
+}
+
+/* ========================================
+   代码块折叠功能
+   ======================================== */
+
+.code-fold-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background: linear-gradient(to bottom, transparent, var(--vp-code-block-bg));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  border-radius: 0 0 8px 8px;
+}
+
+.code-fold-bar:hover {
+  background: linear-gradient(to bottom, transparent, var(--vp-c-brand-soft));
+}
+
+.code-fold-bar:hover .fold-text {
+  color: var(--vp-c-brand-1);
+}
+
+.code-fold-bar .fold-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.code-fold-bar .fold-icon {
+  transition: transform 0.3s ease;
+}
+
+.code-fold-bar.collapsed .fold-icon {
+  transform: rotate(180deg);
+}
+
+/* 折叠状态 */
+.vp-doc div[class*="language-"].code-collapsed {
+  min-height: 44px;
+}
+
+.vp-doc div[class*="language-"].code-collapsed pre,
+.vp-doc div[class*="language-"].code-collapsed code {
+  height: 0;
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.vp-doc div[class*="language-"].code-collapsed .line-numbers-wrapper {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* 展开平滑过渡 */
+.vp-doc div[class*="language-"] pre,
+.vp-doc div[class*="language-"] code,
+.vp-doc div[class*="language-"] .line-numbers-wrapper {
+  transition: all 0.3s ease;
+}
+
+.code-fold-bar.collapsed {
+  position: relative;
+  border-top: 1px dashed var(--vp-c-border);
+}
+
+/* 行号模式下折叠栏偏移 */
+.vp-doc div[class*="language-"].line-numbers-mode .code-fold-bar {
+  left: 50px;
+}
+
+/* 暗色模式适配 */
+.dark .code-fold-bar:hover {
+  background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.1));
+}
+
+/* ========================================
+   复制按钮
+   ======================================== */
+
+.vp-doc div[class*="language-"] > button.copy {
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.vp-doc div[class*="language-"] > button.copy:hover {
+  background-color: var(--vp-c-brand-soft) !important;
+}
+
+.vp-doc div[class*="language-"] > button.copy.copied {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+}
+
+/* 暗色模式代码块 */
+.dark .vp-doc div[class*='language-'] {
+  border-color: #1F2937;
+  background: #0F172A;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dark .vp-code-group {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* 复制成功 Toast 动画 */
+@keyframes copy-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes copy-toast-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+}

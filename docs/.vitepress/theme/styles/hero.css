@@ -1,0 +1,120 @@
+/**
+ * Hero 英雄区域样式
+ * 渐变背景、浮动动画、光晕效果
+ */
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+}
+
+.VPHero .name {
+  background: var(--vp-home-hero-name-background);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.VPHero {
+  position: relative;
+  overflow: hidden;
+}
+
+.VPHero::before,
+.VPHero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 25% 20%, rgba(37, 99, 235, 0.15), transparent 55%);
+  transform: translate3d(0, 0, 0);
+  animation: hero-pulse 9s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.VPHero::after {
+  background: radial-gradient(circle at 75% 35%, rgba(249, 115, 22, 0.12), transparent 50%);
+  animation-duration: 11s;
+  mix-blend-mode: screen;
+}
+
+/* Hero 图片浮动动画 */
+.VPHero .image-bg {
+  animation: hero-float 6s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Hero 图片容器动画 */
+.VPHero .image-container {
+  animation: hero-container-float 6s ease-in-out infinite;
+}
+
+@keyframes hero-container-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.02);
+  }
+}
+
+/* Hero 图片光晕效果 */
+.VPHero .image-bg::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle, var(--vp-c-brand-soft) 0%, transparent 70%);
+  opacity: 0.5;
+  animation: hero-glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes hero-glow {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes hero-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* 暗色模式 Hero 渐变增强（加入橙色点缀） */
+.dark .VPHero::after {
+  background: radial-gradient(circle at 75% 35%, rgba(249, 115, 22, 0.1), transparent 50%);
+  animation-duration: 11s;
+  mix-blend-mode: screen;
+}
+
+/* 首页特性卡片 */
+.VPFeature {
+  border-radius: var(--vp-border-radius-large);
+  border: 1px solid var(--vp-c-border);
+  transition: all 0.25s ease;
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.1);
+  transform: translateY(-4px);
+}
+
+.dark .VPFeature:hover {
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.12);
+}

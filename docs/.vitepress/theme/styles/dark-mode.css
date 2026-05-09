@@ -1,0 +1,136 @@
+/**
+ * 暗色模式专属增强样式
+ * 微光边框、可读性增强、内联颜色修正
+ */
+
+/* ========================================
+   暗色模式文章可读性增强
+   ======================================== */
+
+.dark .vp-doc {
+  color: var(--vp-c-text-1);
+}
+
+.dark .vp-doc p,
+.dark .vp-doc li,
+.dark .vp-doc th,
+.dark .vp-doc td {
+  color: var(--vp-c-text-1);
+}
+
+.dark .vp-doc strong {
+  color: #E2E8F0;
+}
+
+.dark .vp-doc a {
+  color: var(--vp-c-brand-1);
+}
+
+.dark .vp-doc table {
+  background: #0F172A;
+  border-color: #1F2937;
+}
+
+.dark .vp-doc blockquote {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--vp-c-brand-1);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  color: var(--vp-c-text-1);
+}
+
+.dark .vp-doc code {
+  background: rgba(255, 255, 255, 0.06);
+  color: #E5E7EB;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .vp-doc th {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* 修正旧文章中的浅色内联样式 */
+.dark .vp-doc font,
+.dark .vp-doc [style*="color:rgb(44, 44, 54"],
+.dark .vp-doc [style*="color:rgb(32, 33, 34"],
+.dark .vp-doc [style*="color:rgb(60, 60, 67"] {
+  color: var(--vp-c-text-1) !important;
+}
+
+.dark .vp-doc [style*="color:rgb(44, 44, 54"] strong,
+.dark .vp-doc [style*="color:rgb(32, 33, 34"] strong,
+.dark .vp-doc [style*="color:rgb(60, 60, 67"] strong {
+  color: #E2E8F0 !important;
+}
+
+/* ========================================
+   暗色模式微光边框 & 背景层级
+   ======================================== */
+
+/* 侧边栏微光边框 */
+.dark .VPSidebar {
+  border-right: var(--glow-border);
+  box-shadow: var(--glow-shadow);
+}
+
+/* 导航栏微光边框 */
+.dark .VPNavBar {
+  border-bottom: var(--glow-border) !important;
+}
+
+/* 内容区域卡片微光 */
+.dark .post-card,
+.dark .feature-card,
+.dark .tool-card {
+  border: var(--glow-border);
+  box-shadow: var(--glow-shadow);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.dark .post-card:hover,
+.dark .feature-card:hover,
+.dark .tool-card:hover {
+  border: var(--glow-border-hover);
+  box-shadow: var(--glow-shadow-hover);
+}
+
+/* 自定义容器微光 */
+.dark .custom-block.tip,
+.dark .custom-block.warning,
+.dark .custom-block.danger {
+  border: var(--glow-border);
+  box-shadow: var(--glow-shadow);
+}
+
+/* 表格微光 */
+.dark .vp-doc table {
+  border: var(--glow-border);
+}
+
+/* 引用块微光 */
+.dark .vp-doc blockquote {
+  border-left-color: rgba(59, 130, 246, 0.4);
+}
+
+/* 侧边栏链接 hover 微光 */
+.dark .VPSidebar .VPLink:hover {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+/* Local Nav 微光 */
+.dark .VPLocalNav {
+  border-bottom: var(--glow-border);
+  box-shadow: var(--glow-shadow);
+}
+
+/* ========================================
+   暗色模式 TOC 增强
+   ======================================== */
+
+.dark .VPDocAsideOutline .outline-link.active {
+  background: rgba(59, 130, 246, 0.1);
+  border-left-color: var(--vp-c-brand-1);
+}
+
+.dark .VPDocAsideOutline .outline-link:hover {
+  border-left-color: var(--vp-c-brand-1);
+}

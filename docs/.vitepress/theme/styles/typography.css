@@ -1,0 +1,190 @@
+/**
+ * 文章正文排版间距
+ * 标题、段落、列表、引用、表格等
+ */
+
+/* 全局行高与字间距 */
+.vp-doc {
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+/* 段落间距 */
+.vp-doc p {
+  margin: 1.25em 0;
+  line-height: 1.8;
+}
+
+/* 标题间距 */
+.vp-doc h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.vp-doc h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.vp-doc h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* 列表间距 */
+.vp-doc ul,
+.vp-doc ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.vp-doc li {
+  margin: 0.4em 0;
+  line-height: 1.75;
+}
+
+.vp-doc li > p {
+  margin: 0.5em 0;
+}
+
+/* 嵌套列表间距 */
+.vp-doc li > ul,
+.vp-doc li > ol {
+  margin: 0.35em 0;
+}
+
+/* 引用块间距 */
+.vp-doc blockquote {
+  margin: 1.5em 0;
+  padding: 0.75em 1.25em;
+  border-left: 4px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  border-radius: 0 8px 8px 0;
+}
+
+.vp-doc blockquote p {
+  margin: 0.5em 0;
+}
+
+/* 内联代码 */
+.vp-doc code {
+  font-family: var(--vp-font-family-mono);
+  border-radius: 6px;
+  background: var(--vp-c-bg-soft);
+  padding: 0.15rem 0.45rem;
+}
+
+.dark .vp-doc code {
+  background: var(--vp-c-bg-soft);
+}
+
+/* 表格 */
+.vp-doc table {
+  border-radius: var(--vp-border-radius);
+  overflow: hidden;
+  border: 1px solid var(--vp-c-border);
+  margin: 1.5em 0;
+}
+
+.vp-doc th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+}
+
+.vp-doc td,
+.vp-doc th {
+  border: 1px solid var(--vp-c-border);
+  padding: 0.75rem 1rem;
+  line-height: 1.6;
+}
+
+/* 水平分割线 */
+.vp-doc hr {
+  margin: 2.5em 0;
+  border-color: var(--vp-c-divider);
+}
+
+/* 图片 */
+.vp-doc img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.vp-doc img:hover {
+  transform: scale(1.01);
+}
+
+.vp-doc p > img {
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 1.5em auto;
+}
+
+/* 自定义容器 */
+.custom-block {
+  margin: 1.5em 0;
+  padding: 1rem 1.25rem;
+  border-radius: var(--vp-border-radius-soft);
+  border-left: 4px solid;
+}
+
+/* 链接样式 */
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.vp-doc a:hover {
+  color: var(--vp-c-brand-2);
+}
+
+/* 文档内容容器留白 */
+.vp-doc .content-container {
+  padding: 0 1.5rem;
+}
+
+/* 首段不需要顶部间距 */
+.vp-doc > h1:first-child {
+  margin-top: 0;
+}
+
+/* 标题后首段间距 */
+.vp-doc h1 + p,
+.vp-doc h2 + p,
+.vp-doc h3 + p,
+.vp-doc h4 + p {
+  margin-top: 0.75em;
+}
+
+/* 兼容 <font> 标签 */
+.vp-doc font {
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+
+.vp-doc strong font,
+.vp-doc font strong {
+  font-weight: 700;
+}

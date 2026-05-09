@@ -19,6 +19,8 @@ import SkillsPage from '../components/SkillsPage.vue'
 import SkillsLibrary from '../components/SkillsLibrary.vue'
 import TypeWriter from '../components/TypeWriter.vue'
 import HeroParticles from '../components/HeroParticles.vue'
+import SvgIcon from '../components/SvgIcon.vue'
+import HomePageContent from '../components/HomePageContent.vue'
 
 export default {
   extends: DefaultTheme,
@@ -35,6 +37,8 @@ export default {
     app.component('SkillsLibrary', SkillsLibrary)
     app.component('TypeWriter', TypeWriter)
     app.component('HeroParticles', HeroParticles)
+    app.component('SvgIcon', SvgIcon)
+    app.component('HomePageContent', HomePageContent)
   },
   setup() {
     const isClient = typeof window !== 'undefined'

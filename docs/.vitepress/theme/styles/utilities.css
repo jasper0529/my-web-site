@@ -1,0 +1,147 @@
+/**
+ * 工具类与杂项样式
+ * 滚动条、选中高亮、动画、TOC、页脚隐藏、无障碍
+ */
+
+/* ========================================
+   滚动条美化
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-soft);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-1);
+}
+
+/* ========================================
+   文本选中
+   ======================================== */
+
+::selection {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
+
+/* ========================================
+   动画效果
+   ======================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* 页面过渡动画 */
+.vp-doc {
+  animation: page-fade-in 0.3s ease-out;
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   TOC 侧边栏增强
+   ======================================== */
+
+/* 隐藏默认 outline-marker */
+.VPDocAsideOutline .outline-marker {
+  display: none !important;
+}
+
+.VPDocAsideOutline .title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.VPDocAsideOutline .outline-link {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  transition: all 0.2s ease;
+  border-left: 2px solid transparent;
+  padding-left: 8px;
+  margin-left: -10px;
+}
+
+.VPDocAsideOutline .outline-link.active {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+  border-left-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  border-radius: 0 4px 4px 0;
+}
+
+.VPDocAsideOutline .outline-link:hover {
+  color: var(--vp-c-brand-1);
+  border-left-color: var(--vp-c-brand-2);
+}
+
+.VPDocAsideOutline .outline-link.depth-3 {
+  padding-left: 20px;
+}
+
+.VPDocAsideOutline .outline-link.depth-4 {
+  padding-left: 32px;
+}
+
+/* ========================================
+   隐藏默认页脚
+   ======================================== */
+
+.VPFooter {
+  display: none !important;
+}
+
+/* ========================================
+   无障碍：减少动画偏好
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-particles {
+    display: none !important;
+  }
+
+  .VPHero .image-bg,
+  .VPHero .image-container {
+    animation: none !important;
+  }
+}

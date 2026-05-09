@@ -4,7 +4,7 @@
         <title>Jasper Labs</title>
         <link>https://jasper-labs.cn</link>
         <description>个人知识库和博客网站，包含Python、算法、技术笔记等内容</description>
-        <lastBuildDate>Sat, 09 May 2026 01:39:45 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 09 May 2026 02:50:10 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -14,6 +14,13 @@
             <link>https://jasper-labs.cn</link>
         </image>
         <copyright>Copyright © 2026 Jasper</copyright>
+        <item>
+            <title><![CDATA[Jasper Labs - 个人技术知识库与博客]]></title>
+            <link>https://jasper-labs.cn/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/</guid>
+            <pubDate>Sat, 09 May 2026 02:32:57 GMT</pubDate>
+            <description><![CDATA[Jasper Labs 是一个专注于 Python 编程、算法与数据结构、AI 技术、Linux 运维等领域的技术知识库，提供高质量的技术教程、学习笔记和最佳实践分享。]]></description>
+        </item>
         <item>
             <title><![CDATA[技术笔记]]></title>
             <link>https://jasper-labs.cn/notes/</link>
@@ -48,13 +55,6 @@
             <guid isPermaLink="false">https://jasper-labs.cn/python/</guid>
             <pubDate>Fri, 08 May 2026 10:08:00 GMT</pubDate>
             <description><![CDATA[系统学习 Python 编程，从基础语法到高级特性，包含常用库的使用教程和最佳实践。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Jasper Labs - 个人技术知识库与博客]]></title>
-            <link>https://jasper-labs.cn/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/</guid>
-            <pubDate>Fri, 08 May 2026 09:16:50 GMT</pubDate>
-            <description><![CDATA[Jasper Labs 是一个专注于 Python 编程、算法与数据结构、AI 技术、Linux 运维等领域的技术知识库，提供高质量的技术教程、学习笔记和最佳实践分享。]]></description>
         </item>
         <item>
             <title><![CDATA[文章归档]]></title>

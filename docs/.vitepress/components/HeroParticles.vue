@@ -94,8 +94,11 @@ const update = (width: number, height: number) => {
   }
 }
 
+let isVisible = true
+let observer: IntersectionObserver | null = null
+
 const animate = () => {
-  if (!canvas.value) return
+  if (!canvas.value || !isVisible) return
   const ctx = canvas.value.getContext('2d')
   if (!ctx) return
 
@@ -105,6 +108,20 @@ const animate = () => {
   update(width, height)
   draw(ctx, width, height)
   animationId = requestAnimationFrame(animate)
+}
+
+const startAnimation = () => {
+  if (animationId) return // 已在运行
+  isVisible = true
+  animate()
+}
+
+const stopAnimation = () => {
+  isVisible = false
+  if (animationId) {
+    cancelAnimationFrame(animationId)
+    animationId = null
+  }
 }
 
 const resize = () => {
@@ -132,11 +149,31 @@ onMounted(() => {
   resize()
   animate()
   window.addEventListener('resize', resize)
+
+  // 使用 IntersectionObserver 在不可见时暂停动画，节省性能
+  observer = new IntersectionObserver(
+    (entries) => {
+      const entry = entries[0]
+      if (entry.isIntersecting) {
+        startAnimation()
+      } else {
+        stopAnimation()
+      }
+    },
+    { threshold: 0.1 }
+  )
+
+  if (canvas.value?.parentElement) {
+    observer.observe(canvas.value.parentElement)
+  }
 })
 
 onUnmounted(() => {
-  if (animationId) cancelAnimationFrame(animationId)
-  if (isClient) window.removeEventListener('resize', resize)
+  stopAnimation()
+  if (isClient) {
+    window.removeEventListener('resize', resize)
+    observer?.disconnect()
+  }
 })
 </script>
 

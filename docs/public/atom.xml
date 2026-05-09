@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-05-09T01:39:45.513Z</updated>
+    <updated>2026-05-09T02:50:10.050Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -15,6 +15,13 @@
     <logo>https://jasper-labs.cn/images/logo.svg</logo>
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
+    <entry>
+        <title type="html"><![CDATA[Jasper Labs - 个人技术知识库与博客]]></title>
+        <id>https://jasper-labs.cn/</id>
+        <link href="https://jasper-labs.cn/"/>
+        <updated>2026-05-09T02:32:57.663Z</updated>
+        <summary type="html"><![CDATA[Jasper Labs 是一个专注于 Python 编程、算法与数据结构、AI 技术、Linux 运维等领域的技术知识库，提供高质量的技术教程、学习笔记和最佳实践分享。]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[技术笔记]]></title>
         <id>https://jasper-labs.cn/notes/</id>
@@ -49,13 +56,6 @@
         <link href="https://jasper-labs.cn/python/"/>
         <updated>2026-05-08T10:08:00.477Z</updated>
         <summary type="html"><![CDATA[系统学习 Python 编程，从基础语法到高级特性，包含常用库的使用教程和最佳实践。]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Jasper Labs - 个人技术知识库与博客]]></title>
-        <id>https://jasper-labs.cn/</id>
-        <link href="https://jasper-labs.cn/"/>
-        <updated>2026-05-08T09:16:50.523Z</updated>
-        <summary type="html"><![CDATA[Jasper Labs 是一个专注于 Python 编程、算法与数据结构、AI 技术、Linux 运维等领域的技术知识库，提供高质量的技术教程、学习笔记和最佳实践分享。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[文章归档]]></title>

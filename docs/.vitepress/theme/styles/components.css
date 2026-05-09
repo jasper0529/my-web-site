@@ -1,0 +1,471 @@
+/**
+ * 组件样式
+ * 卡片、标签、按钮、容器（Tip/Warning/Danger）、Section 区块
+ */
+
+/* ========================================
+   自定义容器 (Tip, Warning, Danger, Info)
+   ======================================== */
+
+.custom-block.tip {
+  border-color: var(--vp-c-success);
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.custom-block.tip .custom-block-title {
+  color: var(--vp-c-success);
+}
+
+.dark .custom-block.tip {
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.custom-block.warning {
+  border-color: var(--vp-c-warning);
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.custom-block.warning .custom-block-title {
+  color: var(--vp-c-warning);
+}
+
+.custom-block.danger {
+  border-color: var(--vp-c-danger);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.custom-block.danger .custom-block-title {
+  color: var(--vp-c-danger);
+}
+
+.custom-block.info {
+  border-color: var(--vp-c-info);
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.custom-block.info .custom-block-title {
+  color: var(--vp-c-info);
+}
+
+/* ========================================
+   按钮样式
+   ======================================== */
+
+.vp-button.brand {
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  padding-inline: 1.5rem;
+}
+
+.vp-button.brand:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.dark .vp-button.brand:hover {
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.45);
+}
+
+.vp-button.alt {
+  border-radius: 999px;
+  border-width: 1.5px;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+  border-color: rgba(37, 99, 235, 0.5);
+  background: transparent;
+}
+
+/* ========================================
+   卡片网格布局
+   ======================================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+/* ========================================
+   卡片样式（统一基类）
+   ======================================== */
+
+.feature-card,
+.post-card,
+.tool-card,
+.home-section .post-card,
+.home-section .feature-card {
+  padding: 1.5rem;
+  border-radius: var(--vp-border-radius-large);
+  background: var(--vp-c-bg);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover,
+.post-card:hover,
+.tool-card:hover,
+.home-section .post-card:hover,
+.home-section .feature-card:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.15);
+  transform: translateY(-4px);
+}
+
+.dark .feature-card:hover,
+.dark .post-card:hover,
+.dark .tool-card:hover {
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.65);
+}
+
+.feature-card .feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.feature-card p {
+  margin: 0 0 1rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+}
+
+.feature-card a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+}
+
+.feature-card a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   标签样式（全局统一）
+   ======================================== */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--tag-padding);
+  font-size: var(--tag-font-size);
+  font-weight: 500;
+  border-radius: var(--tag-radius);
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border: 1px solid var(--tag-border);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 1.6;
+}
+
+.tag:hover {
+  background: var(--tag-hover-bg);
+  color: var(--tag-hover-text);
+  border-color: var(--tag-hover-border);
+  box-shadow: var(--tag-hover-shadow);
+  transform: translateY(-1px);
+}
+
+.tag.active {
+  background: var(--tag-active-bg);
+  color: var(--tag-active-text);
+  border-color: transparent;
+}
+
+/* ========================================
+   首页 Section 区块
+   ======================================== */
+
+.home-section {
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: var(--vp-border-radius-large);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(29, 78, 216, 0.05));
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(249, 115, 22, 0.08), transparent 60%);
+  opacity: 0.8;
+}
+
+.home-section > * {
+  position: relative;
+}
+
+.home-section + .home-section {
+  margin-top: 1.5rem;
+}
+
+.dark .home-section {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(29, 78, 216, 0.1));
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.home-section .section-header {
+  margin-bottom: 1.5rem;
+}
+
+.home-section .section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--vp-c-brand-1);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-section .section-eyebrow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.35), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.home-section:hover .section-eyebrow::after {
+  opacity: 1;
+}
+
+.dark .home-section .section-eyebrow {
+  background: rgba(59, 130, 246, 0.18);
+}
+
+.home-section h2 {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+}
+
+.home-section .section-desc {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  max-width: 720px;
+}
+
+/* ── Section 差异化背景 ── */
+
+/* 蓝色 */
+.home-section.section-blue {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(29, 78, 216, 0.05));
+  border-color: rgba(37, 99, 235, 0.12);
+}
+.home-section.section-blue::before {
+  background: radial-gradient(circle at 30% 20%, rgba(37, 99, 235, 0.1), transparent 60%);
+}
+.dark .home-section.section-blue {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(29, 78, 216, 0.1));
+  border-color: rgba(59, 130, 246, 0.35);
+}
+.home-section.section-blue .section-eyebrow {
+  background: rgba(37, 99, 235, 0.12);
+  color: #2563eb;
+}
+.dark .home-section.section-blue .section-eyebrow {
+  background: rgba(59, 130, 246, 0.18);
+  color: #60a5fa;
+}
+
+/* 橙色 */
+.home-section.section-orange {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.08), rgba(234, 88, 12, 0.05));
+  border-color: rgba(249, 115, 22, 0.12);
+}
+.home-section.section-orange::before {
+  background: radial-gradient(circle at 70% 30%, rgba(249, 115, 22, 0.1), transparent 60%);
+}
+.dark .home-section.section-orange {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(234, 88, 12, 0.1));
+  border-color: rgba(249, 115, 22, 0.35);
+}
+.home-section.section-orange .section-eyebrow {
+  background: rgba(249, 115, 22, 0.12);
+  color: #ea580c;
+}
+.dark .home-section.section-orange .section-eyebrow {
+  background: rgba(249, 115, 22, 0.18);
+  color: #fb923c;
+}
+
+/* 绿色 */
+.home-section.section-green {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(5, 150, 105, 0.05));
+  border-color: rgba(16, 185, 129, 0.12);
+}
+.home-section.section-green::before {
+  background: radial-gradient(circle at 50% 10%, rgba(16, 185, 129, 0.1), transparent 60%);
+}
+.dark .home-section.section-green {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(5, 150, 105, 0.1));
+  border-color: rgba(16, 185, 129, 0.35);
+}
+.home-section.section-green .section-eyebrow {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+}
+.dark .home-section.section-green .section-eyebrow {
+  background: rgba(16, 185, 129, 0.18);
+  color: #34d399;
+}
+
+/* 紫色 */
+.home-section.section-purple {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(124, 58, 237, 0.05));
+  border-color: rgba(139, 92, 246, 0.12);
+}
+.home-section.section-purple::before {
+  background: radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.1), transparent 60%);
+}
+.dark .home-section.section-purple {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(124, 58, 237, 0.1));
+  border-color: rgba(139, 92, 246, 0.35);
+}
+.home-section.section-purple .section-eyebrow {
+  background: rgba(139, 92, 246, 0.12);
+  color: #7c3aed;
+}
+.dark .home-section.section-purple .section-eyebrow {
+  background: rgba(139, 92, 246, 0.18);
+  color: #a78bfa;
+}
+
+/* ── SVG Section 分隔线 ── */
+.section-divider {
+  width: 100%;
+  height: 28px;
+  margin: -1px 0;
+  line-height: 0;
+  overflow: hidden;
+}
+.section-divider svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.section-divider-flip {
+  transform: scaleY(-1);
+}
+
+/* ========================================
+   文章元信息
+   ======================================== */
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  color: var(--vp-c-text-3);
+  font-size: 0.875rem;
+}
+
+/* ========================================
+   时间线样式
+   ======================================== */
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--vp-c-border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--vp-c-brand-1);
+  border: 2px solid var(--vp-c-bg);
+}
+
+/* ========================================
+   侧边栏
+   ======================================== */
+
+.VPSidebar {
+  background: var(--vp-sidebar-bg-color);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.VPSidebarItem.is-active > .item > .link > .text {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.VPSidebarItem .link:hover .text {
+  color: var(--vp-c-brand-1);
+}
+
+/* ========================================
+   medium-zoom 样式
+   ======================================== */
+
+.medium-zoom-overlay {
+  z-index: 999;
+}
+
+.medium-zoom-image--opened {
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+/* ========================================
+   阅读进度条（基础结构，组件内 scoped 补充）
+   ======================================== */
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--vp-c-brand-1);
+  z-index: 9999;
+  transition: width 0.1s;
+}
