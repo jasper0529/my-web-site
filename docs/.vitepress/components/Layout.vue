@@ -14,7 +14,7 @@ import Breadcrumb from './Breadcrumb.vue' // 面包屑导航
 import RelatedPosts from './RelatedPosts.vue' // 相关文章推荐
 import HeroParticles from './HeroParticles.vue' // Hero 粒子动画背景
 import SiteFooter from './SiteFooter.vue' // 自定义页脚
-import NotFoundContent from './NotFoundContent.vue' // 自定义 404 页面内容
+import NotFoundHubPage from './NotFoundHubPage.vue' // 404 页面
 
 const { Layout } = DefaultTheme
 const { frontmatter } = useData()
@@ -22,12 +22,13 @@ const { frontmatter } = useData()
 // 判断是否为首页
 const isHome = computed(() => frontmatter.value.layout === 'home')
 
-// 判断是否显示文档元信息
-const showDocMeta = () => {
-  return frontmatter.value.date ||
-    (frontmatter.value.tags && frontmatter.value.tags.length > 0) ||
-    frontmatter.value.title
-}
+// 只有真正的文章页才显示文章头部和文章附属模块
+const isArticlePage = computed(() => {
+  const fm = frontmatter.value as Record<string, any>
+  if (fm.layout === 'home') return false
+  if (fm.docMeta === true) return true
+  return Boolean(fm.date)
+})
 
 const defaultAnnouncement = {
   show: true,
@@ -63,32 +64,35 @@ const announcementConfig = computed(() => {
   <Layout>
     <!-- 阅读进度条、加载动画和首页粒子背景 - 放在 layout-top 插槽中 -->
     <template #layout-top>
+      <a href="#main-content" class="skip-link">跳到主内容</a>
       <ReadingProgress />
       <LoadingOverlay />
       <HeroParticles v-if="isHome" />
     </template>
 
-    <!-- 自定义 404 页面 -->
+    <!-- 404 页面支持 -->
     <template #not-found>
-      <NotFoundContent />
+      <div class="VPNotFound">
+        <NotFoundHubPage />
+      </div>
     </template>
 
     <!-- 在文档内容前插入面包屑和元信息 -->
     <template #doc-before>
       <Breadcrumb />
-      <DocMeta v-if="showDocMeta()" />
+      <DocMeta v-if="isArticlePage" />
     </template>
 
     <!-- 在文档内容后插入相关文章、版权信息和评论 -->
     <template #doc-after>
-      <RelatedPosts />
-      <ArticleCopyright />
-      <GiscusComment />
+      <RelatedPosts v-if="isArticlePage" />
+      <ArticleCopyright v-if="isArticlePage" />
+      <GiscusComment v-if="isArticlePage" />
     </template>
 
     <!-- 在布局后插入返回顶部按钮和公告栏 -->
     <template #layout-bottom>
-    <SiteFooter />
+      <SiteFooter />
       <Analytics />
       <BackToTop />
       <Announcement
@@ -100,6 +104,3 @@ const announcementConfig = computed(() => {
     </template>
   </Layout>
 </template>
-
-<style>
-</style>

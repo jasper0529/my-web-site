@@ -3,6 +3,7 @@ title: Linux 常用命令速查手册
 date: 2026-03-20
 tags: ['Linux', '运维', '命令行', '速查手册']
 description: 全面整理 Linux 常用命令，包括缓存清理、文件搜索、磁盘管理、进程管理等运维必备命令，附带参数说明和使用示例，适合日常快速查阅。
+cover: /images/covers/linux-commands.svg
 ---
 
 # 常用命令
@@ -97,4 +98,3 @@ lshw -class disk
 ```bash
 find /tmp -name "name*" -exec rm -rf {} +
 ```
-

@@ -126,6 +126,8 @@ onUnmounted(() => {
 
 /* 深色模式优化 */
 .dark .loading-spinner {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  background: rgba(15, 23, 42, 0.92);
+  border-color: rgba(59, 130, 246, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 12px rgba(59, 130, 246, 0.08);
 }
 </style>

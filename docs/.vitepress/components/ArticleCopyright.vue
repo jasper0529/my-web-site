@@ -86,10 +86,10 @@ const showCopyright = computed(() => {
 <style scoped>
 .article-copyright {
   margin: 2rem 0;
-  padding: 1.25rem 1.5rem;
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-border);
-  border-radius: 12px;
+  padding: 1.2rem 1.3rem;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-xl);
   position: relative;
   overflow: hidden;
 }
@@ -99,7 +99,7 @@ const showCopyright = computed(() => {
   position: absolute;
   top: 0;
   left: 0;
-  width: 4px;
+  width: 3px;
   height: 100%;
   background: linear-gradient(180deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
 }
@@ -110,7 +110,7 @@ const showCopyright = computed(() => {
   gap: 0.5rem;
   margin-bottom: 1rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px dashed var(--vp-c-border);
+  border-bottom: 1px dashed rgba(15, 23, 42, 0.1);
 }
 
 .copyright-icon {
@@ -177,7 +177,9 @@ const showCopyright = computed(() => {
 
 /* 暗色模式优化 */
 .dark .article-copyright {
-  background: var(--vp-c-bg-mute);
+  background: rgba(15, 23, 42, 0.82);
+  border-color: rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.05);
 }
 
 /* 移动端适配 */

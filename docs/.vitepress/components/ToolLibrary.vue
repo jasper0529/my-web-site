@@ -4,11 +4,11 @@
     <div class="tool-hero">
       <div class="tool-hero-inner">
         <h2 class="tool-hero-title">
-          <span class="hero-icon">🛠️</span>
+          <span class="hero-code">TOOLS</span>
           常用工具箱
         </h2>
         <p class="tool-hero-desc">
-          精心筛选的开发者工具与服务，覆盖开发、设计、AI 等多个领域，助你高效工作。
+          聚合开发、排障、设计与 AI 相关工具，优先收录能直接进入真实工作流的高频选项。
         </p>
         <!-- 搜索框 -->
         <div class="tool-search-box">
@@ -186,8 +186,8 @@
 
     <!-- 底部提示 -->
     <div class="tool-footer-hint">
-      <p>💡 点击工具卡片可直接访问官网，所有工具均经过筛选推荐</p>
-      <p>📮 如果你有好用的工具推荐，欢迎通过 GitHub Issue 提交</p>
+      <p>点击工具卡片可直接访问官网，条目按实际使用场景持续整理。</p>
+      <p>如果你有值得补充的工具，欢迎通过 GitHub Issue 提交建议。</p>
     </div>
   </div>
 </template>
@@ -394,11 +394,18 @@ watch([searchQuery, activeCategory], () => {
 /* ---- 页面头部 Hero ---- */
 .tool-hero {
   text-align: center;
-  padding: 2.5rem 0 1.5rem;
+  padding: 1.9rem 1.4rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.98)),
+    linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(15, 23, 42, 0.02));
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.05);
 }
 
 .tool-hero-inner {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -413,8 +420,18 @@ watch([searchQuery, activeCategory], () => {
   gap: 0.5rem;
 }
 
-.hero-icon {
-  font-size: 1.8rem;
+.hero-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.5rem;
+  padding: 0.24rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  color: #f8fafc;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .tool-hero-desc {
@@ -443,9 +460,9 @@ watch([searchQuery, activeCategory], () => {
 .tool-search-input {
   width: 100%;
   padding: 0.75rem 2.5rem 0.75rem 2.75rem;
-  border: 2px solid var(--vp-c-border);
-  border-radius: 12px;
-  background: var(--vp-c-bg-soft);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.86);
   color: var(--vp-c-text-1);
   font-size: 0.95rem;
   outline: none;
@@ -458,8 +475,8 @@ watch([searchQuery, activeCategory], () => {
 
 .tool-search-input:focus {
   border-color: var(--vp-c-brand-1);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-  background: var(--vp-c-bg);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+  background: rgba(255, 255, 255, 0.98);
 }
 
 .search-clear {
@@ -484,12 +501,10 @@ watch([searchQuery, activeCategory], () => {
 
 /* ---- 统计信息 ---- */
 .tool-stats {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1.25rem 0;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--vp-c-divider);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0 0 1.2rem;
 }
 
 .stat-item {
@@ -497,6 +512,10 @@ watch([searchQuery, activeCategory], () => {
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .stat-number {
@@ -515,8 +534,8 @@ watch([searchQuery, activeCategory], () => {
 .tool-categories {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 1rem 0 1.5rem;
+  gap: 0.65rem;
+  padding: 0.25rem 0 1.4rem;
   justify-content: center;
 }
 
@@ -524,29 +543,29 @@ watch([searchQuery, activeCategory], () => {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.5rem 1rem;
-  border: 1.5px solid var(--vp-c-border);
+  padding: 0.55rem 0.95rem;
+  border: 1px solid rgba(15, 23, 42, 0.1);
   border-radius: 999px;
-  background: var(--vp-c-bg);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--vp-c-text-2);
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
   white-space: nowrap;
 }
 
 .category-tag:hover {
-  border-color: var(--vp-c-brand-1);
-  color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
+  border-color: rgba(37, 99, 235, 0.24);
+  color: var(--vp-c-text-1);
+  background: rgba(37, 99, 235, 0.06);
 }
 
 .category-tag.active {
-  border-color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-1);
+  border-color: rgba(15, 23, 42, 0.92);
+  background: rgba(15, 23, 42, 0.92);
   color: #fff;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  box-shadow: none;
 }
 
 .category-icon {
@@ -561,7 +580,7 @@ watch([searchQuery, activeCategory], () => {
   height: 1.25rem;
   padding: 0 0.35rem;
   border-radius: 999px;
-  background: var(--vp-c-default-soft);
+  background: rgba(15, 23, 42, 0.08);
   color: var(--vp-c-text-3);
   font-size: 0.7rem;
   font-weight: 600;
@@ -569,7 +588,7 @@ watch([searchQuery, activeCategory], () => {
 }
 
 .category-tag:hover .category-count {
-  background: var(--vp-c-brand-soft);
+  background: rgba(37, 99, 235, 0.12);
   color: var(--vp-c-brand-1);
 }
 
@@ -610,9 +629,9 @@ watch([searchQuery, activeCategory], () => {
   display: flex;
   gap: 0.875rem;
   padding: 1.125rem;
-  border: 1.5px solid var(--vp-c-border);
-  border-radius: 14px;
-  background: var(--vp-c-bg);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
   text-decoration: none;
   color: inherit;
   transition: all 0.3s ease;
@@ -620,8 +639,8 @@ watch([searchQuery, activeCategory], () => {
 }
 
 .tool-card:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.22);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.07);
   transform: translateY(-2px);
 }
 
@@ -631,9 +650,9 @@ watch([searchQuery, activeCategory], () => {
   width: 44px;
   height: 44px;
   flex-shrink: 0;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  background: var(--vp-c-bg-soft);
+  background: rgba(15, 23, 42, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -706,12 +725,12 @@ watch([searchQuery, activeCategory], () => {
 
 .tool-tag {
   display: inline-block;
-  padding: 0.1rem 0.45rem;
+  padding: 0.18rem 0.52rem;
   font-size: 0.7rem;
-  border-radius: 4px;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-  font-weight: 500;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.05);
+  color: var(--vp-c-text-2);
+  font-weight: 600;
 }
 
 /* ---- 空状态 ---- */
@@ -739,8 +758,10 @@ watch([searchQuery, activeCategory], () => {
 
 /* ---- 底部提示 ---- */
 .tool-footer-hint {
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--vp-c-divider);
+  padding: 1.2rem 1.25rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.03);
   margin-top: 1rem;
 }
 
@@ -753,6 +774,20 @@ watch([searchQuery, activeCategory], () => {
 
 .tool-footer-hint p:last-child {
   margin-bottom: 0;
+}
+
+.dark .tool-hero,
+.dark .stat-item,
+.dark .category-tag,
+.dark .tool-card,
+.dark .tool-footer-hint {
+  border-color: rgba(148, 163, 184, 0.14);
+  background: rgba(15, 23, 42, 0.82);
+}
+
+.dark .tool-search-input {
+  border-color: rgba(148, 163, 184, 0.14);
+  background: rgba(15, 23, 42, 0.74);
 }
 
 /* ---- 分页控件 ---- */
@@ -862,7 +897,8 @@ watch([searchQuery, activeCategory], () => {
   }
 
   .tool-stats {
-    gap: 1.25rem;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
   .stat-number {

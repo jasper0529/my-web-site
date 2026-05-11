@@ -4,6 +4,16 @@ import { useData } from 'vitepress'
 
 const { frontmatter, page, site } = useData()
 
+const sectionMap: Record<string, { code: string; name: string }> = {
+  python: { code: 'PY', name: 'Python 工程实践' },
+  algorithm: { code: 'ALGO', name: '算法与数据结构' },
+  notes: { code: 'OPS', name: '技术笔记 / Linux' },
+  ai: { code: 'AI', name: 'AI 应用落地' },
+  tools: { code: 'TOOLS', name: '常用工具' },
+  prompts: { code: 'PROMPT', name: '提示词库' },
+  skills: { code: 'SKILL', name: '技能库' }
+}
+
 const formatDate = (date: string | Date) => {
   if (!date) return ''
   const d = new Date(date)
@@ -19,11 +29,15 @@ const hasMeta = computed(() => {
     (frontmatter.value.tags && frontmatter.value.tags.length > 0)
 })
 
-const articleTitle = computed(() => {
-  return frontmatter.value.title || page.value.title
+const articleTitle = computed(() => frontmatter.value.title || page.value.title)
+const articleDescription = computed(() => frontmatter.value.description || '')
+
+const articleSection = computed(() => {
+  const path = page.value.relativePath.replace(/\\/g, '/')
+  const root = path.split('/')[0]
+  return sectionMap[root] || { code: 'DOC', name: '技术文章' }
 })
 
-// 作者信息
 const authorName = computed(() => {
   return frontmatter.value.author || site.value.themeConfig?.siteTitle || 'Admin'
 })
@@ -31,11 +45,9 @@ const authorName = computed(() => {
 const authorInitial = computed(() => {
   const name = authorName.value
   if (!name) return 'A'
-  // 取第一个字符（支持中文和英文）
   return name.charAt(0).toUpperCase()
 })
 
-// 基于作者名生成头像渐变色
 const avatarGradient = computed(() => {
   const name = authorName.value
   let hash = 0
@@ -43,24 +55,17 @@ const avatarGradient = computed(() => {
     hash = name.charCodeAt(i) + ((hash << 5) - hash)
   }
   const palettes = [
-    ['#2563EB', '#7C3AED'],
-    ['#059669', '#0D9488'],
-    ['#D97706', '#EA580C'],
-    ['#DC2626', '#E11D48'],
-    ['#7C3AED', '#EC4899'],
-    ['#0891B2', '#2563EB'],
-    ['#4F46E5', '#7C3AED'],
-    ['#B45309', '#CA8A04'],
+    ['#2563EB', '#0F766E'],
+    ['#0F766E', '#0891B2'],
+    ['#1D4ED8', '#1E3A8A'],
+    ['#0F766E', '#134E4A']
   ]
-  const idx = Math.abs(hash) % palettes.length
-  return palettes[idx]
+  return palettes[Math.abs(hash) % palettes.length]
 })
 
-// 阅读统计相关
 const wordCount = ref(0)
 const readingTime = ref(0)
 
-// 计算阅读字数和时间
 const calculateReadingStats = () => {
   if (typeof document === 'undefined') return
 
@@ -87,13 +92,11 @@ const calculateReadingStats = () => {
   readingTime.value = Math.max(1, Math.ceil(chineseTime + englishTime + codeTime))
 }
 
-// 格式化字数显示
 const formatWordCount = (count: number) => {
   if (count < 1000) return count.toString()
   return (count / 1000).toFixed(1) + 'k'
 }
 
-// 监听页面路径变化
 watch(
   () => page.value.relativePath,
   (newPath, oldPath) => {
@@ -107,7 +110,6 @@ watch(
   }
 )
 
-// 组件挂载时计算
 onMounted(() => {
   nextTick(() => {
     requestAnimationFrame(calculateReadingStats)
@@ -117,7 +119,15 @@ onMounted(() => {
 
 <template>
   <div class="doc-meta-container">
-    <h1 v-if="articleTitle" class="article-title">{{ articleTitle }}</h1>
+    <header class="article-header">
+      <div class="article-kicker">
+        <span class="article-code">{{ articleSection.code }}</span>
+        <span class="article-section">{{ articleSection.name }}</span>
+      </div>
+      <h1 v-if="articleTitle" class="article-title">{{ articleTitle }}</h1>
+      <p v-if="articleDescription" class="article-description">{{ articleDescription }}</p>
+    </header>
+
     <div v-if="hasMeta" class="doc-meta-card">
       <div class="meta-left">
         <div class="author-avatar" :style="{ background: `linear-gradient(135deg, ${avatarGradient[0]}, ${avatarGradient[1]})` }">
@@ -152,72 +162,105 @@ onMounted(() => {
   margin-bottom: 1.5rem;
 }
 
-<style scoped>
-.doc-meta-container {
-  margin-bottom: 1.25rem;
+.article-header {
+  padding: 1.35rem 1.4rem 1.25rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 250, 252, 0.99)),
+    linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(15, 23, 42, 0.02));
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.05);
+}
+
+.article-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.95rem;
+}
+
+.article-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.9rem;
+  padding: 0.26rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  color: #f8fafc;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.article-section {
+  color: var(--vp-c-text-3);
+  font-size: 0.88rem;
+  font-weight: 600;
 }
 
 .article-title {
-  margin: 0 0 1rem 0;
-  padding-bottom: 0.6rem;
-  border-bottom: 2px solid var(--vp-c-brand-1);
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.3;
+  margin: 0;
+  font-size: clamp(2rem, 1.7rem + 0.9vw, 2.65rem);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
   color: var(--vp-c-text-1);
+}
+
+.article-description {
+  margin: 1rem 0 0;
+  max-width: 64ch;
+  color: var(--vp-c-text-2);
+  line-height: 1.9;
+  font-size: 0.98rem;
 }
 
 .doc-meta-card {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.625rem;
-  padding: 0.5rem 0.875rem;
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  gap: 0.75rem;
+  margin-top: 0.95rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.78);
 }
 
-.doc-meta-card:hover {
-  border-color: var(--vp-c-brand-1-dimm);
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
-}
-
-/* 左侧信息 */
 .meta-left {
   display: flex;
   align-items: center;
-  gap: 0.375rem;
+  gap: 0.4rem;
   flex-wrap: wrap;
 }
 
 .author-avatar {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   color: #fff;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
   line-height: 1;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
 }
 
 .meta-text {
   display: inline-flex;
   align-items: center;
-  gap: 0.2rem;
-  font-size: 0.8125rem;
+  gap: 0.24rem;
+  font-size: 0.82rem;
   color: var(--vp-c-text-2);
   white-space: nowrap;
 }
 
 .author-name {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--vp-c-text-1);
 }
 
@@ -238,11 +281,10 @@ onMounted(() => {
   vertical-align: -1px;
 }
 
-/* 标签区域 — 推到右侧 */
 .meta-tags {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.42rem;
   margin-left: auto;
   flex-wrap: wrap;
 }
@@ -250,61 +292,70 @@ onMounted(() => {
 .meta-tag {
   display: inline-flex;
   align-items: center;
-  padding: 0.1rem 0.45rem;
-  background: var(--vp-c-brand-soft);
-  border: 1px solid var(--vp-c-brand-1-dimm);
-  border-radius: 10px;
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: var(--vp-c-brand-1);
+  padding: 0.24rem 0.7rem;
+  background: rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
   text-decoration: none;
-  transition: all 0.2s;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
   cursor: pointer;
   white-space: nowrap;
 }
 
 .meta-tag:hover {
-  background: var(--vp-c-brand-1);
-  color: #fff;
-  border-color: var(--vp-c-brand-1);
   transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+  border-color: rgba(37, 99, 235, 0.22);
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--vp-c-brand-1);
 }
 
-/* 暗色模式 */
+.dark .article-header {
+  border-color: rgba(59, 130, 246, 0.15);
+  background: rgba(15, 23, 42, 0.82);
+  box-shadow: 0 18px 36px rgba(2, 6, 23, 0.4), 0 0 15px rgba(59, 130, 246, 0.06);
+}
+
 .dark .doc-meta-card {
-  border-color: var(--glow-border, rgba(59, 130, 246, 0.12));
-  background: rgba(15, 23, 42, 0.6);
-}
-
-.dark .doc-meta-card:hover {
-  border-color: var(--glow-border-hover, rgba(59, 130, 246, 0.25));
-  box-shadow: 0 2px 8px var(--glow-shadow, rgba(59, 130, 246, 0.08));
+  border-color: rgba(59, 130, 246, 0.15);
+  background: rgba(15, 23, 42, 0.82);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.05);
 }
 
 .dark .author-avatar {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 14px rgba(2, 6, 23, 0.4);
 }
 
-.dark .meta-tag:hover {
-  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.35);
+.dark .meta-tag {
+  border-color: rgba(148, 163, 184, 0.14);
+  background: rgba(148, 163, 184, 0.08);
 }
 
-/* 响应式 */
 @media (max-width: 640px) {
+  .article-header {
+    padding: 1.15rem 1rem 1.05rem;
+    border-radius: var(--radius-lg);
+  }
+
   .article-title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+  }
+
+  .article-description {
+    font-size: 0.93rem;
   }
 
   .doc-meta-card {
-    padding: 0.5rem 0.75rem;
+    padding: 0.8rem 0.85rem;
   }
 
   .meta-tags {
     margin-left: 0;
     width: 100%;
-    padding-top: 0.25rem;
-    border-top: 1px solid var(--vp-c-divider);
+    padding-top: 0.35rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
   }
 }
 </style>

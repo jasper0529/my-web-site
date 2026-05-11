@@ -4,10 +4,10 @@
       <a :href="post.url" class="post-link">
         <article class="post-card">
           <div class="post-cover" :class="{ 'has-image': post.cover }" aria-hidden="true">
-                    <img v-if="post.cover" :src="post.cover" :alt="post.title" loading="lazy" />
-                    <CoverPlaceholder v-else :title="post.title" :category="post.tags?.[0]" />
-                    <span class="cover-glow"></span>
-                  </div>
+            <img v-if="post.cover" :src="post.cover" :alt="post.title" loading="lazy" />
+            <CoverPlaceholder v-else :title="post.title" :category="post.tags?.[0]" />
+            <span class="cover-glow"></span>
+          </div>
           <div class="post-body">
             <div class="post-header">
               <p class="post-meta">
@@ -28,7 +28,7 @@
                 <span v-for="tag in post.tags" :key="tag" class="tag">{{ tag }}</span>
               </div>
               <span class="post-arrow">
-                <span>阅读全文</span>
+                <span>查看细节</span>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -72,7 +72,6 @@ const formatDate = (date: string) => {
   return d.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })
 }
 
-const getInitial = (title: string) => (title?.[0] || 'J').toUpperCase()
 </script>
 
 <style scoped>
@@ -87,7 +86,7 @@ const getInitial = (title: string) => (title?.[0] || 'J').toUpperCase()
 }
 
 .post-item:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
 }
 
 .post-link {
@@ -102,22 +101,22 @@ const getInitial = (title: string) => (title?.[0] || 'J').toUpperCase()
   gap: 1.25rem;
   padding: 1.25rem;
   border-radius: 16px;
-  background: var(--vp-c-bg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.98));
   border: 1px solid color-mix(in srgb, var(--vp-c-border), transparent 30%);
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .post-card:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08);
 }
 
 .post-cover {
   position: relative;
   border-radius: 18px;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(249, 115, 22, 0.15));
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.88));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,10 +146,9 @@ const getInitial = (title: string) => (title?.[0] || 'J').toUpperCase()
   inset: auto auto -40% -30%;
   width: 140%;
   height: 140%;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.4), transparent 70%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.32), transparent 70%);
   filter: blur(20px);
-  opacity: 0.5;
-  animation: post-glow 6s ease-in-out infinite alternate;
+  opacity: 0.36;
   z-index: -1;
 }
 
@@ -191,14 +189,19 @@ const getInitial = (title: string) => (title?.[0] || 'J').toUpperCase()
 .post-title {
   margin: 0;
   font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--vp-c-text-1);
+  line-height: 1.35;
 }
 
 .post-desc {
   margin: 0;
   color: var(--vp-c-text-2);
   line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .post-footer {
@@ -221,8 +224,6 @@ const getInitial = (title: string) => (title?.[0] || 'J').toUpperCase()
   gap: 0.5rem;
   font-weight: 600;
   font-size: 0.875rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
   color: var(--vp-c-brand-1);
 }
 
@@ -243,9 +244,9 @@ const getInitial = (title: string) => (title?.[0] || 'J').toUpperCase()
   padding: 0.35rem 0.9rem;
   font-size: 0.78rem;
   border-radius: 999px;
-  background: rgba(37, 99, 235, 0.12);
-  color: var(--vp-c-brand-1);
-  border: 1px solid rgba(37, 99, 235, 0.1);
+  background: rgba(15, 23, 42, 0.04);
+  color: var(--vp-c-text-2);
+  border: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .tag::before {
@@ -255,21 +256,12 @@ const getInitial = (title: string) => (title?.[0] || 'J').toUpperCase()
 }
 
 .dark .post-card {
-  background: color-mix(in srgb, var(--vp-c-bg), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.84), rgba(15, 23, 42, 0.96));
   box-shadow: 0 8px 24px rgba(2, 6, 23, 0.5);
 }
 
 .dark .post-cover .cover-glow {
-  opacity: 0.8;
-}
-
-@keyframes post-glow {
-  from {
-    transform: rotate(0deg) scale(1);
-  }
-  to {
-    transform: rotate(8deg) scale(1.1);
-  }
+  opacity: 0.44;
 }
 
 @media (max-width: 960px) {

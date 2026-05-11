@@ -4,11 +4,11 @@
     <div class="prompt-hero">
       <div class="prompt-hero-inner">
         <h2 class="prompt-hero-title">
-          <span class="hero-icon">✨</span>
+          <span class="hero-code">PROMPT</span>
           Prompt 提示词库
         </h2>
         <p class="prompt-hero-desc">
-          精心整理的 AI 提示词集合，助你高效使用 AI 工具。点击即可复制，快速使用。
+          面向写作、编程、分析与学习场景整理可复用提示词模板，便于快速调用与二次改写。
         </p>
         <!-- 搜索框 -->
         <div class="prompt-search-box">
@@ -217,8 +217,8 @@
 
     <!-- 底部提示 -->
     <div class="prompt-footer-hint">
-      <p>💡 点击提示词卡片可展开查看完整内容，点击复制按钮可一键复制</p>
-      <p>📝 带有 <code v-text="'{{变量名}}'"></code> 标记的为模板变量，使用时请替换为实际内容</p>
+      <p>点击卡片可展开完整内容，复制按钮可直接提取可用模板。</p>
+      <p>带有 <code v-text="'{{变量名}}'"></code> 标记的为模板变量，使用时请替换为实际内容。</p>
     </div>
   </div>
 </template>
@@ -406,11 +406,18 @@ async function copyPrompt(prompt: PromptItem) {
 /* ---- 页面头部 Hero ---- */
 .prompt-hero {
   text-align: center;
-  padding: 2.5rem 0 1.5rem;
+  padding: 1.9rem 1.4rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.98)),
+    linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(15, 23, 42, 0.02));
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.05);
 }
 
 .prompt-hero-inner {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -425,8 +432,18 @@ async function copyPrompt(prompt: PromptItem) {
   gap: 0.5rem;
 }
 
-.hero-icon {
-  font-size: 1.8rem;
+.hero-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 5.2rem;
+  padding: 0.24rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  color: #f8fafc;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .prompt-hero-desc {
@@ -455,9 +472,9 @@ async function copyPrompt(prompt: PromptItem) {
 .prompt-search-input {
   width: 100%;
   padding: 0.75rem 2.5rem 0.75rem 2.75rem;
-  border: 2px solid var(--vp-c-border);
-  border-radius: 12px;
-  background: var(--vp-c-bg-soft);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.86);
   color: var(--vp-c-text-1);
   font-size: 0.95rem;
   outline: none;
@@ -470,8 +487,8 @@ async function copyPrompt(prompt: PromptItem) {
 
 .prompt-search-input:focus {
   border-color: var(--vp-c-brand-1);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-  background: var(--vp-c-bg);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+  background: rgba(255, 255, 255, 0.98);
 }
 
 .search-clear {
@@ -496,12 +513,10 @@ async function copyPrompt(prompt: PromptItem) {
 
 /* ---- 统计信息 ---- */
 .prompt-stats {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1.25rem 0;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--vp-c-divider);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0 0 1.2rem;
 }
 
 .stat-item {
@@ -509,6 +524,10 @@ async function copyPrompt(prompt: PromptItem) {
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .stat-number {
@@ -527,8 +546,8 @@ async function copyPrompt(prompt: PromptItem) {
 .prompt-categories {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 1rem 0 1.5rem;
+  gap: 0.65rem;
+  padding: 0.25rem 0 1.4rem;
   justify-content: center;
 }
 
@@ -536,29 +555,29 @@ async function copyPrompt(prompt: PromptItem) {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.5rem 1rem;
-  border: 1.5px solid var(--vp-c-border);
+  padding: 0.55rem 0.95rem;
+  border: 1px solid rgba(15, 23, 42, 0.1);
   border-radius: 999px;
-  background: var(--vp-c-bg);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--vp-c-text-2);
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
   white-space: nowrap;
 }
 
 .category-tag:hover {
-  border-color: var(--vp-c-brand-1);
-  color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
+  border-color: rgba(37, 99, 235, 0.24);
+  color: var(--vp-c-text-1);
+  background: rgba(37, 99, 235, 0.06);
 }
 
 .category-tag.active {
-  border-color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-1);
+  border-color: rgba(15, 23, 42, 0.92);
+  background: rgba(15, 23, 42, 0.92);
   color: #fff;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  box-shadow: none;
 }
 
 .category-icon {
@@ -573,7 +592,7 @@ async function copyPrompt(prompt: PromptItem) {
   height: 1.25rem;
   padding: 0 0.35rem;
   border-radius: 999px;
-  background: var(--vp-c-default-soft);
+  background: rgba(15, 23, 42, 0.08);
   color: var(--vp-c-text-3);
   font-size: 0.7rem;
   font-weight: 600;
@@ -581,7 +600,7 @@ async function copyPrompt(prompt: PromptItem) {
 }
 
 .category-tag:hover .category-count {
-  background: var(--vp-c-brand-soft);
+  background: rgba(37, 99, 235, 0.12);
   color: var(--vp-c-brand-1);
 }
 
@@ -600,21 +619,21 @@ async function copyPrompt(prompt: PromptItem) {
 
 /* ---- 提示词卡片 ---- */
 .prompt-card {
-  border: 1.5px solid var(--vp-c-border);
-  border-radius: 14px;
-  background: var(--vp-c-bg);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .prompt-card:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.22);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.07);
 }
 
 .prompt-card.expanded {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.24);
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.08);
 }
 
 .prompt-card-header {
@@ -628,7 +647,7 @@ async function copyPrompt(prompt: PromptItem) {
 }
 
 .prompt-card-header:hover {
-  background: var(--vp-c-bg-soft);
+  background: rgba(15, 23, 42, 0.03);
 }
 
 .prompt-card-info {
@@ -659,12 +678,12 @@ async function copyPrompt(prompt: PromptItem) {
 
 .prompt-tag {
   display: inline-block;
-  padding: 0.15rem 0.5rem;
+  padding: 0.18rem 0.55rem;
   font-size: 0.75rem;
   border-radius: 999px;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-  font-weight: 500;
+  background: rgba(15, 23, 42, 0.05);
+  color: var(--vp-c-text-2);
+  font-weight: 600;
 }
 
 /* ---- 卡片操作按钮 ---- */
@@ -681,9 +700,9 @@ async function copyPrompt(prompt: PromptItem) {
   justify-content: center;
   width: 34px;
   height: 34px;
-  border: 1px solid var(--vp-c-border);
-  border-radius: 8px;
-  background: var(--vp-c-bg);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
   color: var(--vp-c-text-3);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -691,8 +710,8 @@ async function copyPrompt(prompt: PromptItem) {
 
 .action-btn:hover {
   color: var(--vp-c-brand-1);
-  border-color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
+  border-color: rgba(37, 99, 235, 0.24);
+  background: rgba(37, 99, 235, 0.06);
 }
 
 .expand-btn.is-expanded svg {
@@ -706,7 +725,7 @@ async function copyPrompt(prompt: PromptItem) {
 /* ---- 卡片展开内容 ---- */
 .prompt-card-body {
   border-top: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg-soft);
+  background: rgba(15, 23, 42, 0.03);
 }
 
 .prompt-content-wrapper {
@@ -912,9 +931,11 @@ async function copyPrompt(prompt: PromptItem) {
 /* ---- 底部提示 ---- */
 .prompt-footer-hint {
   text-align: center;
-  padding: 2rem 0;
+  padding: 1.2rem 1.25rem;
   margin-top: 1rem;
-  border-top: 1px solid var(--vp-c-divider);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.03);
 }
 
 .prompt-footer-hint p {
@@ -925,11 +946,26 @@ async function copyPrompt(prompt: PromptItem) {
 
 .prompt-footer-hint code {
   padding: 0.125rem 0.375rem;
-  background: var(--vp-c-bg-mute);
+  background: rgba(15, 23, 42, 0.06);
   border-radius: 4px;
   font-size: 0.8rem;
   color: var(--vp-c-brand-1);
   font-family: var(--vp-font-family-mono);
+}
+
+.dark .prompt-hero,
+.dark .stat-item,
+.dark .category-tag,
+.dark .prompt-card,
+.dark .prompt-footer-hint {
+  border-color: rgba(148, 163, 184, 0.14);
+  background: rgba(15, 23, 42, 0.82);
+}
+
+.dark .prompt-search-input,
+.dark .action-btn {
+  border-color: rgba(148, 163, 184, 0.14);
+  background: rgba(15, 23, 42, 0.74);
 }
 
 /* ---- 动画 ---- */
@@ -977,7 +1013,8 @@ async function copyPrompt(prompt: PromptItem) {
   }
 
   .prompt-stats {
-    gap: 1.25rem;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
   .stat-number {

@@ -93,12 +93,40 @@ const update = (width: number, height: number) => {
     p.y = Math.max(0, Math.min(height, p.y))
   }
 }
-
 let isVisible = true
 let observer: IntersectionObserver | null = null
 
+// FPS 监控：连续低帧时自动降级
+let fpsFrames = 0
+let fpsLastTime = performance.now()
+let fpsDegraded = false
+
+const checkFps = () => {
+  fpsFrames++
+  const now = performance.now()
+  if (now - fpsLastTime >= 1000) {
+    const fps = fpsFrames
+    fpsFrames = 0
+    fpsLastTime = now
+    // 连续低于 25fps 则降级：减少粒子数
+    if (fps < 25 && !fpsDegraded) {
+      fpsDegraded = true
+      particles = particles.slice(0, 30)
+    }
+    // 低于 15fps 则停止动画
+    if (fps < 15) {
+      stopAnimation()
+      return false
+    }
+  }
+  return true
+}
+
 const animate = () => {
   if (!canvas.value || !isVisible) return
+
+  if (!checkFps()) return
+
   const ctx = canvas.value.getContext('2d')
   if (!ctx) return
 

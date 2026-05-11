@@ -78,6 +78,11 @@ export default defineConfig({
   
   // SEO 相关配置
   head: [
+    // 字体预加载
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;700&display=swap' }],
+
     // 基础 meta
     ['meta', { name: 'theme-color', content: '#2563EB' }],
     ['meta', { name: 'referrer', content: 'no-referrer' }],
@@ -403,6 +408,24 @@ export default defineConfig({
         }
 
     headTags.push(['script', { type: 'application/ld+json' }, JSON.stringify(jsonLd)])
+
+    const breadcrumbs = getBreadcrumbItems(relativePath, String(title))
+    if (breadcrumbs.length > 1) {
+      headTags.push([
+        'script',
+        { type: 'application/ld+json' },
+        JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: breadcrumbs.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: item.name,
+            ...(item.path ? { item: `${SITE_URL}${item.path}` } : {})
+          }))
+        })
+      ])
+    }
     
     return headTags
   }
@@ -416,4 +439,78 @@ function getArticleSection(path: string): string {
   if (path.startsWith('notes')) return '技术笔记'
   if (path.startsWith('tools')) return '工具推荐'
   return '技术'
+}
+
+const breadcrumbNameMap: Record<string, string> = {
+  python: 'Python 学习',
+  algorithm: '算法与数据结构',
+  notes: '技术笔记',
+  tools: '常用工具',
+  others: '其他',
+  tags: '标签分类',
+  basics: '基础语法',
+  advanced: '进阶特性',
+  'data-structure': '数据结构',
+  leetcode: 'LeetCode',
+  sorting: '排序算法',
+  ai: 'AI 专题',
+  'vibe-coding': 'Vibe Coding',
+  prompts: '提示词库',
+  skills: 'Skills',
+  linux: 'Linux'
+}
+
+function formatBreadcrumbSegment(segment: string): string {
+  return decodeURIComponent(segment)
+    .replace(/[-_]/g, ' ')
+    .trim()
+}
+
+function getBreadcrumbItems(relativePath: string, title: string) {
+  const path = relativePath.replace(/\.md$/, '').replace(/\\/g, '/')
+  const parts = path.split('/').filter(Boolean)
+
+  if (parts.length <= 1 && (parts[0] === 'index' || path === '')) {
+    return []
+  }
+
+  const result: Array<{ name: string; path?: string }> = [
+    { name: '首页', path: '/' }
+  ]
+
+  let accumulatedPath = ''
+
+  parts.forEach((part, index) => {
+    accumulatedPath += `/${part}`
+    const isLast = index === parts.length - 1
+
+    if (part === 'index' && isLast) {
+      return
+    }
+
+    const mappedName = breadcrumbNameMap[part]
+
+    if (mappedName) {
+      result.push({
+        name: mappedName,
+        path: isLast ? undefined : `${accumulatedPath}/`
+      })
+      return
+    }
+
+    if (!isLast) {
+      result.push({
+        name: formatBreadcrumbSegment(part),
+        path: `${accumulatedPath}/`
+      })
+      return
+    }
+
+    result.push({
+      name: title || formatBreadcrumbSegment(part),
+      path: undefined
+    })
+  })
+
+  return result
 }

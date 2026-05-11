@@ -8,19 +8,19 @@
    ======================================== */
 
 .vp-doc div[class*='language-'] {
-  border-radius: var(--vp-border-radius-soft);
+  border-radius: 20px;
   background: var(--vp-code-block-bg);
-  border: 1px solid var(--vp-c-border);
-  margin: 1.5em 0;
-  box-shadow: 0 10px 30px 0 rgb(0 0 0 / 40%);
-  padding-top: 20px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  margin: 1.7em 0;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+  padding-top: 22px;
   position: relative;
-  padding-bottom: 32px;
+  padding-bottom: 34px;
 }
 
 /* 亮色模式阴影降低 */
 :not(.dark) .vp-doc div[class*="language-"] {
-  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 8%);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.07);
 }
 
 /* macOS 风格三色点 */
@@ -28,10 +28,10 @@
   content: "";
   display: block;
   position: absolute;
-  top: 13px;
-  left: 14px;
-  width: 10px;
-  height: 10px;
+  top: 14px;
+  left: 16px;
+  width: 9px;
+  height: 9px;
   background-color: #ff5f56;
   border-radius: 50%;
   box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
@@ -48,16 +48,16 @@
 .vp-doc div[class*="language-"]::after {
   content: attr(data-lang);
   position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 0.7rem;
-  font-weight: 500;
+  top: 9px;
+  right: 14px;
+  font-size: 0.68rem;
+  font-weight: 700;
   color: var(--vp-c-text-3);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   pointer-events: none;
   z-index: 2;
-  opacity: 0.7;
+  opacity: 0.8;
   transition: opacity 0.2s;
 }
 
@@ -90,14 +90,15 @@
    ======================================== */
 
 .vp-code-group .tabs {
-  padding-top: 20px;
+  padding-top: 22px;
   padding-right: 60px;
 }
 
 .vp-code-group {
   color: var(--vp-c-black-soft);
-  border-radius: 8px;
-  box-shadow: 0 10px 30px 0 rgb(0 0 0 / 40%);
+  border-radius: 20px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
 }
 
 /* 代码组 macOS 圆点 */
@@ -119,13 +120,13 @@
 }
 
 :not(.dark) .vp-code-group {
-  box-shadow: 0 4px 16px 0 rgb(0 0 0 / 8%);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.07);
 }
 
 /* 代码组内容区域修正 */
 .vp-code-group div[class*="language-"].vp-adaptive-theme.line-numbers-mode,
 .vp-code-group div[class*="language-"].vp-adaptive-theme {
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: none;
   padding-top: 0px;
 }
@@ -161,7 +162,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   z-index: 10;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 20px 20px;
 }
 
 .code-fold-bar:hover {
@@ -239,12 +240,15 @@
    ======================================== */
 
 .vp-doc div[class*="language-"] > button.copy {
-  border-radius: 6px !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  background-color: rgba(255, 255, 255, 0.72) !important;
   transition: all 0.2s ease !important;
 }
 
 .vp-doc div[class*="language-"] > button.copy:hover {
-  background-color: var(--vp-c-brand-soft) !important;
+  background-color: rgba(37, 99, 235, 0.08) !important;
+  border-color: rgba(37, 99, 235, 0.24) !important;
 }
 
 .vp-doc div[class*="language-"] > button.copy.copied {
@@ -253,13 +257,14 @@
 
 /* 暗色模式代码块 */
 .dark .vp-doc div[class*='language-'] {
-  border-color: #1F2937;
+  border-color: rgba(148, 163, 184, 0.14);
   background: #0F172A;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 18px 36px rgba(2, 6, 23, 0.32);
 }
 
 .dark .vp-code-group {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  border-color: rgba(148, 163, 184, 0.14);
+  box-shadow: 0 18px 36px rgba(2, 6, 23, 0.32);
 }
 
 /* 复制成功 Toast 动画 */

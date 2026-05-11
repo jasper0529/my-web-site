@@ -92,10 +92,10 @@ const typeClass = props.type || 'info'
 .announcement-card {
   position: fixed;
   right: 20px;
-  bottom: 80px;
+  bottom: 88px;
   width: 320px;
   max-width: calc(100vw - 40px);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   overflow: hidden;
   z-index: 9998;

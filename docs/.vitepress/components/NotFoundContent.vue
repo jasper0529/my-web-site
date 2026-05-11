@@ -2,6 +2,14 @@
 import { useData } from 'vitepress'
 
 const { theme } = useData()
+
+const openSearch = () => {
+  // 触发 VitePress 本地搜索框
+  const searchBtn = document.querySelector('.VPNavBarSearch button') as HTMLElement
+  if (searchBtn) {
+    searchBtn.click()
+  }
+}
 </script>
 
 <template>
@@ -12,9 +20,7 @@ const { theme } = useData()
     <div class="not-found-actions">
       <a href="/" class="not-found-btn primary">返回首页</a>
       <a href="/others/archives" class="not-found-btn secondary">浏览文章归档</a>
-    </div>
-    <div class="not-found-search">
-      <p>或者尝试搜索：</p>
+      <button class="not-found-btn secondary" @click="openSearch">搜索文档</button>
     </div>
   </div>
 </template>
@@ -31,7 +37,7 @@ const { theme } = useData()
   font-size: 8rem;
   font-weight: 800;
   line-height: 1;
-  background: linear-gradient(135deg, #2563EB 0%, #F97316 100%);
+  background: linear-gradient(135deg, #1E40AF 0%, #2563EB 60%, #3B82F6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -39,7 +45,7 @@ const { theme } = useData()
 }
 
 .dark .not-found-code {
-  background: linear-gradient(135deg, #3B82F6 0%, #FB923C 100%);
+  background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -69,7 +75,7 @@ const { theme } = useData()
   display: inline-flex;
   align-items: center;
   padding: 0.625rem 1.5rem;
-  border-radius: 999px;
+  border-radius: var(--radius-md);
   font-size: 0.9375rem;
   font-weight: 600;
   text-decoration: none;
@@ -99,11 +105,6 @@ const { theme } = useData()
   transform: translateY(-2px);
 }
 
-.not-found-search {
-  margin-top: 2rem;
-  color: var(--vp-c-text-3);
-  font-size: 0.875rem;
-}
 
 @media (max-width: 480px) {
   .not-found-code {

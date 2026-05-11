@@ -3,6 +3,7 @@ title: 3、prompt工程体系进化
 date: 2026-04-28
 tags: ["AI", "Vibe Coding"]
 description: prompt工程体系进化
+cover: /images/covers/prompt-evolution.svg
 ---
 <!-- 这是一张图片，ocr 内容为：PROMPT工程体系进化 好 从 PROMPT ENGINEERING 到 CONTEXT ENGINEERING 6大结构要素 PROMPT 2.0 四四四 从会聊天 CONSTRAINT ROLE 到会写任务单 OUTPUT CONTEXT 核心思想 规格书 VERIFICATION TASK 任务定义 输出为什么会变 3 高级提示策略 训练 上下文供给 分解 ZERO-SHOT 对齐 结构化输出 FEW-SHOT 边界约束 上下文 PLAN-FIRST 模型会猜 验证机制 T CHAINING CONTEXT ENGINEERING PROMPT  线性链 相关 可信 PROMPT不是话术, 路由链 完整 可引用 反馈链 而是任务规格书 新鲜 交接格式 工程化落地 AGENT与安全边界 生命周期模板 PLAN-THEN-EXECUTE 高风险操作 工具调用 显式授权 先问四个问题 跨工具适配 调试迭代 工程结论:高质量输出三任务清晰 (上下文正确X约束明确X 验证到位 教学类比用于帮助理解,实际落地仍需测试,审查与评估 -->
 ![](https://raw.githubusercontent.com/jasper0529/picx-images-hosting/master/1777375070918-dac27ffb-ccb5-4f6b-9ac1-0d8dec429d4f.png)<font style="color:rgb(26, 26, 46);">你有没有过这种经历——</font>

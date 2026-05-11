@@ -4,11 +4,11 @@
     <div class="skill-hero">
       <div class="skill-hero-inner">
         <h2 class="skill-hero-title">
-          <span class="hero-icon">⚡</span>
+          <span class="hero-code">SKILL</span>
           Agent Skills 技能库
         </h2>
         <p class="skill-hero-desc">
-          扩展 AI 编程助手能力的标准化功能模块，涵盖代码审查、测试、重构、文档生成等场景。点击即可复制使用。
+          收录可扩展 AI 编程助手能力的标准化模块，聚焦代码审查、测试、重构与文档生成等高频场景。
         </p>
         <!-- 搜索框 -->
         <div class="skill-search-box">
@@ -260,8 +260,8 @@
 
     <!-- 底部提示 -->
     <div class="skill-footer-hint">
-      <p>💡 点击技能卡片可展开查看完整内容，点击复制按钮可一键复制</p>
-      <p>📦 Skills 是扩展 AI 编程助手能力的标准化功能模块，复制后可在 Claude Code 或 Codex CLI 中使用</p>
+      <p>点击技能卡片可展开详情，并在预览模式与源码模式之间切换。</p>
+      <p>这些 Skills 采用标准化格式，适合直接迁移到常见 Agent 工作流中。</p>
     </div>
   </div>
 </template>
@@ -498,11 +498,18 @@ onUnmounted(() => {
 /* ---- 页面头部 Hero ---- */
 .skill-hero {
   text-align: center;
-  padding: 2.5rem 0 1.5rem;
+  padding: 1.9rem 1.4rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.98)),
+    linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(15, 23, 42, 0.02));
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.05);
 }
 
 .skill-hero-inner {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -517,8 +524,18 @@ onUnmounted(() => {
   gap: 0.5rem;
 }
 
-.hero-icon {
-  font-size: 1.8rem;
+.hero-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.5rem;
+  padding: 0.24rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  color: #f8fafc;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .skill-hero-desc {
@@ -547,9 +564,9 @@ onUnmounted(() => {
 .skill-search-input {
   width: 100%;
   padding: 0.75rem 2.5rem 0.75rem 2.75rem;
-  border: 2px solid var(--vp-c-border);
-  border-radius: 12px;
-  background: var(--vp-c-bg-soft);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.86);
   color: var(--vp-c-text-1);
   font-size: 0.95rem;
   outline: none;
@@ -562,8 +579,8 @@ onUnmounted(() => {
 
 .skill-search-input:focus {
   border-color: var(--vp-c-brand-1);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-  background: var(--vp-c-bg);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+  background: rgba(255, 255, 255, 0.98);
 }
 
 .search-clear {
@@ -588,12 +605,10 @@ onUnmounted(() => {
 
 /* ---- 统计信息 ---- */
 .skill-stats {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1.25rem 0;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--vp-c-divider);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0 0 1.2rem;
 }
 
 .stat-item {
@@ -601,6 +616,10 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .stat-number {
@@ -619,8 +638,8 @@ onUnmounted(() => {
 .skill-categories {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 1rem 0 1.5rem;
+  gap: 0.65rem;
+  padding: 0.25rem 0 1.4rem;
   justify-content: center;
 }
 
@@ -628,29 +647,29 @@ onUnmounted(() => {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.5rem 1rem;
-  border: 1.5px solid var(--vp-c-border);
+  padding: 0.55rem 0.95rem;
+  border: 1px solid rgba(15, 23, 42, 0.1);
   border-radius: 999px;
-  background: var(--vp-c-bg);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--vp-c-text-2);
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
   white-space: nowrap;
 }
 
 .category-tag:hover {
-  border-color: var(--vp-c-brand-1);
-  color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
+  border-color: rgba(37, 99, 235, 0.24);
+  color: var(--vp-c-text-1);
+  background: rgba(37, 99, 235, 0.06);
 }
 
 .category-tag.active {
-  border-color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-1);
+  border-color: rgba(15, 23, 42, 0.92);
+  background: rgba(15, 23, 42, 0.92);
   color: #fff;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  box-shadow: none;
 }
 
 .category-icon {
@@ -665,7 +684,7 @@ onUnmounted(() => {
   height: 1.25rem;
   padding: 0 0.35rem;
   border-radius: 999px;
-  background: var(--vp-c-default-soft);
+  background: rgba(15, 23, 42, 0.08);
   color: var(--vp-c-text-3);
   font-size: 0.7rem;
   font-weight: 600;
@@ -673,7 +692,7 @@ onUnmounted(() => {
 }
 
 .category-tag:hover .category-count {
-  background: var(--vp-c-brand-soft);
+  background: rgba(37, 99, 235, 0.12);
   color: var(--vp-c-brand-1);
 }
 
@@ -714,16 +733,16 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   padding: 1.125rem;
-  border: 1.5px solid var(--vp-c-border);
-  border-radius: 14px;
-  background: var(--vp-c-bg);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
   transition: all 0.3s ease;
   overflow: hidden;
 }
 
 .skill-card:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.22);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.07);
 }
 
 .skill-card.expanded {
@@ -769,12 +788,12 @@ onUnmounted(() => {
 
 .skill-tag {
   display: inline-block;
-  padding: 0.1rem 0.45rem;
+  padding: 0.18rem 0.52rem;
   font-size: 0.7rem;
-  border-radius: 4px;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-  font-weight: 500;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.05);
+  color: var(--vp-c-text-2);
+  font-weight: 600;
 }
 
 /* ---- 卡片操作按钮 ---- */
@@ -791,9 +810,9 @@ onUnmounted(() => {
   justify-content: center;
   width: 32px;
   height: 32px;
-  border: 1px solid var(--vp-c-border);
-  border-radius: 8px;
-  background: var(--vp-c-bg-soft);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.72);
   color: var(--vp-c-text-2);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -802,7 +821,7 @@ onUnmounted(() => {
 .action-btn:hover {
   border-color: var(--vp-c-brand-1);
   color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
+  background: rgba(37, 99, 235, 0.06);
 }
 
 .action-btn.copy-btn:hover {
@@ -823,8 +842,8 @@ onUnmounted(() => {
 }
 
 .skill-content-wrapper {
-  background: var(--vp-c-bg-soft);
-  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.03);
+  border-radius: 14px;
   overflow: hidden;
 }
 
@@ -1106,8 +1125,10 @@ onUnmounted(() => {
 
 /* ---- 底部提示 ---- */
 .skill-footer-hint {
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--vp-c-divider);
+  padding: 1.2rem 1.25rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.03);
   margin-top: 1rem;
 }
 
@@ -1120,6 +1141,22 @@ onUnmounted(() => {
 
 .skill-footer-hint p:last-child {
   margin-bottom: 0;
+}
+
+.dark .skill-hero,
+.dark .stat-item,
+.dark .category-tag,
+.dark .skill-card,
+.dark .skill-content-wrapper,
+.dark .skill-footer-hint {
+  border-color: rgba(148, 163, 184, 0.14);
+  background: rgba(15, 23, 42, 0.82);
+}
+
+.dark .skill-search-input,
+.dark .action-btn {
+  border-color: rgba(148, 163, 184, 0.14);
+  background: rgba(15, 23, 42, 0.74);
 }
 
 /* ---- 分页控件 ---- */
@@ -1250,7 +1287,8 @@ onUnmounted(() => {
   }
 
   .skill-stats {
-    gap: 1.25rem;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
   .stat-number {

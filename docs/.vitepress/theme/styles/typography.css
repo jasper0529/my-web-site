@@ -17,27 +17,27 @@
 
 /* 标题间距 */
 .vp-doc h1 {
-  font-size: 1.875rem;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.35;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
 }
 
 .vp-doc h2 {
   font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.5;
+  font-weight: 700;
+  line-height: 1.4;
   margin-top: 2.5em;
-  margin-bottom: 1em;
-  padding-bottom: 0.3em;
+  margin-bottom: 0.95em;
+  padding-bottom: 0.45em;
   border-bottom: 1px solid var(--vp-c-divider);
 }
 
 .vp-doc h3 {
   font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.5;
+  font-weight: 700;
+  line-height: 1.45;
   margin-top: 2em;
   margin-bottom: 0.75em;
 }
@@ -72,10 +72,10 @@
 /* 引用块间距 */
 .vp-doc blockquote {
   margin: 1.5em 0;
-  padding: 0.75em 1.25em;
+  padding: 0.9em 1.15em;
   border-left: 4px solid var(--vp-c-brand-1);
-  background: var(--vp-c-bg-soft);
-  border-radius: 0 8px 8px 0;
+  background: rgba(15, 23, 42, 0.03);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
 }
 
 .vp-doc blockquote p {
@@ -85,7 +85,7 @@
 /* 内联代码 */
 .vp-doc code {
   font-family: var(--vp-font-family-mono);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: var(--vp-c-bg-soft);
   padding: 0.15rem 0.45rem;
 }
@@ -96,20 +96,21 @@
 
 /* 表格 */
 .vp-doc table {
-  border-radius: var(--vp-border-radius);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid var(--vp-c-border);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   margin: 1.5em 0;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
 }
 
 .vp-doc th {
-  background: var(--vp-c-bg-soft);
-  font-weight: 600;
+  background: rgba(15, 23, 42, 0.04);
+  font-weight: 700;
 }
 
 .vp-doc td,
 .vp-doc th {
-  border: 1px solid var(--vp-c-border);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   padding: 0.75rem 1rem;
   line-height: 1.6;
 }
@@ -124,7 +125,7 @@
 .vp-doc img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   margin: 1rem 0;
   cursor: zoom-in;
   transition: transform 0.2s ease;
@@ -143,8 +144,9 @@
 /* 自定义容器 */
 .custom-block {
   margin: 1.5em 0;
-  padding: 1rem 1.25rem;
-  border-radius: var(--vp-border-radius-soft);
+  padding: 1rem 1.15rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-left: 4px solid;
 }
 

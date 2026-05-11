@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { computed, onMounted, watch } from 'vue'
+import { computed } from 'vue'
 import { useData } from 'vitepress'
 
 const { page, frontmatter } = useData()
-const siteUrl = 'https://jasper-labs.cn'
 
 // 通用名称格式化（避免每个目录手动硬编码）
 const formatSegmentName = (segment: string) =>
@@ -90,53 +89,6 @@ const showBreadcrumb = computed(() => {
   return breadcrumbs.value.length > 1
 })
 
-// 生成 BreadcrumbList JSON-LD 结构化数据
-const breadcrumbJsonLd = computed(() => {
-  if (!showBreadcrumb.value) return null
-
-  const items = breadcrumbs.value.map((item, index) => ({
-    '@type': 'ListItem',
-    'position': index + 1,
-    'name': item.name,
-    ...(item.path ? { 'item': `${siteUrl}${item.path}` } : {})
-  }))
-
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    'itemListElement': items
-  }
-})
-
-// 动态插入 BreadcrumbList JSON-LD
-function insertBreadcrumbJsonLd() {
-  if (typeof document === 'undefined' || !breadcrumbJsonLd.value) return
-
-  // 移除旧的面包屑 JSON-LD
-  const oldScript = document.querySelector('script[type="application/ld+json"]#breadcrumb-json-ld')
-  if (oldScript) {
-    oldScript.remove()
-  }
-
-  // 创建新的 JSON-LD 标签
-  const script = document.createElement('script')
-  script.type = 'application/ld+json'
-  script.id = 'breadcrumb-json-ld'
-  script.textContent = JSON.stringify(breadcrumbJsonLd.value)
-  document.head.appendChild(script)
-}
-
-// 监听路由变化
-watch(
-  () => page.value.path,
-  () => {
-    setTimeout(insertBreadcrumbJsonLd, 150)
-  }
-)
-
-onMounted(() => {
-  setTimeout(insertBreadcrumbJsonLd, 100)
-})
 </script>
 
 <template>
@@ -167,11 +119,16 @@ onMounted(() => {
 
 <style scoped>
 .breadcrumb {
-  margin-bottom: 1rem;
-  padding: 0.6rem 1rem;
-  background: var(--vp-c-bg-soft);
-  border-radius: 8px;
-  border: 1px solid var(--vp-c-divider);
+  margin-bottom: 0.95rem;
+  padding: 0.72rem 1rem;
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.dark .breadcrumb {
+  background: rgba(15, 23, 42, 0.82);
+  border-color: rgba(59, 130, 246, 0.15);
 }
 
 .breadcrumb-list {
@@ -196,7 +153,7 @@ onMounted(() => {
   color: var(--vp-c-text-3);
   margin: 0 0.35rem;
   user-select: none;
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
 .breadcrumb-link {
@@ -205,14 +162,15 @@ onMounted(() => {
   gap: 0.3rem;
   color: var(--vp-c-text-2);
   text-decoration: none;
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
-  transition: color 0.2s ease, background 0.2s ease;
+  padding: 0.22rem 0.48rem;
+  border-radius: 999px;
+  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
 .breadcrumb-link:hover {
   color: var(--vp-c-brand-1);
   background: rgba(37, 99, 235, 0.06);
+  transform: translateY(-1px);
 }
 
 .breadcrumb-current {
@@ -221,9 +179,9 @@ onMounted(() => {
   gap: 0.3rem;
   color: var(--vp-c-brand-1);
   font-weight: 600;
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
-  background: rgba(37, 99, 235, 0.08);
+  padding: 0.22rem 0.52rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.06);
 }
 
 .breadcrumb-svg-icon {
@@ -268,7 +226,8 @@ onMounted(() => {
 <style>
 /* 暗色模式适配 */
 .dark .breadcrumb {
-  border-color: rgba(59, 130, 246, 0.12);
+  border-color: rgba(148, 163, 184, 0.14);
+  background: rgba(15, 23, 42, 0.8);
 }
 
 .dark .breadcrumb-link:hover {
@@ -276,6 +235,6 @@ onMounted(() => {
 }
 
 .dark .breadcrumb-current {
-  background: rgba(59, 130, 246, 0.12);
+  background: rgba(148, 163, 184, 0.12);
 }
 </style>
