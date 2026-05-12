@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-05-11T09:03:46.242Z</updated>
+    <updated>2026-05-12T11:42:21.978Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -15,6 +15,15 @@
     <logo>https://jasper-labs.cn/images/logo.svg</logo>
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
+    <entry>
+        <title type="html"><![CDATA[4、context工程与内存管理]]></title>
+        <id>https://jasper-labs.cn/ai/vibe-coding/04-content-engineering/</id>
+        <link href="https://jasper-labs.cn/ai/vibe-coding/04-content-engineering/"/>
+        <updated>2026-05-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[同一句 Prompt，今天让 AI 改 Bug，它像开挂；明天还是这句 Prompt，它像失忆。你以为是模型抽风，真相往往更朴素一点。]]></summary>
+        <category label="AI"/>
+        <category label="Vibe Coding"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[AI 应用落地]]></title>
         <id>https://jasper-labs.cn/ai/</id>
@@ -170,13 +179,5 @@
         <category label="Python"/>
         <category label="列表"/>
         <category label="数据结构"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[构建生产级 Linux LVM 磁盘自动扩容]]></title>
-        <id>https://jasper-labs.cn/notes/linux/linux-lvm-auto-extend/</id>
-        <link href="https://jasper-labs.cn/notes/linux/linux-lvm-auto-extend/"/>
-        <updated>2026-03-19T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[在当今的云和虚拟化环境中，动态调整服务器资源已是常态。然而，手动扩展磁盘分区，尤其是在使用了 LVM (Logical Volume Manager) 的 Linux 系统上，仍然是一项繁琐且有风险的任务。一个错误的命令就可能导致数据丢失。 那么，如何实现“即插即用”的磁盘扩容，让服务器在检测到新磁...]]></summary>
-        <category label="Linux"/>
     </entry>
 </feed>

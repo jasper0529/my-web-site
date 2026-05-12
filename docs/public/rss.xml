@@ -4,7 +4,7 @@
         <title>Jasper Labs</title>
         <link>https://jasper-labs.cn</link>
         <description>个人知识库和博客网站，包含Python、算法、技术笔记等内容</description>
-        <lastBuildDate>Mon, 11 May 2026 09:03:46 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 12 May 2026 11:42:21 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -14,6 +14,15 @@
             <link>https://jasper-labs.cn</link>
         </image>
         <copyright>Copyright © 2026 Jasper</copyright>
+        <item>
+            <title><![CDATA[4、context工程与内存管理]]></title>
+            <link>https://jasper-labs.cn/ai/vibe-coding/04-content-engineering/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/ai/vibe-coding/04-content-engineering/</guid>
+            <pubDate>Mon, 11 May 2026 16:00:00 GMT</pubDate>
+            <description><![CDATA[同一句 Prompt，今天让 AI 改 Bug，它像开挂；明天还是这句 Prompt，它像失忆。你以为是模型抽风，真相往往更朴素一点。]]></description>
+            <category>AI</category>
+            <category>Vibe Coding</category>
+        </item>
         <item>
             <title><![CDATA[AI 应用落地]]></title>
             <link>https://jasper-labs.cn/ai/</link>
@@ -169,14 +178,6 @@
             <category>Python</category>
             <category>列表</category>
             <category>数据结构</category>
-        </item>
-        <item>
-            <title><![CDATA[构建生产级 Linux LVM 磁盘自动扩容]]></title>
-            <link>https://jasper-labs.cn/notes/linux/linux-lvm-auto-extend/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/linux-lvm-auto-extend/</guid>
-            <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[在当今的云和虚拟化环境中，动态调整服务器资源已是常态。然而，手动扩展磁盘分区，尤其是在使用了 LVM (Logical Volume Manager) 的 Linux 系统上，仍然是一项繁琐且有风险的任务。一个错误的命令就可能导致数据丢失。 那么，如何实现“即插即用”的磁盘扩容，让服务器在检测到新磁...]]></description>
-            <category>Linux</category>
         </item>
     </channel>
 </rss>

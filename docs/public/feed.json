@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "https://jasper-labs.cn/ai/vibe-coding/04-content-engineering/",
+            "content_html": "同一句 Prompt，今天让 AI 改 Bug，它像开挂；明天还是这句 Prompt，它像失忆。你以为是模型抽风，真相往往更朴素一点。",
+            "url": "https://jasper-labs.cn/ai/vibe-coding/04-content-engineering/",
+            "title": "4、context工程与内存管理",
+            "date_modified": "2026-05-11T16:00:00.000Z",
+            "tags": [
+                "AI",
+                "Vibe Coding"
+            ]
+        },
+        {
             "id": "https://jasper-labs.cn/ai/",
             "content_html": "覆盖大模型基础、Prompt 工程、工作流编排与评测迭代的 AI 专题入口，强调工程化理解与可执行方法。",
             "url": "https://jasper-labs.cn/ai/",
@@ -192,16 +203,6 @@
                 "Python",
                 "列表",
                 "数据结构"
-            ]
-        },
-        {
-            "id": "https://jasper-labs.cn/notes/linux/linux-lvm-auto-extend/",
-            "content_html": "在当今的云和虚拟化环境中，动态调整服务器资源已是常态。然而，手动扩展磁盘分区，尤其是在使用了 LVM (Logical Volume Manager) 的 Linux 系统上，仍然是一项繁琐且有风险的任务。一个错误的命令就可能导致数据丢失。 那么，如何实现“即插即用”的磁盘扩容，让服务器在检测到新磁...",
-            "url": "https://jasper-labs.cn/notes/linux/linux-lvm-auto-extend/",
-            "title": "构建生产级 Linux LVM 磁盘自动扩容",
-            "date_modified": "2026-03-19T00:00:00.000Z",
-            "tags": [
-                "Linux"
             ]
         }
     ]
