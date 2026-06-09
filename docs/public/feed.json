@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "https://jasper-labs.cn/notes/linux/dnf-offline-download/",
+            "content_html": "在实际运维开发中，经常会遇到这样的场景： 生产环境处于内网，无法连接外网； 多台机器需要安装同一个软件，不想每台机器都重复占用带宽下载； 需要提前准备完整的软件安装包，统一拷贝到离线环境； 安全合规要求安装介质必须先经过审核，再进入生产环境。 这时候，我们就需要在一台可以联网的机器上，把 RPM…",
+            "url": "https://jasper-labs.cn/notes/linux/dnf-offline-download/",
+            "title": "离线部署必备：如何使用 DNF 下载 RPM 包及其全部依赖",
+            "date_modified": "2026-06-09T00:00:00.000Z",
+            "tags": [
+                "技术笔记",
+                "Linux"
+            ]
+        },
+        {
             "id": "https://jasper-labs.cn/ai/vibe-coding/04-content-engineering/",
             "content_html": "同一句 Prompt，今天让 AI 改 Bug，它像开挂；明天还是这句 Prompt，它像失忆。你以为是模型抽风，真相往往更朴素一点。",
             "url": "https://jasper-labs.cn/ai/vibe-coding/04-content-engineering/",
@@ -191,18 +202,6 @@
                 "MySQL",
                 "性能优化",
                 "数据生成"
-            ]
-        },
-        {
-            "id": "https://jasper-labs.cn/python/advanced/python-delete-list-elements/",
-            "content_html": "全面讲解 Python 删除列表元素的 6 种常用方法，包括 pop()、remove()、del、列表推导式、clear() 和切片赋值，附带使用场景对比和注意事项。",
-            "url": "https://jasper-labs.cn/python/advanced/python-delete-list-elements/",
-            "title": "Python 删除列表元素的 6 种方法详解",
-            "date_modified": "2026-03-19T00:00:00.000Z",
-            "tags": [
-                "Python",
-                "列表",
-                "数据结构"
             ]
         }
     ]

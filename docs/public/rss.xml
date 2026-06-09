@@ -4,7 +4,7 @@
         <title>Jasper Labs</title>
         <link>https://jasper-labs.cn</link>
         <description>个人知识库和博客网站，包含Python、算法、技术笔记等内容</description>
-        <lastBuildDate>Tue, 12 May 2026 11:42:21 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 09 Jun 2026 09:50:20 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -14,6 +14,15 @@
             <link>https://jasper-labs.cn</link>
         </image>
         <copyright>Copyright © 2026 Jasper</copyright>
+        <item>
+            <title><![CDATA[离线部署必备：如何使用 DNF 下载 RPM 包及其全部依赖]]></title>
+            <link>https://jasper-labs.cn/notes/linux/dnf-offline-download/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/dnf-offline-download/</guid>
+            <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[在实际运维开发中，经常会遇到这样的场景： 生产环境处于内网，无法连接外网； 多台机器需要安装同一个软件，不想每台机器都重复占用带宽下载； 需要提前准备完整的软件安装包，统一拷贝到离线环境； 安全合规要求安装介质必须先经过审核，再进入生产环境。 这时候，我们就需要在一台可以联网的机器上，把 RPM…]]></description>
+            <category>技术笔记</category>
+            <category>Linux</category>
+        </item>
         <item>
             <title><![CDATA[4、context工程与内存管理]]></title>
             <link>https://jasper-labs.cn/ai/vibe-coding/04-content-engineering/</link>
@@ -168,16 +177,6 @@
             <category>MySQL</category>
             <category>性能优化</category>
             <category>数据生成</category>
-        </item>
-        <item>
-            <title><![CDATA[Python 删除列表元素的 6 种方法详解]]></title>
-            <link>https://jasper-labs.cn/python/advanced/python-delete-list-elements/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/python/advanced/python-delete-list-elements/</guid>
-            <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[全面讲解 Python 删除列表元素的 6 种常用方法，包括 pop()、remove()、del、列表推导式、clear() 和切片赋值，附带使用场景对比和注意事项。]]></description>
-            <category>Python</category>
-            <category>列表</category>
-            <category>数据结构</category>
         </item>
     </channel>
 </rss>
