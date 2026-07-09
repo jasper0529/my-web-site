@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-06-09T09:50:20.108Z</updated>
+    <updated>2026-07-09T12:11:23.790Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -15,6 +15,15 @@
     <logo>https://jasper-labs.cn/images/logo.svg</logo>
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
+    <entry>
+        <title type="html"><![CDATA[5、AI 编程工具全图谱：从对话助手到自主 Agent，2026 年该如何选型？]]></title>
+        <id>https://jasper-labs.cn/ai/vibe-coding/05-ai-tools-overview/</id>
+        <link href="https://jasper-labs.cn/ai/vibe-coding/05-ai-tools-overview/"/>
+        <updated>2026-07-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[一、AI 编程工具的进化史：从"补全一段代码"到"帮你写完整个项目" 想象一下这样的场景： 2021 年，你在 IDE 里敲一个 for 循环，弹出一个灰色的小气泡，告诉你"你可能想写这个"——你瞥了一眼，大部分时候是对的，偶尔是个垃圾建议，你随手删掉接着写。 2026 年，你打开终端，输入 claude…]]></summary>
+        <category label="AI"/>
+        <category label="Vibe Coding"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[离线部署必备：如何使用 DNF 下载 RPM 包及其全部依赖]]></title>
         <id>https://jasper-labs.cn/notes/linux/dnf-offline-download/</id>
@@ -167,16 +176,5 @@
         <updated>2026-03-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[无限域名邮箱指的是一种可以生成多个别名邮箱地址的域名邮箱，这些别名都指向同一个主邮箱，用于接收邮件。这种方式的主要优点是保护隐私、方便管理邮件和减少垃圾邮件。 无限域名邮箱的核心在于“别名”的概念。你可以为你的域名邮箱设置多个别名，例如：yourname+alias1@yourdomain.com,...]]></summary>
         <category label="邮箱"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python 生成并插入百万数据到 MySQL 的最佳实践]]></title>
-        <id>https://jasper-labs.cn/python/advanced/python-insert-millions-to-mysql/</id>
-        <link href="https://jasper-labs.cn/python/advanced/python-insert-millions-to-mysql/"/>
-        <updated>2026-03-19T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[本文介绍如何使用 Python 高效生成百万级测试数据并批量插入 MySQL，涵盖 Mimesis 数据生成、executemany 批量插入、事务优化等关键技巧，适用于 API 性能测试场景。]]></summary>
-        <category label="Python"/>
-        <category label="MySQL"/>
-        <category label="性能优化"/>
-        <category label="数据生成"/>
     </entry>
 </feed>

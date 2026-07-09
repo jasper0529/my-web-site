@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "https://jasper-labs.cn/ai/vibe-coding/05-ai-tools-overview/",
+            "content_html": "一、AI 编程工具的进化史：从\"补全一段代码\"到\"帮你写完整个项目\" 想象一下这样的场景： 2021 年，你在 IDE 里敲一个 for 循环，弹出一个灰色的小气泡，告诉你\"你可能想写这个\"——你瞥了一眼，大部分时候是对的，偶尔是个垃圾建议，你随手删掉接着写。 2026 年，你打开终端，输入 claude…",
+            "url": "https://jasper-labs.cn/ai/vibe-coding/05-ai-tools-overview/",
+            "title": "5、AI 编程工具全图谱：从对话助手到自主 Agent，2026 年该如何选型？",
+            "date_modified": "2026-07-09T00:00:00.000Z",
+            "tags": [
+                "AI",
+                "Vibe Coding"
+            ]
+        },
+        {
             "id": "https://jasper-labs.cn/notes/linux/dnf-offline-download/",
             "content_html": "在实际运维开发中，经常会遇到这样的场景： 生产环境处于内网，无法连接外网； 多台机器需要安装同一个软件，不想每台机器都重复占用带宽下载； 需要提前准备完整的软件安装包，统一拷贝到离线环境； 安全合规要求安装介质必须先经过审核，再进入生产环境。 这时候，我们就需要在一台可以联网的机器上，把 RPM…",
             "url": "https://jasper-labs.cn/notes/linux/dnf-offline-download/",
@@ -189,19 +200,6 @@
             "date_modified": "2026-03-19T00:00:00.000Z",
             "tags": [
                 "邮箱"
-            ]
-        },
-        {
-            "id": "https://jasper-labs.cn/python/advanced/python-insert-millions-to-mysql/",
-            "content_html": "本文介绍如何使用 Python 高效生成百万级测试数据并批量插入 MySQL，涵盖 Mimesis 数据生成、executemany 批量插入、事务优化等关键技巧，适用于 API 性能测试场景。",
-            "url": "https://jasper-labs.cn/python/advanced/python-insert-millions-to-mysql/",
-            "title": "Python 生成并插入百万数据到 MySQL 的最佳实践",
-            "date_modified": "2026-03-19T00:00:00.000Z",
-            "tags": [
-                "Python",
-                "MySQL",
-                "性能优化",
-                "数据生成"
             ]
         }
     ]
