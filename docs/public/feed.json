@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "https://jasper-labs.cn/ai/vibe-coding/06-cursor-first-ide/",
+            "content_html": "你身边是不是也有这样的人：装了 Cursor，开了 Tab 补全，用了几天，得出一个结论——“不就是 Copilot 加聊天框吗？”说实话，这个判断不能说完全错，但它刚好错过了 Cursor 最值钱的那部分。 先给一句话定义：Cursor 是一个把“编辑器、代码库上下文、AI 对话、多文件…",
+            "url": "https://jasper-labs.cn/ai/vibe-coding/06-cursor-first-ide/",
+            "title": "6、Cursor 不只是“会补全的 VS Code”：AI-first IDE 到底强在哪？",
+            "date_modified": "2026-07-16T00:00:00.000Z",
+            "tags": [
+                "AI",
+                "Vibe Coding"
+            ]
+        },
+        {
             "id": "https://jasper-labs.cn/ai/vibe-coding/05-ai-tools-overview/",
             "content_html": "一、AI 编程工具的进化史：从\"补全一段代码\"到\"帮你写完整个项目\" 想象一下这样的场景： 2021 年，你在 IDE 里敲一个 for 循环，弹出一个灰色的小气泡，告诉你\"你可能想写这个\"——你瞥了一眼，大部分时候是对的，偶尔是个垃圾建议，你随手删掉接着写。 2026 年，你打开终端，输入 claude…",
             "url": "https://jasper-labs.cn/ai/vibe-coding/05-ai-tools-overview/",
@@ -190,16 +201,6 @@
             "date_modified": "2026-03-20T00:00:00.000Z",
             "tags": [
                 "Linux"
-            ]
-        },
-        {
-            "id": "https://jasper-labs.cn/notes/unlimited-domain-email/",
-            "content_html": "无限域名邮箱指的是一种可以生成多个别名邮箱地址的域名邮箱，这些别名都指向同一个主邮箱，用于接收邮件。这种方式的主要优点是保护隐私、方便管理邮件和减少垃圾邮件。 无限域名邮箱的核心在于“别名”的概念。你可以为你的域名邮箱设置多个别名，例如：yourname+alias1@yourdomain.com,...",
-            "url": "https://jasper-labs.cn/notes/unlimited-domain-email/",
-            "title": "无限域名邮箱打造",
-            "date_modified": "2026-03-19T00:00:00.000Z",
-            "tags": [
-                "邮箱"
             ]
         }
     ]

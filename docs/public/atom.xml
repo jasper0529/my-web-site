@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-07-09T12:11:23.790Z</updated>
+    <updated>2026-07-16T11:43:05.514Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -15,6 +15,15 @@
     <logo>https://jasper-labs.cn/images/logo.svg</logo>
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
+    <entry>
+        <title type="html"><![CDATA[6、Cursor 不只是“会补全的 VS Code”：AI-first IDE 到底强在哪？]]></title>
+        <id>https://jasper-labs.cn/ai/vibe-coding/06-cursor-first-ide/</id>
+        <link href="https://jasper-labs.cn/ai/vibe-coding/06-cursor-first-ide/"/>
+        <updated>2026-07-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[你身边是不是也有这样的人：装了 Cursor，开了 Tab 补全，用了几天，得出一个结论——“不就是 Copilot 加聊天框吗？”说实话，这个判断不能说完全错，但它刚好错过了 Cursor 最值钱的那部分。 先给一句话定义：Cursor 是一个把“编辑器、代码库上下文、AI 对话、多文件…]]></summary>
+        <category label="AI"/>
+        <category label="Vibe Coding"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[5、AI 编程工具全图谱：从对话助手到自主 Agent，2026 年该如何选型？]]></title>
         <id>https://jasper-labs.cn/ai/vibe-coding/05-ai-tools-overview/</id>
@@ -168,13 +177,5 @@
         <updated>2026-03-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[从 nmap 官方网站下载源代码并在 ARM 平台编译安装 nmap-7.95 的全过程，含常见依赖问题处理]]></summary>
         <category label="Linux"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[无限域名邮箱打造]]></title>
-        <id>https://jasper-labs.cn/notes/unlimited-domain-email/</id>
-        <link href="https://jasper-labs.cn/notes/unlimited-domain-email/"/>
-        <updated>2026-03-19T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[无限域名邮箱指的是一种可以生成多个别名邮箱地址的域名邮箱，这些别名都指向同一个主邮箱，用于接收邮件。这种方式的主要优点是保护隐私、方便管理邮件和减少垃圾邮件。 无限域名邮箱的核心在于“别名”的概念。你可以为你的域名邮箱设置多个别名，例如：yourname+alias1@yourdomain.com,...]]></summary>
-        <category label="邮箱"/>
     </entry>
 </feed>

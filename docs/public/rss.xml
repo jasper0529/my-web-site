@@ -4,7 +4,7 @@
         <title>Jasper Labs</title>
         <link>https://jasper-labs.cn</link>
         <description>个人知识库和博客网站，包含Python、算法、技术笔记等内容</description>
-        <lastBuildDate>Thu, 09 Jul 2026 12:11:23 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 Jul 2026 11:43:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -14,6 +14,15 @@
             <link>https://jasper-labs.cn</link>
         </image>
         <copyright>Copyright © 2026 Jasper</copyright>
+        <item>
+            <title><![CDATA[6、Cursor 不只是“会补全的 VS Code”：AI-first IDE 到底强在哪？]]></title>
+            <link>https://jasper-labs.cn/ai/vibe-coding/06-cursor-first-ide/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/ai/vibe-coding/06-cursor-first-ide/</guid>
+            <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[你身边是不是也有这样的人：装了 Cursor，开了 Tab 补全，用了几天，得出一个结论——“不就是 Copilot 加聊天框吗？”说实话，这个判断不能说完全错，但它刚好错过了 Cursor 最值钱的那部分。 先给一句话定义：Cursor 是一个把“编辑器、代码库上下文、AI 对话、多文件…]]></description>
+            <category>AI</category>
+            <category>Vibe Coding</category>
+        </item>
         <item>
             <title><![CDATA[5、AI 编程工具全图谱：从对话助手到自主 Agent，2026 年该如何选型？]]></title>
             <link>https://jasper-labs.cn/ai/vibe-coding/05-ai-tools-overview/</link>
@@ -167,14 +176,6 @@
             <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[从 nmap 官方网站下载源代码并在 ARM 平台编译安装 nmap-7.95 的全过程，含常见依赖问题处理]]></description>
             <category>Linux</category>
-        </item>
-        <item>
-            <title><![CDATA[无限域名邮箱打造]]></title>
-            <link>https://jasper-labs.cn/notes/unlimited-domain-email/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes/unlimited-domain-email/</guid>
-            <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[无限域名邮箱指的是一种可以生成多个别名邮箱地址的域名邮箱，这些别名都指向同一个主邮箱，用于接收邮件。这种方式的主要优点是保护隐私、方便管理邮件和减少垃圾邮件。 无限域名邮箱的核心在于“别名”的概念。你可以为你的域名邮箱设置多个别名，例如：yourname+alias1@yourdomain.com,...]]></description>
-            <category>邮箱</category>
         </item>
     </channel>
 </rss>
