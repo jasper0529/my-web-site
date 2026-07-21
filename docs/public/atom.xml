@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-07-16T11:43:05.514Z</updated>
+    <updated>2026-07-21T01:35:03.183Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -15,6 +15,15 @@
     <logo>https://jasper-labs.cn/images/logo.svg</logo>
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
+    <entry>
+        <title type="html"><![CDATA[7、Claude Code 不是终端聊天框：它是会动手的工程 Agent]]></title>
+        <id>https://jasper-labs.cn/ai/vibe-coding/07-claude-code-overview/</id>
+        <link href="https://jasper-labs.cn/ai/vibe-coding/07-claude-code-overview/"/>
+        <updated>2026-07-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[你有没有遇到过这种场景：项目 CI 红了、测试挂了、PR 冲突了、依赖升级炸了，你打开 IDE 准备硬啃，结果半小时过去只定位到“可能是某个配置问题”。这时候很多人会把错误粘进聊天窗口，等 AI 给一段建议。说实话，这已经有点落后了。 Claude Code 的关键变化不是“Claude 变聪明了”…]]></summary>
+        <category label="AI"/>
+        <category label="Vibe Coding"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[6、Cursor 不只是“会补全的 VS Code”：AI-first IDE 到底强在哪？]]></title>
         <id>https://jasper-labs.cn/ai/vibe-coding/06-cursor-first-ide/</id>
@@ -169,13 +178,5 @@
         <category label="GCC"/>
         <category label="CentOS"/>
         <category label="SCL"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ARM架构下编译安装Nmap7.95]]></title>
-        <id>https://jasper-labs.cn/notes/linux/arm-compile-nmap/</id>
-        <link href="https://jasper-labs.cn/notes/linux/arm-compile-nmap/"/>
-        <updated>2026-03-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[从 nmap 官方网站下载源代码并在 ARM 平台编译安装 nmap-7.95 的全过程，含常见依赖问题处理]]></summary>
-        <category label="Linux"/>
     </entry>
 </feed>

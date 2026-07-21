@@ -35,6 +35,21 @@ const percentDisplay = computed(() => {
   if (scrollPercent.value >= 100) return '✓'
   return `${scrollPercent.value}%`
 })
+
+// 组件挂载时注册滚动/缩放监听，否则 isVisible 永远为 false，
+// 按钮与右侧进度环都不会显示
+onMounted(() => {
+  if (!isClient) return
+  handleScroll()
+  window.addEventListener('scroll', handleScroll, { passive: true })
+  window.addEventListener('resize', handleScroll, { passive: true })
+})
+
+onUnmounted(() => {
+  if (!isClient) return
+  window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('resize', handleScroll)
+})
 </script>
 
 <template>

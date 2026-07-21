@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "https://jasper-labs.cn/ai/vibe-coding/07-claude-code-overview/",
+            "content_html": "你有没有遇到过这种场景：项目 CI 红了、测试挂了、PR 冲突了、依赖升级炸了，你打开 IDE 准备硬啃，结果半小时过去只定位到“可能是某个配置问题”。这时候很多人会把错误粘进聊天窗口，等 AI 给一段建议。说实话，这已经有点落后了。 Claude Code 的关键变化不是“Claude 变聪明了”…",
+            "url": "https://jasper-labs.cn/ai/vibe-coding/07-claude-code-overview/",
+            "title": "7、Claude Code 不是终端聊天框：它是会动手的工程 Agent",
+            "date_modified": "2026-07-20T00:00:00.000Z",
+            "tags": [
+                "AI",
+                "Vibe Coding"
+            ]
+        },
+        {
             "id": "https://jasper-labs.cn/ai/vibe-coding/06-cursor-first-ide/",
             "content_html": "你身边是不是也有这样的人：装了 Cursor，开了 Tab 补全，用了几天，得出一个结论——“不就是 Copilot 加聊天框吗？”说实话，这个判断不能说完全错，但它刚好错过了 Cursor 最值钱的那部分。 先给一句话定义：Cursor 是一个把“编辑器、代码库上下文、AI 对话、多文件…",
             "url": "https://jasper-labs.cn/ai/vibe-coding/06-cursor-first-ide/",
@@ -191,16 +202,6 @@
                 "GCC",
                 "CentOS",
                 "SCL"
-            ]
-        },
-        {
-            "id": "https://jasper-labs.cn/notes/linux/arm-compile-nmap/",
-            "content_html": "从 nmap 官方网站下载源代码并在 ARM 平台编译安装 nmap-7.95 的全过程，含常见依赖问题处理",
-            "url": "https://jasper-labs.cn/notes/linux/arm-compile-nmap/",
-            "title": "ARM架构下编译安装Nmap7.95",
-            "date_modified": "2026-03-20T00:00:00.000Z",
-            "tags": [
-                "Linux"
             ]
         }
     ]

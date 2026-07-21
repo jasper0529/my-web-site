@@ -4,7 +4,7 @@
         <title>Jasper Labs</title>
         <link>https://jasper-labs.cn</link>
         <description>个人知识库和博客网站，包含Python、算法、技术笔记等内容</description>
-        <lastBuildDate>Thu, 16 Jul 2026 11:43:05 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 21 Jul 2026 01:35:03 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -14,6 +14,15 @@
             <link>https://jasper-labs.cn</link>
         </image>
         <copyright>Copyright © 2026 Jasper</copyright>
+        <item>
+            <title><![CDATA[7、Claude Code 不是终端聊天框：它是会动手的工程 Agent]]></title>
+            <link>https://jasper-labs.cn/ai/vibe-coding/07-claude-code-overview/</link>
+            <guid isPermaLink="false">https://jasper-labs.cn/ai/vibe-coding/07-claude-code-overview/</guid>
+            <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[你有没有遇到过这种场景：项目 CI 红了、测试挂了、PR 冲突了、依赖升级炸了，你打开 IDE 准备硬啃，结果半小时过去只定位到“可能是某个配置问题”。这时候很多人会把错误粘进聊天窗口，等 AI 给一段建议。说实话，这已经有点落后了。 Claude Code 的关键变化不是“Claude 变聪明了”…]]></description>
+            <category>AI</category>
+            <category>Vibe Coding</category>
+        </item>
         <item>
             <title><![CDATA[6、Cursor 不只是“会补全的 VS Code”：AI-first IDE 到底强在哪？]]></title>
             <link>https://jasper-labs.cn/ai/vibe-coding/06-cursor-first-ide/</link>
@@ -168,14 +177,6 @@
             <category>GCC</category>
             <category>CentOS</category>
             <category>SCL</category>
-        </item>
-        <item>
-            <title><![CDATA[ARM架构下编译安装Nmap7.95]]></title>
-            <link>https://jasper-labs.cn/notes/linux/arm-compile-nmap/</link>
-            <guid isPermaLink="false">https://jasper-labs.cn/notes/linux/arm-compile-nmap/</guid>
-            <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[从 nmap 官方网站下载源代码并在 ARM 平台编译安装 nmap-7.95 的全过程，含常见依赖问题处理]]></description>
-            <category>Linux</category>
         </item>
     </channel>
 </rss>
