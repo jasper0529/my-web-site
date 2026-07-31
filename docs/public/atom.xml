@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-07-22T03:15:14.772Z</updated>
+    <updated>2026-07-31T02:14:03.514Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -15,6 +15,15 @@
     <logo>https://jasper-labs.cn/images/logo.svg</logo>
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
+    <entry>
+        <title type="html"><![CDATA[8、如何写好 CLAUDE.md把项目隐性知识写成可执行规则]]></title>
+        <id>https://jasper-labs.cn/ai/vibe-coding/08-claude-code-claude-md-guide/</id>
+        <link href="https://jasper-labs.cn/ai/vibe-coding/08-claude-code-claude-md-guide/"/>
+        <updated>2026-07-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[你有没有遇到过这种场面：Claude Code 第一次进仓库，代码写得不差，却在包管理器、测试入口、生成目录边界上反复猜错，问题往往不在模型“不会写”，而在于它还不知道你的项目到底怎么工作。每猜错一次，就是一次返工、一次 token 浪费。 不是模型笨，是你没给它入职材料。 CLAUDE.md就是那张入职卡…]]></summary>
+        <category label="AI"/>
+        <category label="Vibe Coding"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[7、Claude Code 不是终端聊天框：它是会动手的工程 Agent]]></title>
         <id>https://jasper-labs.cn/ai/vibe-coding/07-claude-code-overview/</id>
@@ -167,16 +176,5 @@
         <category label="运维"/>
         <category label="命令行"/>
         <category label="速查手册"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CentOS 7 升级 GCC 版本至 8.3.1]]></title>
-        <id>https://jasper-labs.cn/notes/linux/centos7-upgrade-gcc/</id>
-        <link href="https://jasper-labs.cn/notes/linux/centos7-upgrade-gcc/"/>
-        <updated>2026-03-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[在 CentOS 7 上通过 CentOS SCL 方式将 GCC 从 4.8.5 升级到 8.3.1，包含国内阿里云镜像源配置、安装验证等完整步骤。]]></summary>
-        <category label="Linux"/>
-        <category label="GCC"/>
-        <category label="CentOS"/>
-        <category label="SCL"/>
     </entry>
 </feed>

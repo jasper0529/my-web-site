@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "https://jasper-labs.cn/ai/vibe-coding/08-claude-code-claude-md-guide/",
+            "content_html": "你有没有遇到过这种场面：Claude Code 第一次进仓库，代码写得不差，却在包管理器、测试入口、生成目录边界上反复猜错，问题往往不在模型“不会写”，而在于它还不知道你的项目到底怎么工作。每猜错一次，就是一次返工、一次 token 浪费。 不是模型笨，是你没给它入职材料。 CLAUDE.md就是那张入职卡…",
+            "url": "https://jasper-labs.cn/ai/vibe-coding/08-claude-code-claude-md-guide/",
+            "title": "8、如何写好 CLAUDE.md把项目隐性知识写成可执行规则",
+            "date_modified": "2026-07-31T00:00:00.000Z",
+            "tags": [
+                "AI",
+                "Vibe Coding"
+            ]
+        },
+        {
             "id": "https://jasper-labs.cn/ai/vibe-coding/07-claude-code-overview/",
             "content_html": "你有没有遇到过这种场景：项目 CI 红了、测试挂了、PR 冲突了、依赖升级炸了，你打开 IDE 准备硬啃，结果半小时过去只定位到“可能是某个配置问题”。这时候很多人会把错误粘进聊天窗口，等 AI 给一段建议。说实话，这已经有点落后了。 Claude Code 的关键变化不是“Claude 变聪明了”…",
             "url": "https://jasper-labs.cn/ai/vibe-coding/07-claude-code-overview/",
@@ -189,19 +200,6 @@
                 "运维",
                 "命令行",
                 "速查手册"
-            ]
-        },
-        {
-            "id": "https://jasper-labs.cn/notes/linux/centos7-upgrade-gcc/",
-            "content_html": "在 CentOS 7 上通过 CentOS SCL 方式将 GCC 从 4.8.5 升级到 8.3.1，包含国内阿里云镜像源配置、安装验证等完整步骤。",
-            "url": "https://jasper-labs.cn/notes/linux/centos7-upgrade-gcc/",
-            "title": "CentOS 7 升级 GCC 版本至 8.3.1",
-            "date_modified": "2026-03-20T00:00:00.000Z",
-            "tags": [
-                "Linux",
-                "GCC",
-                "CentOS",
-                "SCL"
             ]
         }
     ]

@@ -1,0 +1,9 @@
+{
+  "id": "article-image-generator",
+  "category": "image",
+  "title": "文章配图批量生成执行器",
+  "description": "依据配图 Prompts 文档调用生图 API 生成图片，先生成第一张供确认，通过后再批量生成剩余配图",
+  "content": "你是一位 AI 配图执行助手。请根据上一步生成的配图 Prompts 文档，结合文章内容，调用生图 API 为每张配图生成最终图片。\n\n## 执行约束\n- 必须使用「生图 API」生成位图图片，禁止输出 SVG 或矢量代码\n- 生图 API Key：{{apikey}}\n- 严格遵守 Prompts 文档中定义的统一风格：黑色黑板背景 + 彩色粉笔手绘 + 极简信息图 + 中文标签 + 少量卡通元素\n- 图片文件保存到文章对应的资源目录\n\n## 执行流程（非常重要）\n1. 先只生成第一张配图并展示给我确认。\n2. 我确认风格与效果没问题后，再按相同标准批量生成剩余所有配图。\n3. 全部完成后，输出每张配图在文章中建议插入的位置与文件路径清单。\n\n## 配图 Prompts 文档\n{{prompts_doc}}\n\n## 文章\n{{article}}",
+  "tags": ["文章配图", "批量生图", "生图API", "黑板风格"],
+  "variables": ["apikey", "prompts_doc", "article"]
+}
