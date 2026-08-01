@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "https://jasper-labs.cn/ai/vibe-coding/09-claude-code-claude-md-guide-2/",
+            "content_html": "你已经把命令、边界和验证方式写进了CLAUDE.md ，Claude 却还是没按规则行动。别急着继续加文字，问题很可能不在“写得够不够多”，而在于：规则放在哪、何时加载、当前会话到底看没看见。 上一篇解决“写什么、怎么从仓库证据生成规则”…",
+            "url": "https://jasper-labs.cn/ai/vibe-coding/09-claude-code-claude-md-guide-2/",
+            "title": "9、CLAUDE.md 进阶：作用域、加载机制与排障",
+            "date_modified": "2026-08-01T00:00:00.000Z",
+            "tags": [
+                "AI",
+                "Vibe Coding"
+            ]
+        },
+        {
             "id": "https://jasper-labs.cn/ai/vibe-coding/08-claude-code-claude-md-guide/",
             "content_html": "你有没有遇到过这种场面：Claude Code 第一次进仓库，代码写得不差，却在包管理器、测试入口、生成目录边界上反复猜错，问题往往不在模型“不会写”，而在于它还不知道你的项目到底怎么工作。每猜错一次，就是一次返工、一次 token 浪费。 不是模型笨，是你没给它入职材料。 CLAUDE.md就是那张入职卡…",
             "url": "https://jasper-labs.cn/ai/vibe-coding/08-claude-code-claude-md-guide/",
@@ -187,19 +198,6 @@
             "tags": [
                 "AI",
                 "Vibe Coding"
-            ]
-        },
-        {
-            "id": "https://jasper-labs.cn/notes/linux/linux-commands/",
-            "content_html": "全面整理 Linux 常用命令，包括缓存清理、文件搜索、磁盘管理、进程管理等运维必备命令，附带参数说明和使用示例，适合日常快速查阅。",
-            "url": "https://jasper-labs.cn/notes/linux/linux-commands/",
-            "title": "Linux 常用命令速查手册",
-            "date_modified": "2026-03-20T00:00:00.000Z",
-            "tags": [
-                "Linux",
-                "运维",
-                "命令行",
-                "速查手册"
             ]
         }
     ]

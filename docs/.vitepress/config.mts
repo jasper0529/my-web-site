@@ -69,6 +69,70 @@ function normalizeFontStrong(md) {
   })
 }
 
+function normalizeCjkStrong(md) {
+  const pattern = /\*\*([^*\n]+?[。！？；：，、])\*\*/g
+
+  md.core.ruler.push('normalize-cjk-strong', (state) => {
+    const Token = state.Token
+
+    state.tokens.forEach((blockToken) => {
+      if (blockToken.type !== 'inline' || !blockToken.children) return
+
+      const newChildren: typeof blockToken.children = []
+
+      blockToken.children.forEach((child) => {
+        if (child.type !== 'text') {
+          newChildren.push(child)
+          return
+        }
+
+        const text = child.content
+        pattern.lastIndex = 0
+        let lastIndex = 0
+        let match
+        const segments: typeof blockToken.children = []
+
+        while ((match = pattern.exec(text)) !== null) {
+          if (match.index > lastIndex) {
+            const before = new Token('text', '', 0)
+            before.content = text.slice(lastIndex, match.index)
+            segments.push(before)
+          }
+
+          const strongOpen = new Token('strong_open', 'strong', 1)
+          strongOpen.markup = '**'
+          segments.push(strongOpen)
+
+          const content = new Token('text', '', 0)
+          content.content = match[1]
+          segments.push(content)
+
+          const strongClose = new Token('strong_close', 'strong', -1)
+          strongClose.markup = '**'
+          segments.push(strongClose)
+
+          lastIndex = pattern.lastIndex
+        }
+
+        if (!segments.length) {
+          newChildren.push(child)
+          return
+        }
+
+        if (lastIndex < text.length) {
+          const after = new Token('text', '', 0)
+          after.content = text.slice(lastIndex)
+          segments.push(after)
+        }
+
+        newChildren.push(...segments)
+      })
+
+      blockToken.children = newChildren
+    })
+  })
+}
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Jasper Labs',
@@ -142,6 +206,7 @@ export default defineConfig({
       md.use(groupIconMdPlugin)
       md.use(normalizeLooseInlineMath)
       md.use(normalizeFontStrong)
+      md.use(normalizeCjkStrong)
 
       // 允许在内联代码反引号中直接渲染特定的 HTML（如 `<font ...>text</font>`）
       const defaultCodeInline = md.renderer.rules.code_inline

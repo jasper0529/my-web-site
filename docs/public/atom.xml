@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jasper-labs.cn</id>
     <title>Jasper Labs</title>
-    <updated>2026-07-31T02:14:03.514Z</updated>
+    <updated>2026-08-01T02:43:54.508Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Jasper</name>
@@ -15,6 +15,15 @@
     <logo>https://jasper-labs.cn/images/logo.svg</logo>
     <icon>https://jasper-labs.cn/images/logo.ico</icon>
     <rights>Copyright © 2026 Jasper</rights>
+    <entry>
+        <title type="html"><![CDATA[9、CLAUDE.md 进阶：作用域、加载机制与排障]]></title>
+        <id>https://jasper-labs.cn/ai/vibe-coding/09-claude-code-claude-md-guide-2/</id>
+        <link href="https://jasper-labs.cn/ai/vibe-coding/09-claude-code-claude-md-guide-2/"/>
+        <updated>2026-08-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[你已经把命令、边界和验证方式写进了CLAUDE.md ，Claude 却还是没按规则行动。别急着继续加文字，问题很可能不在“写得够不够多”，而在于：规则放在哪、何时加载、当前会话到底看没看见。 上一篇解决“写什么、怎么从仓库证据生成规则”…]]></summary>
+        <category label="AI"/>
+        <category label="Vibe Coding"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[8、如何写好 CLAUDE.md把项目隐性知识写成可执行规则]]></title>
         <id>https://jasper-labs.cn/ai/vibe-coding/08-claude-code-claude-md-guide/</id>
@@ -165,16 +174,5 @@
         <summary type="html"><![CDATA[Vibe Coding（国内圈子里常开玩笑叫它“氛围编程”或者“感觉流编程”），这词听起来是不是挺玄乎？脑海里是不是浮现出：程序员点着香薰、放着 Lo-Fi 纯音乐、不用看屏幕就能盲打敲键盘的画面？ 大错特错！它其实是近期最硬核、最具颠覆性的软件开发新姿势。Vibe Coding（氛围编程） 这个词...]]></summary>
         <category label="AI"/>
         <category label="Vibe Coding"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linux 常用命令速查手册]]></title>
-        <id>https://jasper-labs.cn/notes/linux/linux-commands/</id>
-        <link href="https://jasper-labs.cn/notes/linux/linux-commands/"/>
-        <updated>2026-03-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[全面整理 Linux 常用命令，包括缓存清理、文件搜索、磁盘管理、进程管理等运维必备命令，附带参数说明和使用示例，适合日常快速查阅。]]></summary>
-        <category label="Linux"/>
-        <category label="运维"/>
-        <category label="命令行"/>
-        <category label="速查手册"/>
     </entry>
 </feed>
